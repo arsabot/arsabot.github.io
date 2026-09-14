@@ -1,8 +1,46 @@
 /**
- * Projects Data & Showcase Controller
+ * Projects Data & Showcase Controller - Updated with Invitely & AI Text Reader
  */
 
 export const projectsData = [
+  {
+    id: 'invitely',
+    title: 'Invitely — Plataforma de Invitaciones Digitales Interactivas',
+    category: 'fullstack',
+    categoryLabel: 'SaaS / EventTech',
+    shortDesc: 'Plataforma integral para crear, personalizar y enviar invitaciones interactivas con RSVP en tiempo real, gestión de listas de invitados y animaciones personalizadas.',
+    tags: ['Next.js 15', 'TypeScript', 'Supabase', 'Tailwind CSS', 'PostgreSQL', 'Realtime RSVP', 'Framer Motion'],
+    githubUrl: 'https://github.com/arsabot/invitely',
+    liveUrl: 'https://arsabot.github.io/#projects',
+    accentColor: '#a855f7',
+    icon: 'sparkles',
+    highlights: [
+      'Editor visual en tiempo real para personalización de plantillas de eventos, tipografías y paletas.',
+      'Sistema de confirmación de asistencia (RSVP) con sincronización en vivo y estadísticas de invitados.',
+      'Integración con Supabase para almacenamiento de fotos de eventos y políticas de acceso por evento.',
+      'Diseño responsive optimizado para visualización móvil instantánea desde enlaces de WhatsApp e Instagram.'
+    ],
+    architecture: `Cliente Next.js 15 (App Router + TypeScript) ───[Server Actions / Realtime]───> Supabase BaaS (PostgreSQL + RLS) ───> CDN Media Storage`
+  },
+  {
+    id: 'ai-text-reader',
+    title: 'Lector de Textos con Inteligencia Artificial & OCR',
+    category: 'fullstack',
+    categoryLabel: 'AI & Data Tools',
+    shortDesc: 'Herramienta inteligente de accesibilidad y productividad con síntesis de voz neuronal (TTS), extracción OCR de documentos/imágenes y resumen contextual con IA.',
+    tags: ['React', 'TypeScript', 'Python', 'FastAPI', 'OpenAI / Gemini API', 'Web Speech API', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/arsabot',
+    liveUrl: 'https://arsabot.github.io/#projects',
+    accentColor: '#8b5cf6',
+    icon: 'bot',
+    highlights: [
+      'Extracción y procesamiento óptico de caracteres (OCR) a partir de PDFs, capturas e imágenes escaneadas.',
+      'Generación de resúmenes inteligentes y puntos clave utilizando modelos de lenguaje LLM.',
+      'Síntesis de voz fluida multi-idioma con controles de velocidad, tono y marcado visual de lectura sincronizada.',
+      'Arquitectura de API en Python FastAPI con streaming asíncrono de respuestas.'
+    ],
+    architecture: `React SPA (Speech & OCR Visualizer) ───[WebSocket / REST Streaming]───> Python FastAPI Backend ───> LLM & Neural TTS Services`
+  },
   {
     id: 'parkia',
     title: 'PARKIA — Smart Parking & Reservation Platform',
@@ -98,8 +136,8 @@ export function initProjects() {
     container.innerHTML = filtered.map(p => `
       <article class="project-card fade-in" data-category="${p.category}">
         <div class="project-thumb">
-          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, ${p.accentColor}22 0%, #0e1424 80%); display: flex; align-items: center; justify-content: center;">
-            <i data-lucide="${p.icon}" style="width: 56px; height: 56px; color: ${p.accentColor}; opacity: 0.9;"></i>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, ${p.accentColor}28 0%, var(--bg-secondary) 80%); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="${p.icon}" style="width: 56px; height: 56px; color: ${p.accentColor}; opacity: 0.95;"></i>
           </div>
           <span class="project-category-badge">${p.categoryLabel}</span>
         </div>
@@ -152,15 +190,15 @@ export function initProjects() {
       <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
         <span class="section-tag" style="margin-bottom: 0;">${project.categoryLabel}</span>
       </div>
-      <h2 style="font-size: 1.85rem; margin-bottom: 1rem; color: #ffffff;">${project.title}</h2>
-      <p style="font-size: 1.05rem; margin-bottom: 1.5rem;">${project.shortDesc}</p>
+      <h2 style="font-size: 1.85rem; margin-bottom: 1rem; color: var(--text-primary);">${project.title}</h2>
+      <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-secondary);">${project.shortDesc}</p>
 
       <h4 class="modal-section-title">
         <i data-lucide="cpu" style="width: 20px; height: 20px;"></i>
         Stack Tecnológico
       </h4>
       <div class="project-tags" style="margin-bottom: 1.5rem;">
-        ${project.tags.map(t => `<span class="project-tag" style="background: rgba(99, 102, 241, 0.15); border-color: rgba(99, 102, 241, 0.4); color: #fff;">${t}</span>`).join('')}
+        ${project.tags.map(t => `<span class="project-tag" style="background: rgba(139, 92, 246, 0.15); border-color: rgba(139, 92, 246, 0.4); color: var(--text-primary);">${t}</span>`).join('')}
       </div>
 
       <h4 class="modal-section-title">
@@ -170,7 +208,7 @@ export function initProjects() {
       <ul style="list-style: none; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem;">
         ${project.highlights.map(h => `
           <li style="display: flex; align-items: flex-start; gap: 0.75rem; color: var(--text-secondary); font-size: 0.95rem;">
-            <i data-lucide="chevron-right" style="width: 18px; height: 18px; color: var(--accent-secondary); flex-shrink: 0; margin-top: 2px;"></i>
+            <i data-lucide="chevron-right" style="width: 18px; height: 18px; color: var(--accent-primary); flex-shrink: 0; margin-top: 2px;"></i>
             <span>${h}</span>
           </li>
         `).join('')}
@@ -180,7 +218,7 @@ export function initProjects() {
         <i data-lucide="git-branch" style="width: 20px; height: 20px;"></i>
         Diagrama de Arquitectura
       </h4>
-      <div style="background: rgba(0, 0, 0, 0.4); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan-light); overflow-x: auto; margin-bottom: 2rem;">
+      <div style="background: rgba(0, 0, 0, 0.35); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-primary-light); overflow-x: auto; margin-bottom: 2rem;">
         ${project.architecture}
       </div>
 
@@ -189,9 +227,9 @@ export function initProjects() {
           <i data-lucide="github" style="width: 18px; height: 18px;"></i>
           Ver Repositorio en GitHub
         </a>
-        <a href="${project.liveUrl}" class="btn btn-secondary">
-          <i data-lucide="external-link" style="width: 18px; height: 18px;"></i>
-          Explorar Proyecto
+        <a href="https://wa.me/5491135094661?text=Hola%20Ariel,%20vi%20tu%20proyecto%20${encodeURIComponent(project.title)}%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <i data-lucide="message-circle" style="width: 18px; height: 18px; color: #25d366;"></i>
+          Consultar por WhatsApp
         </a>
       </div>
     `;

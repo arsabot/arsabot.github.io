@@ -1,5 +1,5 @@
 /**
- * Stats, Counters & Toast Notification System
+ * Stats, Counters, Theme State & Toast Notification System
  */
 
 export function showToast(message, iconName = 'check-circle') {
@@ -60,11 +60,11 @@ export function initStats() {
     observer.observe(statsSection);
   }
 
-  // Copy Email Button Listener
+  // Copy Email Button Listener (Updated Email: rodrigonasaavedra@gmail.com)
   const copyBtn = document.getElementById('copy-email-btn');
   if (copyBtn) {
     copyBtn.addEventListener('click', () => {
-      const email = 'arie19972012@gmail.com';
+      const email = 'rodrigonasaavedra@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
         showToast('¡Email copiado al portapapeles! (' + email + ')', 'check');
       }).catch(() => {

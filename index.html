@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ariel — Fullstack Software Engineer & Web Architect | arsabot</title>
-  <meta name="description" content="Portafolio profesional de Ariel (@arsabot). Desarrollador Fullstack especializado en Next.js, React, TypeScript, Python, Django, Supabase y arquitecturas cloud escalables.">
-  <meta name="keywords" content="Ariel, arsabot, Fullstack Developer, Next.js, React, TypeScript, Python, Django, Supabase, PostgreSQL, Portfolio, Software Engineer">
-  <meta name="author" content="Ariel (@arsabot)">
+  <title>Ariel Saavedra — Fullstack Software Engineer & Web Architect | arsabot</title>
+  <meta name="description" content="Portafolio profesional de Ariel Saavedra (@arsabot). Desarrollador Fullstack especializado en Next.js 15, React 19, TypeScript, Python, Django, Supabase, APIs e Inteligencia Artificial.">
+  <meta name="keywords" content="Ariel Saavedra, Rodrigo Saavedra, arsabot, Fullstack Developer, Next.js, React, TypeScript, Python, Django, Supabase, Invitely, Portfolio">
+  <meta name="author" content="Ariel Saavedra (@arsabot)">
   
   <!-- Open Graph / Meta Social -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://arsabot.github.io/">
-  <meta property="og:title" content="Ariel — Fullstack Software Engineer & Web Architect">
-  <meta property="og:description" content="Portafolio profesional de Ariel. Desarrollo de software moderno, arquitecturas escalables y diseño web premium.">
-  <meta property="og:image" content="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,14,26,45&height=220&section=header&text=Ariel%20%7C%20Fullstack%20Developer&fontSize=38&fontColor=ffffff">
+  <meta property="og:title" content="Ariel Saavedra — Fullstack Software Engineer">
+  <meta property="og:description" content="Desarrollo de software moderno, arquitecturas escalables y experiencias de alto impacto.">
+  <meta property="og:image" content="assets/profile.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,11 +56,16 @@
       </nav>
 
       <div class="nav-actions">
+        <!-- Theme Toggle Switcher (Dark / Light) -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo claro y oscuro" title="Cambiar tema">
+          <i data-lucide="sun" style="width: 20px; height: 20px;"></i>
+        </button>
+
         <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="display: none; @media(min-width:600px){display:inline-flex;}">
           <i data-lucide="github" style="width: 16px; height: 16px;"></i>
           <span>GitHub</span>
         </a>
-        <a href="#contact" class="btn btn-primary btn-sm">
+        <a href="https://wa.me/5491135094661?text=Hola%20Ariel,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
           <span>Hablemos</span>
           <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
         </a>
@@ -79,9 +84,9 @@
     <a href="#experience" class="nav-link">Experiencia</a>
     <a href="#github-stats" class="nav-link">GitHub Stats</a>
     <a href="#contact" class="nav-link">Contacto</a>
-    <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="margin-top: 0.5rem;">
-      <i data-lucide="github" style="width: 16px; height: 16px;"></i>
-      <span>Visitar perfil de GitHub</span>
+    <a href="https://wa.me/5491135094661" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top: 0.5rem;">
+      <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i>
+      <span>Contactar por WhatsApp</span>
     </a>
   </div>
 
@@ -93,9 +98,19 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-            <div class="status-pill">
-              <span class="status-dot"></span>
-              <span>Disponible para proyectos & roles Fullstack</span>
+            
+            <!-- Avatar & Status Badge -->
+            <div class="hero-avatar-container">
+              <div class="hero-avatar-frame">
+                <img src="assets/profile.jpg" alt="Ariel Saavedra — Fullstack Software Engineer" class="hero-avatar-img" />
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                <div class="status-pill">
+                  <span class="status-dot"></span>
+                  <span>Disponible para proyectos & roles</span>
+                </div>
+                <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">Ariel Saavedra (@arsabot)</span>
+              </div>
             </div>
 
             <h1 class="hero-title">
@@ -107,7 +122,7 @@
             </h1>
 
             <p class="hero-subtitle">
-              Desarrollador Fullstack apasionado por diseñar aplicaciones web de alta fidelidad, arquitecturas de backend escalables con Next.js, TypeScript, Django y Supabase, e interfaces de usuario fluidas y accesibles.
+              Desarrollador Fullstack apasionado por diseñar aplicaciones web de alta fidelidad, plataformas SaaS interactivas (*Invitely*, *PARKIA*), herramientas de IA y arquitecturas de backend escalables con Next.js, React, TypeScript, Python y Supabase.
             </p>
 
             <div class="hero-actions">
@@ -115,21 +130,28 @@
                 <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
                 <span>Explorar Proyectos</span>
               </a>
+              <a href="https://wa.me/5491135094661?text=Hola%20Ariel,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i data-lucide="message-circle" style="width: 18px; height: 18px; color: #25d366;"></i>
+                <span>WhatsApp Directo</span>
+              </a>
               <a href="#contact" class="btn btn-secondary">
-                <i data-lucide="send" style="width: 18px; height: 18px;"></i>
-                <span>Contactar</span>
+                <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+                <span>Email</span>
               </a>
             </div>
 
             <div class="hero-socials">
               <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono); margin-right: 0.25rem;">CONECTAR:</span>
+              <a href="https://wa.me/5491135094661" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp (+54 9 11 3509-4661)">
+                <i data-lucide="message-circle" style="width: 20px; height: 20px; color: #25d366;"></i>
+              </a>
               <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
                 <i data-lucide="github" style="width: 20px; height: 20px;"></i>
               </a>
               <a href="https://linkedin.com/in/arsabot" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
                 <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
               </a>
-              <a href="mailto:arie19972012@gmail.com" class="social-link" title="Email">
+              <a href="mailto:rodrigonasaavedra@gmail.com" class="social-link" title="Email">
                 <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
               </a>
             </div>
@@ -149,17 +171,17 @@
               </div>
               <div class="terminal-body">
                 <div class="code-line"><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</div>
-                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">name</span>: <span class="code-str">'Ariel'</span>,</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">name</span>: <span class="code-str">'Ariel Saavedra'</span>,</div>
                 <div class="code-line">&nbsp;&nbsp;<span class="code-fn">role</span>: <span class="code-str">'Fullstack Software Engineer'</span>,</div>
-                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">location</span>: <span class="code-str">'Argentina (Remote / Global)'</span>,</div>
-                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">skills</span>: [</div>
-                <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">'Next.js'</span>, <span class="code-str">'React 19'</span>, <span class="code-str">'TypeScript'</span>,</div>
-                <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">'Python/Django'</span>, <span class="code-str">'Node.js'</span>, <span class="code-str">'PostgreSQL'</span></div>
-                <div class="code-line">&nbsp;&nbsp;],</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">contact</span>: {</div>
+                <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-fn">email</span>: <span class="code-str">'rodrigonasaavedra@gmail.com'</span>,</div>
+                <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-fn">whatsapp</span>: <span class="code-str">'+54 9 11 3509-4661'</span></div>
+                <div class="code-line">&nbsp;&nbsp;},</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">featuredWork</span>: [<span class="code-str">'Invitely'</span>, <span class="code-str">'Parkia'</span>, <span class="code-str">'AI Reader'</span>, <span class="code-str">'Forge'</span>],</div>
                 <div class="code-line">&nbsp;&nbsp;<span class="code-fn">openToWork</span>: <span class="code-keyword">true</span>,</div>
-                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">deliver</span>: () =&gt; <span class="code-str">'High quality & scalable code 🚀'</span></div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">deliver</span>: () =&gt; <span class="code-str">'Clean, high-impact & scalable code 🚀'</span></div>
                 <div class="code-line">};</div>
-                <div class="code-line" style="margin-top: 0.75rem;"><span class="code-comment">// Ready to collaborate and build great software</span></div>
+                <div class="code-line" style="margin-top: 0.75rem;"><span class="code-comment">// Let's build something exceptional together</span></div>
               </div>
             </div>
           </div>
@@ -186,15 +208,15 @@
             </div>
             <h3 class="card-title">Desarrollador Fullstack & Creador de Soluciones</h3>
             <p style="margin-bottom: 1rem;">
-              Me especializo en el ciclo de vida completo del desarrollo web: desde el modelado relacional de bases de datos y la creación de APIs REST seguras hasta la construcción de interfaces de usuario modernas, accesibles y ultra responsivas.
+              Me especializo en el ciclo de vida completo del desarrollo de software: desde el modelado de bases de datos relacionales y diseño de APIs robustas hasta la construcción de interfaces de usuario modernas, interactivas y con animaciones fluidas.
             </p>
             <p>
-              He diseñado e implementado plataformas complejas como <strong>PARKIA</strong> (sistema integral de movilidad y reservas con geolocalización) y <strong>Forge Champions</strong> (portal de masterclasses corporativas para la Fundación Forge).
+              He diseñado e implementado plataformas como <strong>Invitely</strong> (SaaS de invitaciones digitales y gestión de eventos), <strong>PARKIA</strong> (movilidad urbana y reservas con geolocalización), herramientas de <strong>Inteligencia Artificial & OCR</strong> y <strong>Forge Champions</strong>.
             </p>
 
             <div class="metrics-row">
               <div class="metric-item">
-                <span class="metric-num" data-target="3" data-suffix="+">0</span>
+                <span class="metric-num" data-target="5" data-suffix="+">0</span>
                 <span class="metric-label">Apps Insignia</span>
               </div>
               <div class="metric-item">
@@ -221,7 +243,7 @@
               </li>
               <li style="display: flex; align-items: center; gap: 0.5rem;">
                 <i data-lucide="check" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
-                <span><strong>Arquitectura Modular</strong> y testeable.</span>
+                <span><strong>Integración de IA & LLMs</strong> en producción.</span>
               </li>
               <li style="display: flex; align-items: center; gap: 0.5rem;">
                 <i data-lucide="check" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
@@ -240,7 +262,7 @@
     <!-- ======================================================================
          SKILLS & TECH MATRIX
          ====================================================================== -->
-    <section id="skills" class="section" style="background: rgba(14, 20, 36, 0.3);">
+    <section id="skills" class="section" style="background: rgba(139, 92, 246, 0.03);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag"><i data-lucide="cpu" style="width: 14px; height: 14px;"></i> Competencias</span>
@@ -296,7 +318,7 @@
           </div>
           <div class="skill-card" data-category="backend">
             <div class="skill-icon-wrapper"><i class="devicon-express-original"></i></div>
-            <div class="skill-info"><div class="skill-name">Express.js</div><div class="skill-role">Microservicios</div></div>
+            <div class="skill-info"><div class="skill-name">Express.js & FastAPI</div><div class="skill-role">APIs & Microservicios</div></div>
           </div>
 
           <!-- Databases & Cloud -->
@@ -344,7 +366,7 @@
         <!-- Category Tabs -->
         <div class="filter-tabs">
           <button class="filter-tab project-tab active" data-filter="all">Todos los proyectos</button>
-          <button class="filter-tab project-tab" data-filter="fullstack">Fullstack</button>
+          <button class="filter-tab project-tab" data-filter="fullstack">Fullstack & SaaS</button>
           <button class="filter-tab project-tab" data-filter="frontend">Frontend / UI</button>
           <button class="filter-tab project-tab" data-filter="backend">Backend / APIs</button>
         </div>
@@ -359,7 +381,7 @@
     <!-- ======================================================================
          EXPERIENCE / TIMELINE
          ====================================================================== -->
-    <section id="experience" class="section" style="background: rgba(14, 20, 36, 0.2);">
+    <section id="experience" class="section" style="background: rgba(139, 92, 246, 0.02);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag"><i data-lucide="milestone" style="width: 14px; height: 14px;"></i> Hitos & Experiencia</span>
@@ -368,20 +390,33 @@
         </div>
 
         <div class="timeline">
-          <!-- Timeline Item 1 -->
+          <!-- Timeline Item 0: Invitely -->
           <div class="timeline-item">
             <span class="timeline-dot"></span>
             <div class="timeline-content">
               <span class="timeline-date">2026 — Presente</span>
-              <h3 class="timeline-role">Lead Fullstack Developer — Proyecto PARKIA</h3>
-              <div class="timeline-org">Plataforma de Movilidad Urbana & Reservas Inteligentes</div>
+              <h3 class="timeline-role">Lead Developer — Invitely SaaS</h3>
+              <div class="timeline-org">EventTech & Plataforma de Invitaciones Interactivas</div>
               <p style="font-size: 0.95rem;">
-                Diseño integral de arquitectura frontend/backend con React 19, TypeScript, mapas interactivos con Leaflet, backend robusto en Python Django 5 con DRF y autenticación JWT con suite completa de pruebas.
+                Desarrollo integral con Next.js 15, TypeScript, Supabase, Tailwind CSS y RSVP en tiempo real con optimización de entrega móvil.
               </p>
             </div>
           </div>
 
-          <!-- Timeline Item 2 -->
+          <!-- Timeline Item 1: PARKIA -->
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <span class="timeline-date">2026</span>
+              <h3 class="timeline-role">Lead Fullstack Developer — PARKIA</h3>
+              <div class="timeline-org">Plataforma de Movilidad Urbana & Reservas Inteligentes</div>
+              <p style="font-size: 0.95rem;">
+                Diseño integral de arquitectura frontend/backend con React 19, TypeScript, mapas interactivos con Leaflet, backend en Python Django 5 con DRF y autenticación JWT.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Forge Champions -->
           <div class="timeline-item">
             <span class="timeline-dot"></span>
             <div class="timeline-content">
@@ -394,15 +429,15 @@
             </div>
           </div>
 
-          <!-- Timeline Item 3 -->
+          <!-- Timeline Item 3: Informar & AI Tools -->
           <div class="timeline-item">
             <span class="timeline-dot"></span>
             <div class="timeline-content">
               <span class="timeline-date">2025 — 2026</span>
-              <h3 class="timeline-role">Desarrollador Frontend & Ingesta de Datos</h3>
-              <div class="timeline-org">Informar App & Ecosistemas React</div>
+              <h3 class="timeline-role">Desarrollador Frontend & Herramientas de IA</h3>
+              <div class="timeline-org">Informar App & Lector de Textos Inteligente con OCR</div>
               <p style="font-size: 0.95rem;">
-                Construcción de dashboards de visualización de datos en tiempo real, optimización de pipelines de bundling con Vite y adopción de herramientas de análisis estático como Oxlint.
+                Construcción de herramientas de síntesis neuronal de voz, extracción OCR, streaming de datos en tiempo real y optimización con Vite y Oxlint.
               </p>
             </div>
           </div>
@@ -424,12 +459,12 @@
         <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 900px; margin: 0 auto;">
           <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; text-align: center; backdrop-filter: blur(16px);">
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; align-items: center;">
-              <img src="https://github-readme-stats.vercel.app/api?username=arsabot&show_icons=true&theme=tokyonight&hide_border=true&bg_color=080c14&title_color=6366f1&text_color=94a3b8&icon_color=06b6d4" alt="GitHub Stats Card" style="max-width: 100%; border-radius: 10px;" />
-              <img src="https://github-readme-streak-stats.herokuapp.com/?user=arsabot&theme=tokyonight&hide_border=true&background=080c14&ring=6366f1&fire=ec4899&currStreakLabel=06b6d4" alt="Streak Stats Card" style="max-width: 100%; border-radius: 10px;" />
+              <img src="https://github-readme-stats.vercel.app/api?username=arsabot&show_icons=true&theme=tokyonight&hide_border=true&bg_color=090714&title_color=8b5cf6&text_color=a1a1aa&icon_color=06b6d4" alt="GitHub Stats Card" style="max-width: 100%; border-radius: 10px;" />
+              <img src="https://github-readme-streak-stats.herokuapp.com/?user=arsabot&theme=tokyonight&hide_border=true&background=090714&ring=8b5cf6&fire=ec4899&currStreakLabel=06b6d4" alt="Streak Stats Card" style="max-width: 100%; border-radius: 10px;" />
             </div>
             
             <div style="margin-top: 1.5rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">
-              <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arsabot&layout=compact&theme=tokyonight&hide_border=true&bg_color=080c14&title_color=6366f1&text_color=94a3b8" alt="Top Languages Card" style="margin: 0 auto; max-width: 100%;" />
+              <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arsabot&layout=compact&theme=tokyonight&hide_border=true&bg_color=090714&title_color=8b5cf6&text_color=a1a1aa" alt="Top Languages Card" style="margin: 0 auto; max-width: 100%;" />
             </div>
 
             <div style="margin-top: 1.5rem;">
@@ -446,29 +481,39 @@
     <!-- ======================================================================
          CONTACT SECTION
          ====================================================================== -->
-    <section id="contact" class="section" style="background: rgba(14, 20, 36, 0.3);">
+    <section id="contact" class="section" style="background: rgba(139, 92, 246, 0.04);">
       <div class="container">
         <div class="section-header">
           <span class="section-tag"><i data-lucide="message-square" style="width: 14px; height: 14px;"></i> Contacto</span>
           <h2 class="section-title">Hablemos de tu Próximo Proyecto</h2>
-          <p class="section-desc">¿Tienes una propuesta de trabajo, una consulta técnica o deseas crear algo extraordinario? Envíame un mensaje.</p>
+          <p class="section-desc">¿Tienes una propuesta de trabajo, una consulta técnica o deseas crear algo extraordinario? Conversemos directamente.</p>
         </div>
 
         <div class="contact-grid">
           <!-- Left Info Card -->
           <div class="contact-info-card">
             <div>
-              <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #fff;">Canales Directos</h3>
+              <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Canales Directos</h3>
               <p style="margin-bottom: 2rem; font-size: 0.95rem;">
-                Estoy disponible para posiciones full-time, contratos remotos y desarrollo de soluciones a medida.
+                Estoy disponible para posiciones full-time, proyectos SaaS, contratos remotos y consultoría técnica.
               </p>
+
+              <!-- Channel 0: WhatsApp -->
+              <a href="https://wa.me/5491135094661?text=Hola%20Ariel,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener noreferrer" class="contact-channel" style="border-color: rgba(37, 211, 102, 0.4); background: rgba(37, 211, 102, 0.08);">
+                <div class="contact-channel-icon" style="background: rgba(37, 211, 102, 0.18); color: #25d366;"><i data-lucide="message-circle"></i></div>
+                <div style="flex-grow: 1;">
+                  <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">WhatsApp Directo</div>
+                  <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem;">+54 9 11 3509-4661</div>
+                </div>
+                <i data-lucide="external-link" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
+              </a>
 
               <!-- Channel 1: Email -->
               <div class="contact-channel">
                 <div class="contact-channel-icon"><i data-lucide="mail"></i></div>
                 <div style="flex-grow: 1;">
                   <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Email Directo</div>
-                  <div style="font-weight: 600; color: #fff; font-size: 0.95rem;">arie19972012@gmail.com</div>
+                  <div style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem;">rodrigonasaavedra@gmail.com</div>
                 </div>
                 <button id="copy-email-btn" class="icon-btn" title="Copiar email al portapapeles">
                   <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
@@ -480,7 +525,7 @@
                 <div class="contact-channel-icon"><i data-lucide="linkedin"></i></div>
                 <div style="flex-grow: 1;">
                   <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">LinkedIn</div>
-                  <div style="font-weight: 600; color: #fff; font-size: 0.95rem;">linkedin.com/in/arsabot</div>
+                  <div style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem;">linkedin.com/in/arsabot</div>
                 </div>
                 <i data-lucide="external-link" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
               </a>
@@ -490,20 +535,20 @@
                 <div class="contact-channel-icon"><i data-lucide="github"></i></div>
                 <div style="flex-grow: 1;">
                   <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">GitHub Repos</div>
-                  <div style="font-weight: 600; color: #fff; font-size: 0.95rem;">github.com/arsabot</div>
+                  <div style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem;">github.com/arsabot</div>
                 </div>
                 <i data-lucide="external-link" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
               </a>
             </div>
 
             <div style="padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); font-size: 0.85rem; color: var(--text-muted);">
-              🟢 Tiempo promedio de respuesta: &lt; 24 horas.
+              🟢 Tiempo promedio de respuesta: &lt; 2 horas por WhatsApp.
             </div>
           </div>
 
           <!-- Right Contact Form -->
           <form id="contact-form" class="contact-form">
-            <h3 style="font-size: 1.35rem; color: #fff; margin-bottom: 0.5rem;">Enviar un Mensaje</h3>
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">Enviar un Mensaje</h3>
             
             <div class="form-group">
               <label for="form-name" class="form-label">Tu Nombre *</label>
@@ -522,7 +567,7 @@
 
             <div class="form-group">
               <label for="form-message" class="form-label">Mensaje *</label>
-              <textarea id="form-message" class="form-textarea" placeholder="Cuéntame sobre el proyecto, tecnologías o requerimientos..." required></textarea>
+              <textarea id="form-message" class="form-textarea" placeholder="Cuéntame sobre el proyecto, requerimientos o tecnologías..." required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">
@@ -536,15 +581,26 @@
   </main>
 
   <!-- ========================================================================
+       PERSISTENT FLOATING WHATSAPP BUTTON
+       ======================================================================== -->
+  <a href="https://wa.me/5491135094661?text=Hola%20Ariel,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <div class="whatsapp-float-icon">
+      <i data-lucide="message-circle" style="width: 22px; height: 22px;"></i>
+    </div>
+    <span>WhatsApp</span>
+    <span class="whatsapp-float-badge"></span>
+  </a>
+
+  <!-- ========================================================================
        FOOTER
        ======================================================================== -->
   <footer class="footer">
     <div class="container footer-content">
       <div>
-        <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 0.25rem;">
-          Ariel — Fullstack Software Engineer
+        <div style="font-weight: 700; color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.25rem;">
+          Ariel Saavedra — Fullstack Software Engineer
         </div>
-        <p style="font-size: 0.875rem;">Diseñado y construido con precisión técnica y moderna.</p>
+        <p style="font-size: 0.875rem;">Diseñado y construido con precisión técnica, TypeScript & Cyber Violet Aesthetics.</p>
       </div>
 
       <div style="display: flex; align-items: center; gap: 1rem;">
@@ -562,7 +618,7 @@
   <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true">
     <div class="modal-card">
       <div class="modal-header">
-        <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">Detalles de Arquitectura</span>
+        <span style="font-weight: 700; font-size: 1.1rem; color: var(--text-primary);">Detalles de Arquitectura</span>
         <button id="modal-close-btn" class="modal-close-btn" aria-label="Cerrar modal">
           <i data-lucide="x" style="width: 20px; height: 20px;"></i>
         </button>

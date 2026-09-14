@@ -23,9 +23,10 @@ body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
-/* Background Ambient Glows & Grid Pattern */
+/* Background Ambient Glows & Violet Mesh Grid */
 body::before {
   content: '';
   position: fixed;
@@ -34,14 +35,15 @@ body::before {
   width: 100vw;
   height: 100vh;
   background-image: 
-    radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 85% 60%, rgba(6, 182, 212, 0.10) 0%, transparent 40%),
-    radial-gradient(circle at 50% 90%, rgba(139, 92, 246, 0.08) 0%, transparent 45%),
-    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    radial-gradient(circle at 15% 20%, var(--ambient-radial-1) 0%, transparent 45%),
+    radial-gradient(circle at 85% 60%, var(--ambient-radial-2) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, var(--ambient-radial-3) 0%, transparent 50%),
+    linear-gradient(var(--ambient-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ambient-grid) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
   pointer-events: none;
   z-index: -1;
+  transition: background var(--transition-normal);
 }
 
 /* Custom Scrollbar */
@@ -64,7 +66,7 @@ body::before {
 }
 
 ::selection {
-  background: rgba(99, 102, 241, 0.4);
+  background: rgba(139, 92, 246, 0.4);
   color: #ffffff;
 }
 
@@ -126,10 +128,10 @@ img {
   align-items: center;
   gap: 0.5rem;
   padding: 0.35rem 1rem;
-  background: rgba(99, 102, 241, 0.12);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-full);
-  color: var(--accent-cyan-light);
+  color: var(--accent-primary-light);
   font-size: 0.825rem;
   font-family: var(--font-mono);
   font-weight: 600;

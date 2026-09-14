@@ -1,22 +1,55 @@
 /**
- * Main Application Orchestrator
+ * Main Application Orchestrator - With Dual Theme (Dark/Light) Switcher
  */
 import { initTypewriter } from './typewriter.js';
 import { initProjects } from './projects.js';
 import { initStats, showToast } from './stats.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Lucide Icons
+  // 1. Theme Management (Dark / Light Mode)
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedTheme = localStorage.getItem('theme-preference') || (prefersDark ? 'dark' : 'dark');
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme-preference', theme);
+
+    if (themeToggleBtn) {
+      const icon = themeToggleBtn.querySelector('i');
+      if (icon) {
+        icon.setAttribute('data-lucide', theme === 'dark' ? 'sun' : 'moon');
+        themeToggleBtn.setAttribute('title', theme === 'dark' ? 'Cambiar a Modo Claro' : 'Cambiar a Modo Oscuro');
+      }
+    }
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  }
+
+  // Initial Theme Application
+  applyTheme(savedTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const nextTheme = current === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme);
+      showToast(`Modo ${nextTheme === 'dark' ? 'Oscuro' : 'Claro'} activado`, nextTheme === 'dark' ? 'moon' : 'sun');
+    });
+  }
+
+  // 2. Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
   }
 
-  // 2. Initialize Subsystems
+  // 3. Initialize Subsystems
   initTypewriter();
   initProjects();
   initStats();
 
-  // 3. Header Scroll Glassmorphism
+  // 4. Header Scroll Glassmorphism
   const header = document.querySelector('.header');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
@@ -26,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. ScrollSpy & Navigation Links
+  // 5. ScrollSpy & Navigation Links
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
@@ -49,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', updateActiveNav);
 
-  // 5. Mobile Drawer Toggle
+  // 6. Mobile Drawer Toggle
   const mobileToggle = document.getElementById('mobile-toggle');
   const mobileDrawer = document.getElementById('mobile-drawer');
 
@@ -65,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Skills Category Filter Matrix
+  // 7. Skills Category Filter Matrix
   const skillTabs = document.querySelectorAll('.skill-filter-tab');
   const skillCards = document.querySelectorAll('.skill-card');
 
@@ -88,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Contact Form Submission
+  // 8. Contact Form Submission
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -103,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simulate sending
+      // Direct mailto fallback or Simulated sending
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
       submitBtn.disabled = true;
@@ -118,8 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
         if (window.lucide) window.lucide.createIcons();
-        showToast('¡Mensaje enviado con éxito! Te responderé a la brevedad.', 'check-circle');
-      }, 1000);
+        showToast('¡Mensaje enviado con éxito! Te responderé a rodrigonasaavedra@gmail.com a la brevedad.', 'check-circle');
+      }, 900);
     });
   }
 });
