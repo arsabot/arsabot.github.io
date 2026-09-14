@@ -115,6 +115,25 @@ export const projectsData = [
       'Diseño ultra liviano con mínimo consumo de CPU/memoria en macOS.'
     ],
     architecture: `macOS Window Manager ───[System Event Listeners]───> Dynamic Island Floating View Component`
+  },
+  {
+    id: 'lingua',
+    title: 'Lingua — Profesora Virtual de Idiomas con IA & AWS Serverless',
+    category: 'fullstack',
+    categoryLabel: 'AI & Cloud Serverless',
+    shortDesc: 'Tutor interactivo de idiomas en tiempo real construido sobre arquitectura AWS Serverless (Lambda, Bedrock / Claude, API Gateway streaming y Web Speech).',
+    tags: ['Node.js 22', 'AWS Lambda', 'Amazon Bedrock', 'Claude AI', 'API Gateway', 'AWS SAM', 'Web Speech API'],
+    githubUrl: 'https://github.com/arsabot/lingua',
+    liveUrl: 'https://5lps0yqk1k.execute-api.us-east-1.amazonaws.com/prod/',
+    accentColor: '#f59e0b',
+    icon: 'languages',
+    highlights: [
+      'Test de nivel automatizado (A1 a C2) con evaluación diagnóstica en vivo.',
+      'Conversación adaptativa con corrección contextual de errores y registro de vocabulario.',
+      'Arquitectura Serverless con respuestas en streaming token por token mediante API Gateway y Lambda.',
+      'Integración con Amazon Bedrock (Claude Haiku) e infraestructura como código con AWS SAM.'
+    ],
+    architecture: `Web Client (Speech API) ───[REST Streaming]───> AWS API Gateway ───> AWS Lambda (Node.js 22) ───> Amazon Bedrock (Claude)`
   }
 ];
 
