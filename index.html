@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ariel — Fullstack Software Engineer & Web Architect | arsabot</title>
+  <meta name="description" content="Portafolio profesional de Ariel (@arsabot). Desarrollador Fullstack especializado en Next.js, React, TypeScript, Python, Django, Supabase y arquitecturas cloud escalables.">
+  <meta name="keywords" content="Ariel, arsabot, Fullstack Developer, Next.js, React, TypeScript, Python, Django, Supabase, PostgreSQL, Portfolio, Software Engineer">
+  <meta name="author" content="Ariel (@arsabot)">
+  
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arsabot.github.io/">
+  <meta property="og:title" content="Ariel — Fullstack Software Engineer & Web Architect">
+  <meta property="og:description" content="Portafolio profesional de Ariel. Desarrollo de software moderno, arquitecturas escalables y diseño web premium.">
+  <meta property="og:image" content="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,14,26,45&height=220&section=header&text=Ariel%20%7C%20Fullstack%20Developer&fontSize=38&fontColor=ffffff">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Devicon CDN for Vector Tech Badges -->
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER / NAVIGATION
+       ======================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Ir al inicio">
+        <div class="brand-icon">A</div>
+        <span class="brand-text">Ariel<span style="color: var(--accent-primary);">.dev</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+          <li><a href="#skills" class="nav-link">Habilidades</a></li>
+          <li><a href="#projects" class="nav-link">Proyectos</a></li>
+          <li><a href="#experience" class="nav-link">Experiencia</a></li>
+          <li><a href="#github-stats" class="nav-link">GitHub Stats</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="display: none; @media(min-width:600px){display:inline-flex;}">
+          <i data-lucide="github" style="width: 16px; height: 16px;"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <span>Hablemos</span>
+          <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
+        </a>
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Abrir menú de navegación">
+          <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <a href="#about" class="nav-link">Sobre Mí</a>
+    <a href="#skills" class="nav-link">Habilidades</a>
+    <a href="#projects" class="nav-link">Proyectos</a>
+    <a href="#experience" class="nav-link">Experiencia</a>
+    <a href="#github-stats" class="nav-link">GitHub Stats</a>
+    <a href="#contact" class="nav-link">Contacto</a>
+    <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="margin-top: 0.5rem;">
+      <i data-lucide="github" style="width: 16px; height: 16px;"></i>
+      <span>Visitar perfil de GitHub</span>
+    </a>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span>Disponible para proyectos & roles Fullstack</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hola, soy Ariel.<br>
+              <span class="hero-gradient">Construyo software</span><br>
+              <span class="typewriter-wrapper">
+                <span id="typewriter-text">Fullstack Developer</span><span class="typewriter-cursor"></span>
+              </span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Desarrollador Fullstack apasionado por diseñar aplicaciones web de alta fidelidad, arquitecturas de backend escalables con Next.js, TypeScript, Django y Supabase, e interfaces de usuario fluidas y accesibles.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
+                <span>Explorar Proyectos</span>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+                <span>Contactar</span>
+              </a>
+            </div>
+
+            <div class="hero-socials">
+              <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono); margin-right: 0.25rem;">CONECTAR:</span>
+              <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                <i data-lucide="github" style="width: 20px; height: 20px;"></i>
+              </a>
+              <a href="https://linkedin.com/in/arsabot" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
+              </a>
+              <a href="mailto:arie19972012@gmail.com" class="social-link" title="Email">
+                <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Terminal Card -->
+          <div class="hero-visual">
+            <div class="terminal-card animate-float">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot red"></span>
+                  <span class="terminal-dot yellow"></span>
+                  <span class="terminal-dot green"></span>
+                </div>
+                <span class="terminal-title">ariel-profile.ts</span>
+                <i data-lucide="terminal" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
+              </div>
+              <div class="terminal-body">
+                <div class="code-line"><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">name</span>: <span class="code-str">'Ariel'</span>,</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">role</span>: <span class="code-str">'Fullstack Software Engineer'</span>,</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">location</span>: <span class="code-str">'Argentina (Remote / Global)'</span>,</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">skills</span>: [</div>
+                <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">'Next.js'</span>, <span class="code-str">'React 19'</span>, <span class="code-str">'TypeScript'</span>,</div>
+                <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">'Python/Django'</span>, <span class="code-str">'Node.js'</span>, <span class="code-str">'PostgreSQL'</span></div>
+                <div class="code-line">&nbsp;&nbsp;],</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">openToWork</span>: <span class="code-keyword">true</span>,</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">deliver</span>: () =&gt; <span class="code-str">'High quality & scalable code 🚀'</span></div>
+                <div class="code-line">};</div>
+                <div class="code-line" style="margin-top: 0.75rem;"><span class="code-comment">// Ready to collaborate and build great software</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         ABOUT / BENTO GRID
+         ====================================================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="user" style="width: 14px; height: 14px;"></i> Trayectoria</span>
+          <h2 class="section-title">Ingeniería sólida con visión de producto</h2>
+          <p class="section-desc">Combino rigor técnico, buenas prácticas y sensibilidad estética para transformar ideas complejas en productos digitales de alto rendimiento.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento Card 1: Bio Story -->
+          <div class="bento-card col-span-2">
+            <div class="card-icon-box">
+              <i data-lucide="code-2" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 class="card-title">Desarrollador Fullstack & Creador de Soluciones</h3>
+            <p style="margin-bottom: 1rem;">
+              Me especializo en el ciclo de vida completo del desarrollo web: desde el modelado relacional de bases de datos y la creación de APIs REST seguras hasta la construcción de interfaces de usuario modernas, accesibles y ultra responsivas.
+            </p>
+            <p>
+              He diseñado e implementado plataformas complejas como <strong>PARKIA</strong> (sistema integral de movilidad y reservas con geolocalización) y <strong>Forge Champions</strong> (portal de masterclasses corporativas para la Fundación Forge).
+            </p>
+
+            <div class="metrics-row">
+              <div class="metric-item">
+                <span class="metric-num" data-target="3" data-suffix="+">0</span>
+                <span class="metric-label">Apps Insignia</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-num" data-target="15" data-suffix="+">0</span>
+                <span class="metric-label">Tecnologías</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-num" data-target="100" data-suffix="%">0</span>
+                <span class="metric-label">Type-Safe & Clean Code</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 2: Principles -->
+          <div class="bento-card">
+            <div class="card-icon-box">
+              <i data-lucide="zap" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 class="card-title">Pilares de Trabajo</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.95rem;">
+              <li style="display: flex; align-items: center; gap: 0.5rem;">
+                <i data-lucide="check" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
+                <span><strong>TypeScript Estricto</strong> en todo el stack.</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;">
+                <i data-lucide="check" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
+                <span><strong>Arquitectura Modular</strong> y testeable.</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;">
+                <i data-lucide="check" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
+                <span><strong>Diseño UI/UX</strong> moderno y fluido.</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;">
+                <i data-lucide="check" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
+                <span><strong>Seguridad & RLS</strong> en base de datos.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SKILLS & TECH MATRIX
+         ====================================================================== -->
+    <section id="skills" class="section" style="background: rgba(14, 20, 36, 0.3);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="cpu" style="width: 14px; height: 14px;"></i> Competencias</span>
+          <h2 class="section-title">Ecosistema & Stack Tecnológico</h2>
+          <p class="section-desc">Herramientas y tecnologías modernas que domino para construir aplicaciones robustas de punta a punta.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-tab skill-filter-tab active" data-skill-filter="all">Todos</button>
+          <button class="filter-tab skill-filter-tab" data-skill-filter="frontend">Frontend</button>
+          <button class="filter-tab skill-filter-tab" data-skill-filter="backend">Backend & APIs</button>
+          <button class="filter-tab skill-filter-tab" data-skill-filter="database">Bases de Datos & Cloud</button>
+          <button class="filter-tab skill-filter-tab" data-skill-filter="tools">Herramientas & DevOps</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrapper"><i class="devicon-nextjs-plain colored"></i></div>
+            <div class="skill-info"><div class="skill-name">Next.js 15</div><div class="skill-role">App Router & SSR</div></div>
+          </div>
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrapper"><i class="devicon-react-original colored"></i></div>
+            <div class="skill-info"><div class="skill-name">React 19</div><div class="skill-role">Hooks & Components</div></div>
+          </div>
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrapper"><i class="devicon-typescript-plain colored"></i></div>
+            <div class="skill-info"><div class="skill-name">TypeScript</div><div class="skill-role">Type-Safety</div></div>
+          </div>
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrapper"><i class="devicon-tailwindcss-original colored"></i></div>
+            <div class="skill-info"><div class="skill-name">Tailwind CSS</div><div class="skill-role">Design System & UI</div></div>
+          </div>
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-icon-wrapper"><i class="devicon-vitejs-plain colored"></i></div>
+            <div class="skill-info"><div class="skill-name">Vite</div><div class="skill-role">Fast Bundler & HMR</div></div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrapper"><i class="devicon-python-plain colored"></i></div>
+            <div class="skill-info"><div class="skill-name">Python</div><div class="skill-role">Data & Backend</div></div>
+          </div>
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrapper"><i class="devicon-django-plain colored"></i></div>
+            <div class="skill-info"><div class="skill-name">Django & DRF</div><div class="skill-role">REST APIs & JWT</div></div>
+          </div>
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrapper"><i class="devicon-nodejs-plain colored"></i></div>
+            <div class="skill-info"><div class="skill-name">Node.js</div><div class="skill-role">Runtime & Services</div></div>
+          </div>
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon-wrapper"><i class="devicon-express-original"></i></div>
+            <div class="skill-info"><div class="skill-name">Express.js</div><div class="skill-role">Microservicios</div></div>
+          </div>
+
+          <!-- Databases & Cloud -->
+          <div class="skill-card" data-category="database">
+            <div class="skill-icon-wrapper"><i class="devicon-postgresql-plain colored"></i></div>
+            <div class="skill-info"><div class="skill-name">PostgreSQL</div><div class="skill-role">Relational DB & RLS</div></div>
+          </div>
+          <div class="skill-card" data-category="database">
+            <div class="skill-icon-wrapper"><i class="devicon-supabase-plain colored"></i></div>
+            <div class="skill-info"><div class="skill-name">Supabase</div><div class="skill-role">Auth, Storage & DB</div></div>
+          </div>
+          <div class="skill-card" data-category="database">
+            <div class="skill-icon-wrapper"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></div>
+            <div class="skill-info"><div class="skill-name">AWS EC2</div><div class="skill-role">Cloud Compute</div></div>
+          </div>
+          <div class="skill-card" data-category="database">
+            <div class="skill-icon-wrapper"><i class="devicon-docker-plain colored"></i></div>
+            <div class="skill-info"><div class="skill-name">Docker</div><div class="skill-role">Containerization</div></div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrapper"><i class="devicon-git-plain colored"></i></div>
+            <div class="skill-info"><div class="skill-name">Git & GitHub</div><div class="skill-role">Version Control & CI</div></div>
+          </div>
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon-wrapper"><i class="devicon-postman-plain colored"></i></div>
+            <div class="skill-info"><div class="skill-name">Postman</div><div class="skill-role">API Testing & Specs</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FEATURED PROJECTS SHOWCASE
+         ====================================================================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="folder-git-2" style="width: 14px; height: 14px;"></i> Portafolio</span>
+          <h2 class="section-title">Proyectos Destacados</h2>
+          <p class="section-desc">Selección de aplicaciones reales desarrolladas con foco en arquitectura, experiencia de usuario y resolución de problemas.</p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-tab project-tab active" data-filter="all">Todos los proyectos</button>
+          <button class="filter-tab project-tab" data-filter="fullstack">Fullstack</button>
+          <button class="filter-tab project-tab" data-filter="frontend">Frontend / UI</button>
+          <button class="filter-tab project-tab" data-filter="backend">Backend / APIs</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="projects-grid" class="projects-grid">
+          <!-- Dynamically populated via projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EXPERIENCE / TIMELINE
+         ====================================================================== -->
+    <section id="experience" class="section" style="background: rgba(14, 20, 36, 0.2);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="milestone" style="width: 14px; height: 14px;"></i> Hitos & Experiencia</span>
+          <h2 class="section-title">Línea de Tiempo Profesional</h2>
+          <p class="section-desc">Evolución continua, proyectos entregados y desarrollo de capacidades avanzadas de ingeniería de software.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <span class="timeline-date">2026 — Presente</span>
+              <h3 class="timeline-role">Lead Fullstack Developer — Proyecto PARKIA</h3>
+              <div class="timeline-org">Plataforma de Movilidad Urbana & Reservas Inteligentes</div>
+              <p style="font-size: 0.95rem;">
+                Diseño integral de arquitectura frontend/backend con React 19, TypeScript, mapas interactivos con Leaflet, backend robusto en Python Django 5 con DRF y autenticación JWT con suite completa de pruebas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <span class="timeline-date">2026</span>
+              <h3 class="timeline-role">Desarrollador Fullstack — Forge Champions</h3>
+              <div class="timeline-org">Fundación Forge • Team 7</div>
+              <p style="font-size: 0.95rem;">
+                Desarrollo del portal interactivo con Next.js 15, integración con Supabase PostgreSQL, políticas de seguridad RLS y despliegue productivo en instancias AWS EC2 mediante PM2.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <span class="timeline-date">2025 — 2026</span>
+              <h3 class="timeline-role">Desarrollador Frontend & Ingesta de Datos</h3>
+              <div class="timeline-org">Informar App & Ecosistemas React</div>
+              <p style="font-size: 0.95rem;">
+                Construcción de dashboards de visualización de datos en tiempo real, optimización de pipelines de bundling con Vite y adopción de herramientas de análisis estático como Oxlint.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         GITHUB STATS & ACTIVITY SHOWCASE
+         ====================================================================== -->
+    <section id="github-stats" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="activity" style="width: 14px; height: 14px;"></i> Open Source & GitHub</span>
+          <h2 class="section-title">Estadísticas & Actividad en Vivo</h2>
+          <p class="section-desc">Métricas dinámicas directamente extraídas de la actividad y repositorios en GitHub (@arsabot).</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; text-align: center; backdrop-filter: blur(16px);">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; align-items: center;">
+              <img src="https://github-readme-stats.vercel.app/api?username=arsabot&show_icons=true&theme=tokyonight&hide_border=true&bg_color=080c14&title_color=6366f1&text_color=94a3b8&icon_color=06b6d4" alt="GitHub Stats Card" style="max-width: 100%; border-radius: 10px;" />
+              <img src="https://github-readme-streak-stats.herokuapp.com/?user=arsabot&theme=tokyonight&hide_border=true&background=080c14&ring=6366f1&fire=ec4899&currStreakLabel=06b6d4" alt="Streak Stats Card" style="max-width: 100%; border-radius: 10px;" />
+            </div>
+            
+            <div style="margin-top: 1.5rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">
+              <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arsabot&layout=compact&theme=tokyonight&hide_border=true&bg_color=080c14&title_color=6366f1&text_color=94a3b8" alt="Top Languages Card" style="margin: 0 auto; max-width: 100%;" />
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <i data-lucide="github" style="width: 16px; height: 16px;"></i>
+                <span>Ver Perfil Completo en GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT SECTION
+         ====================================================================== -->
+    <section id="contact" class="section" style="background: rgba(14, 20, 36, 0.3);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="message-square" style="width: 14px; height: 14px;"></i> Contacto</span>
+          <h2 class="section-title">Hablemos de tu Próximo Proyecto</h2>
+          <p class="section-desc">¿Tienes una propuesta de trabajo, una consulta técnica o deseas crear algo extraordinario? Envíame un mensaje.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Info Card -->
+          <div class="contact-info-card">
+            <div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #fff;">Canales Directos</h3>
+              <p style="margin-bottom: 2rem; font-size: 0.95rem;">
+                Estoy disponible para posiciones full-time, contratos remotos y desarrollo de soluciones a medida.
+              </p>
+
+              <!-- Channel 1: Email -->
+              <div class="contact-channel">
+                <div class="contact-channel-icon"><i data-lucide="mail"></i></div>
+                <div style="flex-grow: 1;">
+                  <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Email Directo</div>
+                  <div style="font-weight: 600; color: #fff; font-size: 0.95rem;">arie19972012@gmail.com</div>
+                </div>
+                <button id="copy-email-btn" class="icon-btn" title="Copiar email al portapapeles">
+                  <i data-lucide="copy" style="width: 16px; height: 16px;"></i>
+                </button>
+              </div>
+
+              <!-- Channel 2: LinkedIn -->
+              <a href="https://linkedin.com/in/arsabot" target="_blank" rel="noopener noreferrer" class="contact-channel">
+                <div class="contact-channel-icon"><i data-lucide="linkedin"></i></div>
+                <div style="flex-grow: 1;">
+                  <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">LinkedIn</div>
+                  <div style="font-weight: 600; color: #fff; font-size: 0.95rem;">linkedin.com/in/arsabot</div>
+                </div>
+                <i data-lucide="external-link" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
+              </a>
+
+              <!-- Channel 3: GitHub -->
+              <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="contact-channel">
+                <div class="contact-channel-icon"><i data-lucide="github"></i></div>
+                <div style="flex-grow: 1;">
+                  <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">GitHub Repos</div>
+                  <div style="font-weight: 600; color: #fff; font-size: 0.95rem;">github.com/arsabot</div>
+                </div>
+                <i data-lucide="external-link" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
+              </a>
+            </div>
+
+            <div style="padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); font-size: 0.85rem; color: var(--text-muted);">
+              🟢 Tiempo promedio de respuesta: &lt; 24 horas.
+            </div>
+          </div>
+
+          <!-- Right Contact Form -->
+          <form id="contact-form" class="contact-form">
+            <h3 style="font-size: 1.35rem; color: #fff; margin-bottom: 0.5rem;">Enviar un Mensaje</h3>
+            
+            <div class="form-group">
+              <label for="form-name" class="form-label">Tu Nombre *</label>
+              <input type="text" id="form-name" class="form-input" placeholder="Ej: Lucas Fernández" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Tu Correo Electrónico *</label>
+              <input type="email" id="form-email" class="form-input" placeholder="lucas@empresa.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Asunto</label>
+              <input type="text" id="form-subject" class="form-input" placeholder="Propuesta de proyecto / Oportunidad laboral" />
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Mensaje *</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Cuéntame sobre el proyecto, tecnologías o requerimientos..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">
+              <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+              <span>Enviar Mensaje</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 0.25rem;">
+          Ariel — Fullstack Software Engineer
+        </div>
+        <p style="font-size: 0.875rem;">Diseñado y construido con precisión técnica y moderna.</p>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="#hero" class="btn btn-secondary btn-sm" title="Volver arriba">
+          <i data-lucide="arrow-up" style="width: 16px; height: 16px;"></i>
+          <span>Volver arriba</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL & TOAST CONTAINERS
+       ======================================================================== -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span style="font-weight: 700; font-size: 1.1rem; color: #fff;">Detalles de Arquitectura</span>
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Cerrar modal">
+          <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+        </button>
+      </div>
+      <div id="modal-dynamic-content" class="modal-body">
+        <!-- Injected via projects.js -->
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
