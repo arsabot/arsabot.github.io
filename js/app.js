@@ -1,12 +1,21 @@
 /**
- * Main Application Orchestrator - With Dual Theme (Dark/Light) Switcher
+ * Main Application Orchestrator - With Dual Theme (Dark/Light) & Bilingual (ES/EN) Switchers
  */
+import { initI18n, getCurrentLang, onLanguageChange } from './i18n.js';
 import { initTypewriter } from './typewriter.js';
 import { initProjects } from './projects.js';
 import { initStats, showToast } from './stats.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Theme Management (Dark / Light Mode)
+  // 1. Initialize i18n
+  initI18n();
+
+  onLanguageChange((lang) => {
+    const msg = lang === 'en' ? 'Language switched to English 🇬🇧' : 'Idioma cambiado a Español 🇪🇸';
+    showToast(msg, 'globe');
+  });
+
+  // 2. Theme Management (Dark / Light Mode)
   const themeToggleBtn = document.getElementById('theme-toggle');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const savedTheme = localStorage.getItem('theme-preference') || (prefersDark ? 'dark' : 'dark');
@@ -19,7 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const icon = themeToggleBtn.querySelector('i');
       if (icon) {
         icon.setAttribute('data-lucide', theme === 'dark' ? 'sun' : 'moon');
-        themeToggleBtn.setAttribute('title', theme === 'dark' ? 'Cambiar a Modo Claro' : 'Cambiar a Modo Oscuro');
+        const titleText = theme === 'dark' 
+          ? (getCurrentLang() === 'en' ? 'Switch to Light Mode' : 'Cambiar a Modo Claro')
+          : (getCurrentLang() === 'en' ? 'Switch to Dark Mode' : 'Cambiar a Modo Oscuro');
+        themeToggleBtn.setAttribute('title', titleText);
       }
     }
     if (window.lucide) {
@@ -35,21 +47,54 @@ document.addEventListener('DOMContentLoaded', () => {
       const current = document.documentElement.getAttribute('data-theme') || 'dark';
       const nextTheme = current === 'dark' ? 'light' : 'dark';
       applyTheme(nextTheme);
-      showToast(`Modo ${nextTheme === 'dark' ? 'Oscuro' : 'Claro'} activado`, nextTheme === 'dark' ? 'moon' : 'sun');
+      const isEn = getCurrentLang() === 'en';
+      const toastText = nextTheme === 'dark' 
+        ? (isEn ? 'Dark Mode activated' : 'Modo Oscuro activado')
+        : (isEn ? 'Light Mode activated' : 'Modo Claro activado');
+      showToast(toastText, nextTheme === 'dark' ? 'moon' : 'sun');
     });
   }
 
-  // 2. Initialize Lucide Icons
+  // 3. Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
   }
 
-  // 3. Initialize Subsystems
+  // 4. Initialize Subsystems
   initTypewriter();
   initProjects();
   initStats();
 
-  // 4. Header Scroll Glassmorphism
+  // 5. CV Dropdown Toggles (Click outside support & Touch support)
+  const cvDropdowns = document.querySelectorAll('.cv-dropdown-wrapper');
+  cvDropdowns.forEach(wrapper => {
+    const trigger = wrapper.querySelector('.cv-dropdown-trigger');
+    if (trigger) {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = wrapper.classList.contains('open');
+        cvDropdowns.forEach(w => w.classList.remove('open'));
+        if (!isOpen) {
+          wrapper.classList.add('open');
+        }
+      });
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.cv-dropdown-wrapper')) {
+      cvDropdowns.forEach(w => w.classList.remove('open'));
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      cvDropdowns.forEach(w => w.classList.remove('open'));
+    }
+  });
+
+  // 6. Header Scroll Glassmorphism
   const header = document.querySelector('.header');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
@@ -59,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 5. ScrollSpy & Navigation Links
+  // 7. ScrollSpy & Navigation Links
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
@@ -82,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', updateActiveNav);
 
-  // 6. Mobile Drawer Toggle
+  // 8. Mobile Drawer Toggle
   const mobileToggle = document.getElementById('mobile-toggle');
   const mobileDrawer = document.getElementById('mobile-drawer');
 
@@ -91,14 +136,14 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileDrawer.classList.toggle('open');
     });
 
-    mobileDrawer.querySelectorAll('.nav-link').forEach(link => {
+    mobileDrawer.querySelectorAll('.nav-link, .cv-dropdown-item, .lang-btn').forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.classList.remove('open');
       });
     });
   }
 
-  // 7. Skills Category Filter Matrix
+  // 9. Skills Category Filter Matrix
   const skillTabs = document.querySelectorAll('.skill-filter-tab');
   const skillCards = document.querySelectorAll('.skill-card');
 
@@ -121,19 +166,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 8. Real Contact Form Submission (via FormSubmit API to rodrigonasaavedra@gmail.com)
+  // 10. Copy Email Button
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText('rodrigonasaavedra@gmail.com').then(() => {
+        const isEn = getCurrentLang() === 'en';
+        showToast(isEn ? 'Email copied to clipboard!' : '¡Email copiado al portapapeles!', 'copy');
+      });
+    });
+  }
+
+  // 11. Real Contact Form Submission (via FormSubmit API to rodrigonasaavedra@gmail.com)
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
+      const isEn = getCurrentLang() === 'en';
       const name = document.getElementById('form-name').value.trim();
       const email = document.getElementById('form-email').value.trim();
       const subject = document.getElementById('form-subject')?.value.trim() || 'Contacto desde Portafolio Web';
       const message = document.getElementById('form-message').value.trim();
 
       if (!name || !email || !message) {
-        showToast('Por favor, completa todos los campos requeridos.', 'alert-circle');
+        showToast(isEn ? 'Please fill in all required fields.' : 'Por favor, completa todos los campos requeridos.', 'alert-circle');
         return;
       }
 
@@ -142,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = `
         <i data-lucide="loader" class="animate-spin" style="width: 18px; height: 18px;"></i>
-        Enviando correo real...
+        ${isEn ? 'Sending email...' : 'Enviando correo real...'}
       `;
       if (window.lucide) window.lucide.createIcons();
 
@@ -167,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (response.ok || result.success === "true" || result.success === true) {
           contactForm.reset();
-          showToast('¡Mensaje enviado con éxito a mi casilla! Te responderé pronto.', 'check-circle');
+          showToast(isEn ? 'Message sent successfully! I will reply soon.' : '¡Mensaje enviado con éxito a mi casilla! Te responderé pronto.', 'check-circle');
         } else if (result.message && result.message.includes('Activation')) {
           showToast('Por favor, activa tu correo en el email que te envió FormSubmit.', 'mail');
         } else {
@@ -179,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mailtoUrl = `mailto:rodrigonasaavedra@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`De: ${name} (${email})\n\nMensaje:\n${message}`)}`;
         window.location.href = mailtoUrl;
         contactForm.reset();
-        showToast('Abriendo tu cliente de correo...', 'mail');
+        showToast(isEn ? 'Opening your email client...' : 'Abriendo tu cliente de correo...', 'mail');
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;

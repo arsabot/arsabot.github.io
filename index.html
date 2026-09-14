@@ -30,10 +30,10 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Stylesheets (with cache buster) -->
-  <link rel="stylesheet" href="css/variables.css?v=3.5">
-  <link rel="stylesheet" href="css/base.css?v=3.5">
-  <link rel="stylesheet" href="css/components.css?v=3.5">
-  <link rel="stylesheet" href="css/animations.css?v=3.5">
+  <link rel="stylesheet" href="css/variables.css?v=3.6">
+  <link rel="stylesheet" href="css/base.css?v=3.6">
+  <link rel="stylesheet" href="css/components.css?v=3.6">
+  <link rel="stylesheet" href="css/animations.css?v=3.6">
 </head>
 <body>
 
@@ -58,29 +58,62 @@
 
       <nav>
         <ul class="nav-menu">
-          <li><a href="#about" class="nav-link">Sobre Mí</a></li>
-          <li><a href="#skills" class="nav-link">Habilidades</a></li>
-          <li><a href="#projects" class="nav-link">Proyectos</a></li>
-          <li><a href="#experience" class="nav-link">Experiencia</a></li>
-          <li><a href="#github-stats" class="nav-link">GitHub Stats</a></li>
-          <li><a href="#contact" class="nav-link">Contacto</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre Mí</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Habilidades</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Proyectos</a></li>
+          <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experiencia</a></li>
+          <li><a href="#github-stats" class="nav-link" data-i18n="nav.stats">GitHub Stats</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
+        <!-- Language Switcher Pill (ES / EN) -->
+        <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
+          <button class="lang-btn active" data-lang="es" title="Español">ES</button>
+          <button class="lang-btn" data-lang="en" title="English">EN</button>
+        </div>
+
         <!-- Theme Toggle Switcher (Dark / Light) -->
         <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo claro y oscuro" title="Cambiar tema">
           <i data-lucide="sun" style="width: 20px; height: 20px;"></i>
         </button>
 
-        <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="display: none; @media(min-width:600px){display:inline-flex;}">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          <span>GitHub</span>
-        </a>
+        <!-- CV Download Dropdown in Nav -->
+        <div class="cv-dropdown-wrapper">
+          <button class="btn btn-secondary btn-sm cv-dropdown-trigger" aria-label="Descargar CV" title="Descargar CV">
+            <i data-lucide="file-text" style="width: 15px; height: 15px; color: var(--accent-primary);"></i>
+            <span data-i18n="nav.cv">CV</span>
+            <i data-lucide="chevron-down" style="width: 13px; height: 13px; opacity: 0.7;"></i>
+          </button>
+          <div class="cv-dropdown-menu">
+            <div class="cv-dropdown-header" data-i18n="hero.cvSub">PDF • Rodrigo Saavedra</div>
+            <a href="assets/cv-rodrigo-saavedra-es.pdf" download="CV-Rodrigo-Saavedra-ES.pdf" class="cv-dropdown-item">
+              <span class="cv-flag">🇪🇸</span>
+              <div class="cv-item-details">
+                <span class="cv-item-title" data-i18n="nav.cvEs">Español (PDF)</span>
+                <span class="cv-item-sub" data-i18n="nav.cvEsSub">Versión completa</span>
+              </div>
+              <span class="cv-item-badge">ES</span>
+            </a>
+            <a href="assets/cv-rodrigo-saavedra-en.pdf" download="CV-Rodrigo-Saavedra-EN.pdf" class="cv-dropdown-item">
+              <span class="cv-flag">🇬🇧</span>
+              <div class="cv-item-details">
+                <span class="cv-item-title" data-i18n="nav.cvEn">English (PDF)</span>
+                <span class="cv-item-sub" data-i18n="nav.cvEnSub">Full version</span>
+              </div>
+              <span class="cv-item-badge">EN</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- WhatsApp Quick Talk Button -->
         <a href="https://wa.me/5491135094661?text=Hola%20Ariel,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-          <span>Hablemos</span>
+          <span data-i18n="nav.talk">Hablemos</span>
           <i data-lucide="arrow-up-right" style="width: 16px; height: 16px;"></i>
         </a>
+
+        <!-- Mobile Drawer Toggle -->
         <button id="mobile-toggle" class="mobile-toggle" aria-label="Abrir menú de navegación">
           <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
         </button>
@@ -90,19 +123,39 @@
 
   <!-- Mobile Drawer -->
   <div id="mobile-drawer" class="mobile-drawer">
-    <a href="#about" class="nav-link">Sobre Mí</a>
-    <a href="#skills" class="nav-link">Habilidades</a>
-    <a href="#projects" class="nav-link">Proyectos</a>
-    <a href="#experience" class="nav-link">Experiencia</a>
-    <a href="#github-stats" class="nav-link">GitHub Stats</a>
-    <a href="#contact" class="nav-link">Contacto</a>
+    <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-subtle); margin-bottom: 0.5rem;">
+      <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted); font-family: var(--font-mono);">IDIOMA / LANGUAGE:</span>
+      <div class="lang-switcher" role="group">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+
+    <a href="#about" class="nav-link" data-i18n="nav.about">Sobre Mí</a>
+    <a href="#skills" class="nav-link" data-i18n="nav.skills">Habilidades</a>
+    <a href="#projects" class="nav-link" data-i18n="nav.projects">Proyectos</a>
+    <a href="#experience" class="nav-link" data-i18n="nav.experience">Experiencia</a>
+    <a href="#github-stats" class="nav-link" data-i18n="nav.stats">GitHub Stats</a>
+    <a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a>
+
+    <div style="margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+      <a href="assets/cv-rodrigo-saavedra-es.pdf" download="CV-Rodrigo-Saavedra-ES.pdf" class="btn btn-secondary btn-sm" style="justify-content: flex-start; gap: 0.6rem;">
+        <span>🇪🇸</span>
+        <span data-i18n="hero.cvEsTitle">Descargar CV en Español (PDF)</span>
+      </a>
+      <a href="assets/cv-rodrigo-saavedra-en.pdf" download="CV-Rodrigo-Saavedra-EN.pdf" class="btn btn-secondary btn-sm" style="justify-content: flex-start; gap: 0.6rem;">
+        <span>🇬🇧</span>
+        <span data-i18n="hero.cvEnTitle">Download CV in English (PDF)</span>
+      </a>
+    </div>
+
     <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="margin-top: 0.25rem;">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-      <span>Perfil de GitHub</span>
+      <span data-i18n="nav.githubProfile">Perfil de GitHub</span>
     </a>
     <a href="https://wa.me/5491135094661" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="margin-top: 0.25rem;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-      <span>Contactar por WhatsApp</span>
+      <span data-i18n="nav.whatsapp">Contactar por WhatsApp</span>
     </a>
   </div>
 
@@ -123,49 +176,78 @@
               <div style="display: flex; flex-direction: column; gap: 0.4rem;">
                 <div class="status-pill">
                   <span class="status-dot"></span>
-                  <span>Disponible para proyectos & roles</span>
+                  <span data-i18n="hero.status">Disponible para proyectos & roles</span>
                 </div>
                 <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">Ariel Saavedra (@arsabot)</span>
               </div>
             </div>
 
             <h1 class="hero-title">
-              Hola, soy Ariel.<br>
-              <span class="hero-gradient">Fullstack Software Engineer</span>
+              <span data-i18n="hero.greeting">Hola, soy Ariel.</span><br>
+              <span class="hero-gradient" data-i18n="hero.role">Fullstack Software Engineer</span>
             </h1>
 
             <!-- 100% Fixed-Height Typewriter Pill (Zero CLS / Zero Layout Shifting) -->
             <div class="hero-typewriter-pill">
               <span class="typewriter-label">
                 <i data-lucide="terminal" style="width: 16px; height: 16px; color: var(--accent-secondary);"></i>
-                <span>Stack & Focus:</span>
+                <span data-i18n="hero.focusLabel">Stack & Focus:</span>
               </span>
               <span class="typewriter-text-slot">
                 <span id="typewriter-text">Next.js 15 & React 19</span><span class="typewriter-cursor"></span>
               </span>
             </div>
 
-            <p class="hero-subtitle">
-              Desarrollador Fullstack apasionado por diseñar aplicaciones web de alta fidelidad, plataformas SaaS interactivas (*Invitely*, *PARKIA*), herramientas de IA y arquitecturas de backend escalables con Next.js, React, TypeScript, Python y Supabase.
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+              Desarrollador Fullstack apasionado por diseñar aplicaciones web de alta fidelidad, plataformas SaaS interactivas (<em>Invitely</em>, <em>PARKIA</em>), herramientas de IA y arquitecturas de backend escalables con Next.js, React, TypeScript, Python y Supabase.
             </p>
 
             <div class="hero-actions">
               <a href="#projects" class="btn btn-primary">
                 <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
-                <span>Explorar Proyectos</span>
+                <span data-i18n="hero.btnProjects">Explorar Proyectos</span>
               </a>
+
+              <!-- CV Dropdown Button in Hero -->
+              <div class="cv-dropdown-wrapper hero-cv-dropdown">
+                <button class="btn btn-secondary cv-dropdown-trigger" style="border-color: rgba(139, 92, 246, 0.4);">
+                  <i data-lucide="file-text" style="width: 18px; height: 18px; color: var(--accent-primary);"></i>
+                  <span data-i18n="hero.btnCV">Descargar CV</span>
+                  <i data-lucide="chevron-down" style="width: 16px; height: 16px; opacity: 0.7;"></i>
+                </button>
+                <div class="cv-dropdown-menu">
+                  <div class="cv-dropdown-header" data-i18n="hero.cvSub">PDF • Rodrigo Saavedra</div>
+                  <a href="assets/cv-rodrigo-saavedra-es.pdf" download="CV-Rodrigo-Saavedra-ES.pdf" class="cv-dropdown-item">
+                    <span class="cv-flag">🇪🇸</span>
+                    <div class="cv-item-details">
+                      <span class="cv-item-title" data-i18n="hero.cvEsTitle">Descargar en Español</span>
+                      <span class="cv-item-sub">PDF • Versión oficial</span>
+                    </div>
+                    <span class="cv-item-badge">ES</span>
+                  </a>
+                  <a href="assets/cv-rodrigo-saavedra-en.pdf" download="CV-Rodrigo-Saavedra-EN.pdf" class="cv-dropdown-item">
+                    <span class="cv-flag">🇬🇧</span>
+                    <div class="cv-item-details">
+                      <span class="cv-item-title" data-i18n="hero.cvEnTitle">Download in English</span>
+                      <span class="cv-item-sub">PDF • Official version</span>
+                    </div>
+                    <span class="cv-item-badge">EN</span>
+                  </a>
+                </div>
+              </div>
+
               <a href="https://wa.me/5491135094661?text=Hola%20Ariel,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="border-color: rgba(37, 211, 102, 0.4);">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="#25d366"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                <span>WhatsApp Directo</span>
+                <span data-i18n="hero.btnWhatsapp">WhatsApp Directo</span>
               </a>
               <a href="#contact" class="btn btn-secondary">
                 <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
-                <span>Email</span>
+                <span data-i18n="hero.btnEmail">Email</span>
               </a>
             </div>
 
             <div class="hero-socials">
-              <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono); margin-right: 0.25rem;">CONECTAR:</span>
+              <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono); margin-right: 0.25rem;" data-i18n="hero.connect">CONECTAR:</span>
               <a href="https://wa.me/5491135094661" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp (+54 9 11 3509-4661)">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#25d366"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
               </a>
@@ -195,7 +277,7 @@
               </div>
               <div class="terminal-body">
                 <div class="code-line"><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</div>
-                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">name</span>: <span class="code-str">'Ariel Saavedra'</span>,</div>
+                <div class="code-line">&nbsp;&nbsp;<span class="code-fn">name</span>: <span class="code-str">'Rodrigo Ariel Saavedra'</span>,</div>
                 <div class="code-line">&nbsp;&nbsp;<span class="code-fn">role</span>: <span class="code-str">'Fullstack Software Engineer'</span>,</div>
                 <div class="code-line">&nbsp;&nbsp;<span class="code-fn">contact</span>: {</div>
                 <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-fn">email</span>: <span class="code-str">'rodrigonasaavedra@gmail.com'</span>,</div>
@@ -219,9 +301,9 @@
     <section id="about" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i data-lucide="user" style="width: 14px; height: 14px;"></i> Trayectoria</span>
-          <h2 class="section-title">Ingeniería sólida con visión de producto</h2>
-          <p class="section-desc">Combino rigor técnico, buenas prácticas y sensibilidad estética para transformar ideas complejas en productos digitales de alto rendimiento.</p>
+          <span class="section-tag"><i data-lucide="user" style="width: 14px; height: 14px;"></i> <span data-i18n="about.tag">Trayectoria</span></span>
+          <h2 class="section-title" data-i18n="about.title">Ingeniería sólida con visión de producto</h2>
+          <p class="section-desc" data-i18n="about.desc">Combino rigor técnico, buenas prácticas y sensibilidad estética para transformar ideas complejas en productos digitales de alto rendimiento.</p>
         </div>
 
         <div class="bento-grid">
@@ -230,26 +312,26 @@
             <div class="card-icon-box">
               <i data-lucide="code-2" style="width: 24px; height: 24px;"></i>
             </div>
-            <h3 class="card-title">Desarrollador Fullstack & Creador de Soluciones</h3>
-            <p style="margin-bottom: 1rem;">
+            <h3 class="card-title" data-i18n="about.card1Title">Desarrollador Fullstack & Creador de Soluciones</h3>
+            <p style="margin-bottom: 1rem;" data-i18n="about.card1P1">
               Me especializo en el ciclo de vida completo del desarrollo de software: desde el modelado de bases de datos relacionales y diseño de APIs robustas hasta la construcción de interfaces de usuario modernas, interactivas y con animaciones fluidas.
             </p>
-            <p>
+            <p data-i18n="about.card1P2">
               He diseñado e implementado plataformas como <strong>Invitely</strong> (SaaS de invitaciones digitales y gestión de eventos), <strong>PARKIA</strong> (movilidad urbana y reservas con geolocalización), herramientas de <strong>Inteligencia Artificial & OCR</strong> y <strong>Forge Champions</strong>.
             </p>
 
             <div class="metrics-row">
               <div class="metric-item">
                 <span class="metric-num" data-target="5" data-suffix="+">0</span>
-                <span class="metric-label">Apps Insignia</span>
+                <span class="metric-label" data-i18n="about.metric1Label">Apps Insignia</span>
               </div>
               <div class="metric-item">
                 <span class="metric-num" data-target="15" data-suffix="+">0</span>
-                <span class="metric-label">Tecnologías</span>
+                <span class="metric-label" data-i18n="about.metric2Label">Tecnologías</span>
               </div>
               <div class="metric-item">
                 <span class="metric-num" data-target="100" data-suffix="%">0</span>
-                <span class="metric-label">Type-Safe & Clean Code</span>
+                <span class="metric-label" data-i18n="about.metric3Label">Type-Safe & Clean Code</span>
               </div>
             </div>
           </div>
@@ -259,23 +341,23 @@
             <div class="card-icon-box">
               <i data-lucide="zap" style="width: 24px; height: 24px;"></i>
             </div>
-            <h3 class="card-title">Pilares de Trabajo</h3>
+            <h3 class="card-title" data-i18n="about.card2Title">Pilares de Trabajo</h3>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.95rem;">
               <li style="display: flex; align-items: center; gap: 0.5rem;">
                 <i data-lucide="check" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
-                <span><strong>TypeScript Estricto</strong> en todo el stack.</span>
+                <span data-i18n="about.pillar1"><strong>TypeScript Estricto</strong> en todo el stack.</span>
               </li>
               <li style="display: flex; align-items: center; gap: 0.5rem;">
                 <i data-lucide="check" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
-                <span><strong>Integración de IA & LLMs</strong> en producción.</span>
+                <span data-i18n="about.pillar2"><strong>Integración de IA & LLMs</strong> en producción.</span>
               </li>
               <li style="display: flex; align-items: center; gap: 0.5rem;">
                 <i data-lucide="check" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
-                <span><strong>Diseño UI/UX</strong> moderno y fluido.</span>
+                <span data-i18n="about.pillar3"><strong>Diseño UI/UX</strong> moderno y fluido.</span>
               </li>
               <li style="display: flex; align-items: center; gap: 0.5rem;">
                 <i data-lucide="check" style="width: 16px; height: 16px; color: var(--accent-emerald);"></i>
-                <span><strong>Seguridad & RLS</strong> en base de datos.</span>
+                <span data-i18n="about.pillar4"><strong>Seguridad & RLS</strong> en base de datos.</span>
               </li>
             </ul>
           </div>
@@ -289,18 +371,18 @@
     <section id="skills" class="section" style="background: rgba(139, 92, 246, 0.03);">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i data-lucide="cpu" style="width: 14px; height: 14px;"></i> Competencias</span>
-          <h2 class="section-title">Ecosistema & Stack Tecnológico</h2>
-          <p class="section-desc">Herramientas y tecnologías modernas que domino para construir aplicaciones robustas de punta a punta.</p>
+          <span class="section-tag"><i data-lucide="cpu" style="width: 14px; height: 14px;"></i> <span data-i18n="skills.tag">Competencias</span></span>
+          <h2 class="section-title" data-i18n="skills.title">Ecosistema & Stack Tecnológico</h2>
+          <p class="section-desc" data-i18n="skills.desc">Herramientas y tecnologías modernas que domino para construir aplicaciones robustas de punta a punta.</p>
         </div>
 
         <!-- Filter Tabs -->
         <div class="filter-tabs">
-          <button class="filter-tab skill-filter-tab active" data-skill-filter="all">Todos</button>
-          <button class="filter-tab skill-filter-tab" data-skill-filter="frontend">Frontend</button>
-          <button class="filter-tab skill-filter-tab" data-skill-filter="backend">Backend & APIs</button>
-          <button class="filter-tab skill-filter-tab" data-skill-filter="database">Bases de Datos & Cloud</button>
-          <button class="filter-tab skill-filter-tab" data-skill-filter="tools">Herramientas & DevOps</button>
+          <button class="filter-tab skill-filter-tab active" data-skill-filter="all" data-i18n="skills.tabAll">Todos</button>
+          <button class="filter-tab skill-filter-tab" data-skill-filter="frontend" data-i18n="skills.tabFront">Frontend</button>
+          <button class="filter-tab skill-filter-tab" data-skill-filter="backend" data-i18n="skills.tabBack">Backend & APIs</button>
+          <button class="filter-tab skill-filter-tab" data-skill-filter="database" data-i18n="skills.tabDb">Bases de Datos & Cloud</button>
+          <button class="filter-tab skill-filter-tab" data-skill-filter="tools" data-i18n="skills.tabTools">Herramientas & DevOps</button>
         </div>
 
         <!-- Skills Grid -->
@@ -382,17 +464,17 @@
     <section id="projects" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i data-lucide="folder-git-2" style="width: 14px; height: 14px;"></i> Portafolio</span>
-          <h2 class="section-title">Proyectos Destacados</h2>
-          <p class="section-desc">Selección de aplicaciones reales desarrolladas con foco en arquitectura, experiencia de usuario y resolución de problemas.</p>
+          <span class="section-tag"><i data-lucide="folder-git-2" style="width: 14px; height: 14px;"></i> <span data-i18n="projects.tag">Portafolio</span></span>
+          <h2 class="section-title" data-i18n="projects.title">Proyectos Destacados</h2>
+          <p class="section-desc" data-i18n="projects.desc">Selección de aplicaciones reales desarrolladas con foco en arquitectura, experiencia de usuario y resolución de problemas.</p>
         </div>
 
         <!-- Category Tabs -->
         <div class="filter-tabs">
-          <button class="filter-tab project-tab active" data-filter="all">Todos los proyectos</button>
-          <button class="filter-tab project-tab" data-filter="fullstack">Fullstack & SaaS</button>
-          <button class="filter-tab project-tab" data-filter="frontend">Frontend / UI</button>
-          <button class="filter-tab project-tab" data-filter="backend">Backend / APIs</button>
+          <button class="filter-tab project-tab active" data-filter="all" data-i18n="projects.tabAll">Todos los proyectos</button>
+          <button class="filter-tab project-tab" data-filter="fullstack" data-i18n="projects.tabFull">Fullstack & SaaS</button>
+          <button class="filter-tab project-tab" data-filter="frontend" data-i18n="projects.tabFront">Frontend / UI</button>
+          <button class="filter-tab project-tab" data-filter="backend" data-i18n="projects.tabBack">Backend / APIs</button>
         </div>
 
         <!-- Projects Grid / Mobile Carousel -->
@@ -423,9 +505,9 @@
     <section id="experience" class="section" style="background: rgba(139, 92, 246, 0.02);">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i data-lucide="milestone" style="width: 14px; height: 14px;"></i> Hitos & Experiencia</span>
-          <h2 class="section-title">Línea de Tiempo Profesional</h2>
-          <p class="section-desc">Evolución continua, proyectos entregados y desarrollo de capacidades avanzadas de ingeniería de software.</p>
+          <span class="section-tag"><i data-lucide="milestone" style="width: 14px; height: 14px;"></i> <span data-i18n="experience.tag">Hitos & Experiencia</span></span>
+          <h2 class="section-title" data-i18n="experience.title">Línea de Tiempo Profesional</h2>
+          <p class="section-desc" data-i18n="experience.desc">Evolución continua, proyectos entregados y desarrollo de capacidades avanzadas de ingeniería de software.</p>
         </div>
 
         <div class="timeline">
@@ -433,10 +515,10 @@
           <div class="timeline-item">
             <span class="timeline-dot"></span>
             <div class="timeline-content">
-              <span class="timeline-date">2026 — Presente</span>
-              <h3 class="timeline-role">Lead Developer — Invitely SaaS</h3>
-              <div class="timeline-org">EventTech & Plataforma de Invitaciones Interactivas</div>
-              <p style="font-size: 0.95rem;">
+              <span class="timeline-date" data-i18n="exp.invitelyDate">2026 — Presente</span>
+              <h3 class="timeline-role" data-i18n="exp.invitelyRole">Lead Developer — Invitely SaaS</h3>
+              <div class="timeline-org" data-i18n="exp.invitelyOrg">EventTech & Plataforma de Invitaciones Interactivas</div>
+              <p style="font-size: 0.95rem;" data-i18n="exp.invitelyDesc">
                 Desarrollo integral con Next.js 15, TypeScript, Supabase, Tailwind CSS y RSVP en tiempo real con optimización de entrega móvil.
               </p>
             </div>
@@ -446,10 +528,10 @@
           <div class="timeline-item">
             <span class="timeline-dot"></span>
             <div class="timeline-content">
-              <span class="timeline-date">2026</span>
-              <h3 class="timeline-role">Lead Fullstack Developer — PARKIA</h3>
-              <div class="timeline-org">Plataforma de Movilidad Urbana & Reservas Inteligentes</div>
-              <p style="font-size: 0.95rem;">
+              <span class="timeline-date" data-i18n="exp.parkiaDate">2026</span>
+              <h3 class="timeline-role" data-i18n="exp.parkiaRole">Lead Fullstack Developer — PARKIA</h3>
+              <div class="timeline-org" data-i18n="exp.parkiaOrg">Plataforma de Movilidad Urbana & Reservas Inteligentes</div>
+              <p style="font-size: 0.95rem;" data-i18n="exp.parkiaDesc">
                 Diseño integral de arquitectura frontend/backend con React 19, TypeScript, mapas interactivos con Leaflet, backend en Python Django 5 con DRF y autenticación JWT.
               </p>
             </div>
@@ -459,24 +541,37 @@
           <div class="timeline-item">
             <span class="timeline-dot"></span>
             <div class="timeline-content">
-              <span class="timeline-date">2026</span>
-              <h3 class="timeline-role">Desarrollador Fullstack — Forge Champions</h3>
-              <div class="timeline-org">Fundación Forge • Team 7</div>
-              <p style="font-size: 0.95rem;">
-                Desarrollo del portal interactivo con Next.js 15, integración con Supabase PostgreSQL, políticas de seguridad RLS y despliegue productivo en instancias AWS EC2 mediante PM2.
+              <span class="timeline-date" data-i18n="exp.forgeDate">2026</span>
+              <h3 class="timeline-role" data-i18n="exp.forgeRole">Desarrollador Fullstack — Forge Champions</h3>
+              <div class="timeline-org" data-i18n="exp.forgeOrg">Fundación Forge • Team 7</div>
+              <p style="font-size: 0.95rem;" data-i18n="exp.forgeDesc">
+                Portal educativo de mentorías corporativas y masterclasses para conectar ejecutivos con jóvenes talentos.
               </p>
             </div>
           </div>
 
-          <!-- Timeline Item 3: Informar & AI Tools -->
+          <!-- Timeline Item 3: Grupo MSA -->
           <div class="timeline-item">
             <span class="timeline-dot"></span>
             <div class="timeline-content">
-              <span class="timeline-date">2025 — 2026</span>
-              <h3 class="timeline-role">Desarrollador Frontend & Herramientas de IA</h3>
-              <div class="timeline-org">Informar App & Lector de Textos Inteligente con OCR</div>
-              <p style="font-size: 0.95rem;">
-                Construcción de herramientas de síntesis neuronal de voz, extracción OCR, streaming de datos en tiempo real y optimización con Vite y Oxlint.
+              <span class="timeline-date" data-i18n="exp.msaDate">Ene 2025 — May 2026</span>
+              <h3 class="timeline-role" data-i18n="exp.msaRole">QA Tester — Grupo MSA</h3>
+              <div class="timeline-org" data-i18n="exp.msaOrg">Sistemas Electorales & Software de Alta Demanda</div>
+              <p style="font-size: 0.95rem;" data-i18n="exp.msaDesc">
+                Seguimiento de incidentes, análisis de Root Cause en código e infraestructura, diagnóstico técnico y colaboración estrecha con desarrollo.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4: Uplive -->
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <span class="timeline-date" data-i18n="exp.upliveDate">2021 — 2023</span>
+              <h3 class="timeline-role" data-i18n="exp.upliveRole">Analista de Soporte IT — Uplive</h3>
+              <div class="timeline-org" data-i18n="exp.upliveOrg">Soporte Técnico Digital & Troubleshooting</div>
+              <p style="font-size: 0.95rem;" data-i18n="exp.upliveDesc">
+                Soporte técnico avanzado, troubleshooting de sistemas, análisis de logs y resolución de incidencias críticas bajo SLA.
               </p>
             </div>
           </div>
@@ -490,9 +585,9 @@
     <section id="github-stats" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i data-lucide="git-branch" style="width: 14px; height: 14px;"></i> Open Source & GitHub</span>
-          <h2 class="section-title">Estadísticas & Ecosistema en GitHub</h2>
-          <p class="section-desc">Métricas consolidadas de actividad, desglose de lenguajes y repositorios públicos del perfil de <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); font-weight: 600;">@arsabot</a>.</p>
+          <span class="section-tag"><i data-lucide="git-branch" style="width: 14px; height: 14px;"></i> <span data-i18n="github.tag">Open Source & GitHub</span></span>
+          <h2 class="section-title" data-i18n="github.title">Estadísticas & Ecosistema en GitHub</h2>
+          <p class="section-desc"><span data-i18n="github.desc">Métricas consolidadas de actividad, desglose de lenguajes y repositorios públicos del perfil de</span> <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); font-weight: 600;">@arsabot</a>.</p>
         </div>
 
         <div class="github-bento-grid">
@@ -501,7 +596,7 @@
             <!-- Card 1: Total Contributions -->
             <div class="github-metric-card">
               <div class="github-metric-header">
-                <span class="github-metric-label">Contribuciones</span>
+                <span class="github-metric-label" data-i18n="github.metric1">Contribuciones</span>
                 <div class="github-metric-icon" style="background: rgba(139, 92, 246, 0.12); color: #8b5cf6;">
                   <i data-lucide="git-commit"></i>
                 </div>
@@ -510,14 +605,14 @@
                 <div class="github-metric-val">
                   <span class="github-metric-num" data-target="268" data-suffix="+">268+</span>
                 </div>
-                <div class="github-metric-sub">Commits, PRs & Reviews anuales</div>
+                <div class="github-metric-sub" data-i18n="github.metric1Sub">Commits, PRs & Reviews anuales</div>
               </div>
             </div>
 
             <!-- Card 2: Public Repositories -->
             <div class="github-metric-card">
               <div class="github-metric-header">
-                <span class="github-metric-label">Repositorios</span>
+                <span class="github-metric-label" data-i18n="github.metric2">Repositorios</span>
                 <div class="github-metric-icon" style="background: rgba(6, 182, 212, 0.12); color: #06b6d4;">
                   <i data-lucide="folder-git-2"></i>
                 </div>
@@ -526,14 +621,14 @@
                 <div class="github-metric-val">
                   <span id="github-public-repos-val" class="github-metric-num" data-target="15" data-suffix="">15</span>
                 </div>
-                <div class="github-metric-sub">Proyectos SaaS, APIs & Frontends</div>
+                <div class="github-metric-sub" data-i18n="github.metric2Sub">Proyectos SaaS, APIs & Frontends</div>
               </div>
             </div>
 
             <!-- Card 3: Commit Streak -->
             <div class="github-metric-card">
               <div class="github-metric-header">
-                <span class="github-metric-label">Racha Activa</span>
+                <span class="github-metric-label" data-i18n="github.metric3">Racha Activa</span>
                 <div class="github-metric-icon" style="background: rgba(236, 72, 153, 0.12); color: #ec4899;">
                   <i data-lucide="flame"></i>
                 </div>
@@ -542,14 +637,14 @@
                 <div class="github-metric-val">
                   <span class="github-metric-num" data-target="2" data-suffix=" d">2 d</span>
                 </div>
-                <div class="github-metric-sub">Mejor racha: 4 días consecutivos</div>
+                <div class="github-metric-sub" data-i18n="github.metric3Sub">Mejor racha: 4 días consecutivos</div>
               </div>
             </div>
 
             <!-- Card 4: Code Quality -->
             <div class="github-metric-card">
               <div class="github-metric-header">
-                <span class="github-metric-label">Calidad & Tests</span>
+                <span class="github-metric-label" data-i18n="github.metric4">Calidad & Tests</span>
                 <div class="github-metric-icon" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
                   <i data-lucide="shield-check"></i>
                 </div>
@@ -558,7 +653,7 @@
                 <div class="github-metric-val">
                   <span class="github-metric-num" data-target="100" data-suffix="%">100%</span>
                 </div>
-                <div class="github-metric-sub">TypeScript estricto & Clean Code</div>
+                <div class="github-metric-sub" data-i18n="github.metric4Sub">TypeScript estricto & Clean Code</div>
               </div>
             </div>
           </div>
@@ -569,7 +664,7 @@
             <div class="github-panel">
               <div class="github-panel-title">
                 <i data-lucide="code-2" style="color: var(--accent-primary);"></i>
-                <span>Lenguajes & Ecosistema Principal</span>
+                <span data-i18n="github.langsTitle">Lenguajes & Ecosistema Principal</span>
               </div>
 
               <!-- Segmented Progress Bar -->
@@ -632,7 +727,7 @@
             <div class="github-panel">
               <div class="github-panel-title">
                 <i data-lucide="zap" style="color: #ec4899;"></i>
-                <span>Actividad & Racha en Vivo</span>
+                <span data-i18n="github.streakTitle">Actividad & Racha en Vivo</span>
               </div>
 
               <div class="streak-wrapper">
@@ -646,7 +741,7 @@
                     <div class="streak-profile-name">Rodrigo Ariel Saavedra</div>
                     <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="streak-profile-handle">@arsabot</a>
                   </div>
-                  <span class="streak-profile-badge"><i data-lucide="check" style="width: 12px; height: 12px;"></i> Activo</span>
+                  <span class="streak-profile-badge"><i data-lucide="check" style="width: 12px; height: 12px;"></i> <span data-i18n="github.activeBadge">Activo</span></span>
                 </div>
               </div>
             </div>
@@ -656,7 +751,7 @@
           <div>
             <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
               <i data-lucide="bookmark" style="width: 16px; height: 16px; color: var(--accent-primary);"></i>
-              <span>Repositorios Públicos Destacados</span>
+              <span data-i18n="github.pinnedTitle">Repositorios Públicos Destacados</span>
             </div>
 
             <div class="github-repos-row">
@@ -741,16 +836,16 @@
           <!-- 4. CTA Banner -->
           <div class="github-cta-banner">
             <div>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">¿Deseas inspeccionar el código fuente y mis contribuciones?</h3>
-              <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Explora todos mis repositorios, commits y pull requests en mi cuenta oficial de GitHub.</p>
+              <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;" data-i18n="github.ctaTitle">¿Deseas inspeccionar el código fuente y mis contribuciones?</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;" data-i18n="github.ctaDesc">Explora todos mis repositorios, commits y pull requests en mi cuenta oficial de GitHub.</p>
             </div>
             <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
               <a href="https://github.com/arsabot" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                <span>Ver Perfil @arsabot</span>
+                <span data-i18n="github.btnProfile">Ver Perfil @arsabot</span>
               </a>
               <a href="https://github.com/arsabot?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
-                <span>Ver Todos los Repositorios</span>
+                <span data-i18n="github.btnRepos">Ver Todos los Repositorios</span>
               </a>
             </div>
           </div>
@@ -764,17 +859,17 @@
     <section id="contact" class="section" style="background: rgba(139, 92, 246, 0.04);">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i data-lucide="message-square" style="width: 14px; height: 14px;"></i> Contacto</span>
-          <h2 class="section-title">Hablemos de tu Próximo Proyecto</h2>
-          <p class="section-desc">¿Tienes una propuesta de trabajo, una consulta técnica o deseas crear algo extraordinario? Conversemos directamente.</p>
+          <span class="section-tag"><i data-lucide="message-square" style="width: 14px; height: 14px;"></i> <span data-i18n="contact.tag">Contacto</span></span>
+          <h2 class="section-title" data-i18n="contact.title">Hablemos de tu Próximo Proyecto</h2>
+          <p class="section-desc" data-i18n="contact.desc">¿Tienes una propuesta de trabajo, una consulta técnica o deseas crear algo extraordinario? Conversemos directamente.</p>
         </div>
 
         <div class="contact-grid">
           <!-- Left Info Card -->
           <div class="contact-info-card">
             <div>
-              <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Canales Directos</h3>
-              <p style="margin-bottom: 2rem; font-size: 0.95rem;">
+              <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);" data-i18n="contact.channelsTitle">Canales Directos</h3>
+              <p style="margin-bottom: 2rem; font-size: 0.95rem;" data-i18n="contact.channelsDesc">
                 Estoy disponible para posiciones full-time, proyectos SaaS, contratos remotos y consultoría técnica.
               </p>
 
@@ -784,7 +879,7 @@
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                 </div>
                 <div class="contact-channel-text">
-                  <div class="contact-channel-label">WhatsApp Directo</div>
+                  <div class="contact-channel-label" data-i18n="hero.btnWhatsapp">WhatsApp Directo</div>
                   <div class="contact-channel-val">+54 9 11 3509-4661</div>
                 </div>
                 <i data-lucide="external-link" style="width: 16px; height: 16px; color: var(--text-muted); flex-shrink: 0;"></i>
@@ -823,7 +918,7 @@
               </a>
             </div>
 
-            <div style="padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); font-size: 0.85rem; color: var(--text-muted);">
+            <div style="padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); font-size: 0.85rem; color: var(--text-muted);" data-i18n="contact.responseTime">
               🟢 Tiempo promedio de respuesta: &lt; 2 horas por WhatsApp.
             </div>
           </div>
@@ -834,31 +929,31 @@
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_next" value="https://arsabot.github.io/#contact">
 
-            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">Enviar un Mensaje</h3>
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;" data-i18n="contact.formTitle">Enviar un Mensaje</h3>
             
             <div class="form-group">
-              <label for="form-name" class="form-label">Tu Nombre *</label>
-              <input type="text" id="form-name" name="name" class="form-input" placeholder="Ej: Lucas Fernández" required />
+              <label for="form-name" class="form-label" data-i18n="contact.nameLabel">Tu Nombre *</label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="Ej: Lucas Fernández" data-i18n-placeholder="contact.namePlaceholder" required />
             </div>
 
             <div class="form-group">
-              <label for="form-email" class="form-label">Tu Correo Electrónico *</label>
-              <input type="email" id="form-email" name="email" class="form-input" placeholder="lucas@empresa.com" required />
+              <label for="form-email" class="form-label" data-i18n="contact.emailLabel">Tu Correo Electrónico *</label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="lucas@empresa.com" data-i18n-placeholder="contact.emailPlaceholder" required />
             </div>
 
             <div class="form-group">
-              <label for="form-subject" class="form-label">Asunto</label>
-              <input type="text" id="form-subject" name="_subject" class="form-input" placeholder="Propuesta de proyecto / Oportunidad laboral" />
+              <label for="form-subject" class="form-label" data-i18n="contact.subjectLabel">Asunto</label>
+              <input type="text" id="form-subject" name="_subject" class="form-input" placeholder="Propuesta de proyecto / Oportunidad laboral" data-i18n-placeholder="contact.subjectPlaceholder" />
             </div>
 
             <div class="form-group">
-              <label for="form-message" class="form-label">Mensaje *</label>
-              <textarea id="form-message" name="message" class="form-textarea" placeholder="Cuéntame sobre el proyecto, requerimientos o tecnologías..." required></textarea>
+              <label for="form-message" class="form-label" data-i18n="contact.messageLabel">Mensaje *</label>
+              <textarea id="form-message" name="message" class="form-textarea" placeholder="Cuéntame sobre el proyecto, requerimientos o tecnologías..." data-i18n-placeholder="contact.messagePlaceholder" required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">
               <i data-lucide="send" style="width: 18px; height: 18px;"></i>
-              <span>Enviar Mensaje</span>
+              <span data-i18n="contact.sendBtn">Enviar Mensaje</span>
             </button>
           </form>
         </div>
@@ -896,13 +991,13 @@
           </div>
           <span style="font-weight: 800; font-size: 1.25rem; letter-spacing: 1px; color: var(--text-primary);">ARSA<span style="color: var(--accent-purple-glow);">.DEV</span></span>
         </div>
-        <p style="font-size: 0.8rem; letter-spacing: 3px; font-weight: 600; text-transform: uppercase; color: var(--text-muted);">PROFESSIONAL WEB DEVELOPMENT</p>
+        <p style="font-size: 0.8rem; letter-spacing: 3px; font-weight: 600; text-transform: uppercase; color: var(--text-muted);" data-i18n="footer.brandSubtitle">PROFESSIONAL WEB DEVELOPMENT</p>
       </div>
 
       <div style="display: flex; align-items: center; gap: 1rem;">
         <a href="#hero" class="btn btn-secondary btn-sm" title="Volver arriba">
           <i data-lucide="arrow-up" style="width: 16px; height: 16px;"></i>
-          <span>Volver arriba</span>
+          <span data-i18n="footer.backTop">Volver arriba</span>
         </a>
       </div>
     </div>
@@ -914,7 +1009,7 @@
   <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true">
     <div class="modal-card">
       <div class="modal-header">
-        <span style="font-weight: 700; font-size: 1.1rem; color: var(--text-primary);">Detalles de Arquitectura</span>
+        <span style="font-weight: 700; font-size: 1.1rem; color: var(--text-primary);" data-i18n="projects.modalTitle">Detalles de Arquitectura</span>
         <button id="modal-close-btn" class="modal-close-btn" aria-label="Cerrar modal">
           <i data-lucide="x" style="width: 20px; height: 20px;"></i>
         </button>
@@ -928,6 +1023,6 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- Scripts (with cache buster) -->
-  <script type="module" src="js/app.js?v=3.5"></script>
+  <script type="module" src="js/app.js?v=3.6"></script>
 </body>
 </html>
