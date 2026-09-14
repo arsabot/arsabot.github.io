@@ -163,11 +163,15 @@ document.addEventListener('DOMContentLoaded', () => {
           })
         });
 
-        if (response.ok) {
+        const result = await response.json();
+
+        if (response.ok || result.success === "true" || result.success === true) {
           contactForm.reset();
           showToast('¡Mensaje enviado con éxito a mi casilla! Te responderé pronto.', 'check-circle');
+        } else if (result.message && result.message.includes('Activation')) {
+          showToast('Por favor, activa tu correo en el email que te envió FormSubmit.', 'mail');
         } else {
-          throw new Error('Error al enviar mediante el servidor.');
+          throw new Error(result.message || 'Error al enviar');
         }
       } catch (err) {
         console.warn('Fallback a mailto activado:', err);

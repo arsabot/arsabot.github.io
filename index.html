@@ -559,27 +559,31 @@
           </div>
 
           <!-- Right Contact Form -->
-          <form id="contact-form" class="contact-form">
+          <form id="contact-form" class="contact-form" action="https://formsubmit.co/rodrigonasaavedra@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://arsabot.github.io/#contact">
+
             <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">Enviar un Mensaje</h3>
             
             <div class="form-group">
               <label for="form-name" class="form-label">Tu Nombre *</label>
-              <input type="text" id="form-name" class="form-input" placeholder="Ej: Lucas Fernández" required />
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="Ej: Lucas Fernández" required />
             </div>
 
             <div class="form-group">
               <label for="form-email" class="form-label">Tu Correo Electrónico *</label>
-              <input type="email" id="form-email" class="form-input" placeholder="lucas@empresa.com" required />
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="lucas@empresa.com" required />
             </div>
 
             <div class="form-group">
               <label for="form-subject" class="form-label">Asunto</label>
-              <input type="text" id="form-subject" class="form-input" placeholder="Propuesta de proyecto / Oportunidad laboral" />
+              <input type="text" id="form-subject" name="_subject" class="form-input" placeholder="Propuesta de proyecto / Oportunidad laboral" />
             </div>
 
             <div class="form-group">
               <label for="form-message" class="form-label">Mensaje *</label>
-              <textarea id="form-message" class="form-textarea" placeholder="Cuéntame sobre el proyecto, requerimientos o tecnologías..." required></textarea>
+              <textarea id="form-message" name="message" class="form-textarea" placeholder="Cuéntame sobre el proyecto, requerimientos o tecnologías..." required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">
@@ -644,6 +648,6 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- Scripts (with cache buster) -->
-  <script type="module" src="js/app.js?v=2.2"></script>
+  <script type="module" src="js/app.js?v=2.3"></script>
 </body>
 </html>
