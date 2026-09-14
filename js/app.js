@@ -127,19 +127,42 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', updateActiveNav);
 
-  // 8. Mobile Drawer Toggle
+  // 8. Mobile Drawer Toggle with Icon Flip & Outside Click Detection
   const mobileToggle = document.getElementById('mobile-toggle');
   const mobileDrawer = document.getElementById('mobile-drawer');
 
   if (mobileToggle && mobileDrawer) {
-    mobileToggle.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('open');
+    const toggleDrawer = (open) => {
+      const isOpen = open !== undefined ? open : !mobileDrawer.classList.contains('open');
+      mobileDrawer.classList.toggle('open', isOpen);
+      const icon = mobileToggle.querySelector('i');
+      if (icon) {
+        icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+        if (window.lucide) window.lucide.createIcons();
+      }
+    };
+
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleDrawer();
     });
 
-    mobileDrawer.querySelectorAll('.nav-link, .cv-dropdown-item, .lang-btn').forEach(link => {
+    mobileDrawer.querySelectorAll('.nav-link, .cv-dropdown-item, .lang-btn, a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileDrawer.classList.remove('open');
+        toggleDrawer(false);
       });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileDrawer.contains(e.target) && !mobileToggle.contains(e.target)) {
+        toggleDrawer(false);
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1120 && mobileDrawer.classList.contains('open')) {
+        toggleDrawer(false);
+      }
     });
   }
 
