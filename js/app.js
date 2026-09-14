@@ -121,14 +121,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 8. Contact Form Submission
+  // 8. Real Contact Form Submission (via FormSubmit API to rodrigonasaavedra@gmail.com)
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
       const name = document.getElementById('form-name').value.trim();
       const email = document.getElementById('form-email').value.trim();
+      const subject = document.getElementById('form-subject')?.value.trim() || 'Contacto desde Portafolio Web';
       const message = document.getElementById('form-message').value.trim();
 
       if (!name || !email || !message) {
@@ -136,23 +137,50 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Direct mailto fallback or Simulated sending
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = `
         <i data-lucide="loader" class="animate-spin" style="width: 18px; height: 18px;"></i>
-        Enviando mensaje...
+        Enviando correo real...
       `;
       if (window.lucide) window.lucide.createIcons();
 
-      setTimeout(() => {
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/rodrigonasaavedra@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            _subject: `[Portafolio] ${subject} - ${name}`,
+            message: message,
+            _template: 'table',
+            _captcha: 'false'
+          })
+        });
+
+        if (response.ok) {
+          contactForm.reset();
+          showToast('¡Mensaje enviado con éxito a mi casilla! Te responderé pronto.', 'check-circle');
+        } else {
+          throw new Error('Error al enviar mediante el servidor.');
+        }
+      } catch (err) {
+        console.warn('Fallback a mailto activado:', err);
+        // Fallback directo a mailto si hay bloqueo de red
+        const mailtoUrl = `mailto:rodrigonasaavedra@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`De: ${name} (${email})\n\nMensaje:\n${message}`)}`;
+        window.location.href = mailtoUrl;
         contactForm.reset();
+        showToast('Abriendo tu cliente de correo...', 'mail');
+      } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
         if (window.lucide) window.lucide.createIcons();
-        showToast('¡Mensaje enviado con éxito! Te responderé a rodrigonasaavedra@gmail.com a la brevedad.', 'check-circle');
-      }, 900);
+      }
     });
   }
 });
