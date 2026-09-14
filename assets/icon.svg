@@ -1,23 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 60 320 280" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
   <defs>
-    <linearGradient id="isoGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4A154B" />
-      <stop offset="40%" stop-color="#7B2CBF" />
-      <stop offset="75%" stop-color="#9D4EDD" />
+    <!-- Background Gradient -->
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#191336" />
+      <stop offset="100%" stop-color="#090714" />
+    </linearGradient>
+
+    <!-- Glowing Violet to Magenta Gradient -->
+    <linearGradient id="favStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#C084FC" />
       <stop offset="100%" stop-color="#E056FD" />
     </linearGradient>
-    <filter id="iconGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
+
+    <filter id="favGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <g filter="url(#iconGlow)">
-    <path stroke="url(#isoGrad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 120 310 L 220 90 L 320 310" />
-    <path stroke="url(#isoGrad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 160 235 L 265 235" />
-    <path stroke="url(#isoGrad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 220 160 L 290 160 C 330 160 330 220 290 220 L 240 220" />
-    <path stroke="url(#isoGrad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 270 220 L 325 310" />
-    <path stroke="url(#isoGrad)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 100 310 L 80 310" />
-    <path stroke="url(#isoGrad)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 340 310 L 360 310" />
+  <!-- Dark Background rounded squircle for maximum contrast in browser tabs -->
+  <rect width="400" height="400" rx="90" fill="url(#favBg)" stroke="#8B5CF6" stroke-width="12" />
+
+  <!-- ARSA Geometric Isotipo in High-Contrast White & Neon Violet -->
+  <g filter="url(#favGlow)" transform="translate(15, 10) scale(0.92)">
+    <!-- Letra A base -->
+    <path stroke="#FFFFFF" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 120 310 L 220 90 L 320 310" />
+
+    <!-- Travesaño tech -->
+    <path stroke="#A78BFA" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 160 235 L 265 235" />
+
+    <!-- Formación R -->
+    <path stroke="#E056FD" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 220 160 L 290 160 C 330 160 330 220 290 220 L 240 220" />
+    <path stroke="#E056FD" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 270 220 L 325 310" />
+
+    <!-- Acentos angulares inferiores -->
+    <path stroke="#A78BFA" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 100 310 L 80 310" />
+    <path stroke="#A78BFA" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 340 310 L 360 310" />
   </g>
 </svg>

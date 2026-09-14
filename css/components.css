@@ -40,18 +40,23 @@
 }
 
 .brand-icon {
-  width: 38px;
-  height: 38px;
-  background: var(--gradient-violet-tech);
-  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  background: #0f0c22;
+  border: 1px solid var(--border-focus);
+  border-radius: 11px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-family: var(--font-mono);
-  font-weight: 800;
-  font-size: 1.1rem;
-  box-shadow: 0 0 15px rgba(139, 92, 246, 0.45);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.brand-icon:hover {
+  border-color: var(--accent-purple-glow);
+  box-shadow: 0 0 20px rgba(192, 132, 252, 0.5);
+  transform: scale(1.05);
 }
 
 .brand-text {
