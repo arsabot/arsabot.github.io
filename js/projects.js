@@ -180,6 +180,80 @@ export function initProjects() {
         openModal(id);
       });
     });
+
+    // Update Mobile Carousel Dots
+    updateCarouselDots(filtered.length);
+    container.scrollTo({ left: 0, behavior: 'instant' });
+  }
+
+  function updateCarouselDots(total) {
+    const dotsContainer = document.getElementById('proj-carousel-dots');
+    if (!dotsContainer) return;
+    
+    dotsContainer.innerHTML = Array.from({ length: total }, (_, i) => `
+      <span class="carousel-dot ${i === 0 ? 'active' : ''}" data-index="${i}" role="button" aria-label="Ir al proyecto ${i + 1}"></span>
+    `).join('');
+
+    dotsContainer.querySelectorAll('.carousel-dot').forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        const idx = parseInt(e.currentTarget.getAttribute('data-index') || '0', 10);
+        const cards = container.querySelectorAll('.project-card');
+        if (cards[idx]) {
+          cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      });
+    });
+  }
+
+  // Scroll synchronization for active carousel dot
+  let scrollTimeout;
+  container.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const cards = container.querySelectorAll('.project-card');
+      const dots = document.querySelectorAll('#proj-carousel-dots .carousel-dot');
+      if (!cards.length || !dots.length) return;
+
+      const containerRect = container.getBoundingClientRect();
+      const containerCenter = containerRect.left + containerRect.width / 2;
+
+      let closestIdx = 0;
+      let minDistance = Infinity;
+
+      cards.forEach((card, i) => {
+        const cardRect = card.getBoundingClientRect();
+        const cardCenter = cardRect.left + cardRect.width / 2;
+        const distance = Math.abs(containerCenter - cardCenter);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIdx = i;
+        }
+      });
+
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === closestIdx);
+      });
+    }, 40);
+  }, { passive: true });
+
+  // Mobile arrow controls
+  const prevBtn = document.getElementById('proj-prev-btn');
+  const nextBtn = document.getElementById('proj-next-btn');
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      const card = container.querySelector('.project-card');
+      const scrollAmount = card ? card.offsetWidth + 16 : 300;
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      const card = container.querySelector('.project-card');
+      const scrollAmount = card ? card.offsetWidth + 16 : 300;
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
   }
 
   function openModal(projectId) {
