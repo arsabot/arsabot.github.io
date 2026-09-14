@@ -15,10 +15,13 @@
   <meta property="og:description" content="Desarrollo de software moderno, arquitecturas escalables y experiencias de alto impacto.">
   <meta property="og:image" content="assets/profile.jpg">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Montserrat:wght@500;700;800&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Devicon CDN for Vector Tech Badges -->
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
@@ -27,10 +30,10 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Stylesheets (with cache buster) -->
-  <link rel="stylesheet" href="css/variables.css?v=2.1">
-  <link rel="stylesheet" href="css/base.css?v=2.1">
-  <link rel="stylesheet" href="css/components.css?v=2.1">
-  <link rel="stylesheet" href="css/animations.css?v=2.1">
+  <link rel="stylesheet" href="css/variables.css?v=3.0">
+  <link rel="stylesheet" href="css/base.css?v=3.0">
+  <link rel="stylesheet" href="css/components.css?v=3.0">
+  <link rel="stylesheet" href="css/animations.css?v=3.0">
 </head>
 <body>
 
@@ -40,8 +43,24 @@
   <header class="header">
     <div class="container nav-container">
       <a href="#hero" class="nav-brand" aria-label="Ir al inicio">
-        <div class="brand-icon">A</div>
-        <span class="brand-text">Ariel<span style="color: var(--accent-primary);">.dev</span></span>
+        <div class="brand-icon">
+          <svg viewBox="60 60 320 280" width="26" height="26">
+            <defs>
+              <linearGradient id="navBrandGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#7B2CBF" />
+                <stop offset="50%" stop-color="#9D4EDD" />
+                <stop offset="100%" stop-color="#E056FD" />
+              </linearGradient>
+            </defs>
+            <path stroke="url(#navBrandGrad)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 120 310 L 220 90 L 320 310" />
+            <path stroke="url(#navBrandGrad)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 160 235 L 265 235" />
+            <path stroke="url(#navBrandGrad)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 220 160 L 290 160 C 330 160 330 220 290 220 L 240 220" />
+            <path stroke="url(#navBrandGrad)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 270 220 L 325 310" />
+            <path stroke="url(#navBrandGrad)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 100 310 L 80 310" />
+            <path stroke="url(#navBrandGrad)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 340 310 L 360 310" />
+          </svg>
+        </div>
+        <span class="brand-text">ARSA<span style="color: var(--accent-purple-glow);">.DEV</span></span>
       </a>
 
       <nav>
@@ -612,11 +631,21 @@
        ======================================================================== -->
   <footer class="footer">
     <div class="container footer-content">
-      <div>
-        <div style="font-weight: 700; color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.25rem;">
-          Ariel Saavedra — Fullstack Software Engineer
+      <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <div class="brand-icon" style="width: 32px; height: 32px;">
+            <svg viewBox="60 60 320 280" width="20" height="20">
+              <path stroke="#fff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 120 310 L 220 90 L 320 310" />
+              <path stroke="#fff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 160 235 L 265 235" />
+              <path stroke="#fff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 220 160 L 290 160 C 330 160 330 220 290 220 L 240 220" />
+              <path stroke="#fff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 270 220 L 325 310" />
+              <path stroke="#fff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 100 310 L 80 310" />
+              <path stroke="#fff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 340 310 L 360 310" />
+            </svg>
+          </div>
+          <span style="font-weight: 800; font-size: 1.25rem; letter-spacing: 1px; color: var(--text-primary);">ARSA<span style="color: var(--accent-purple-glow);">.DEV</span></span>
         </div>
-        <p style="font-size: 0.875rem;">Diseñado y construido con precisión técnica, TypeScript & Cyber Violet Aesthetics.</p>
+        <p style="font-size: 0.8rem; letter-spacing: 3px; font-weight: 600; text-transform: uppercase; color: var(--text-muted);">PROFESSIONAL WEB DEVELOPMENT</p>
       </div>
 
       <div style="display: flex; align-items: center; gap: 1rem;">

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 60 320 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="isoGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A154B" />
+      <stop offset="40%" stop-color="#7B2CBF" />
+      <stop offset="75%" stop-color="#9D4EDD" />
+      <stop offset="100%" stop-color="#E056FD" />
+    </linearGradient>
+    <filter id="iconGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <g filter="url(#iconGlow)">
+    <path stroke="url(#isoGrad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 120 310 L 220 90 L 320 310" />
+    <path stroke="url(#isoGrad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 160 235 L 265 235" />
+    <path stroke="url(#isoGrad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 220 160 L 290 160 C 330 160 330 220 290 220 L 240 220" />
+    <path stroke="url(#isoGrad)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 270 220 L 325 310" />
+    <path stroke="url(#isoGrad)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 100 310 L 80 310" />
+    <path stroke="url(#isoGrad)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none" d="M 340 310 L 360 310" />
+  </g>
+</svg>
