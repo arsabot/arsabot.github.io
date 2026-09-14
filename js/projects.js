@@ -11,7 +11,7 @@ export const projectsData = [
     shortDesc: 'Plataforma integral para crear, personalizar y enviar invitaciones interactivas con RSVP en tiempo real, gestión de listas de invitados y animaciones personalizadas.',
     tags: ['Next.js 15', 'TypeScript', 'Supabase', 'Tailwind CSS', 'PostgreSQL', 'Realtime RSVP', 'Framer Motion'],
     githubUrl: 'https://github.com/arsabot/invitely',
-    liveUrl: 'https://arsabot.github.io/#projects',
+    liveUrl: 'https://invitely-delta-dun.vercel.app/login',
     accentColor: '#a855f7',
     icon: 'sparkles',
     highlights: [
