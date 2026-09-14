@@ -1,22 +1,23 @@
 /**
- * Typewriter Effect for Hero Title / Role - Zero Layout Shift
+ * Typewriter Effect for Hero Typewriter Pill - 100% Zero Layout Shift
  */
 export function initTypewriter() {
   const targetElement = document.getElementById('typewriter-text');
   if (!targetElement) return;
 
   const words = [
-    'Fullstack Developer',
-    'Next.js & React Expert',
-    'Python & Django Engineer',
-    'Cloud & APIs Architect',
-    'UI/UX & Web Creator'
+    'Next.js 15 & React 19',
+    'Python & Django 5',
+    'TypeScript & REST APIs',
+    'Supabase & PostgreSQL',
+    'AI Tools & Web Apps',
+    'Invitely & PARKIA SaaS'
   ];
 
   let wordIndex = 0;
   let charIndex = words[0].length;
-  let isDeleting = true; // start after initial display
-  let typingSpeed = 2000;
+  let isDeleting = true;
+  let typingSpeed = 2200;
 
   function type() {
     const currentWord = words[wordIndex];
@@ -24,27 +25,26 @@ export function initTypewriter() {
     if (isDeleting) {
       charIndex--;
       targetElement.textContent = charIndex > 0 ? currentWord.substring(0, charIndex) : '\u00A0';
-      typingSpeed = 45;
+      typingSpeed = 35;
     } else {
       charIndex++;
       targetElement.textContent = currentWord.substring(0, charIndex);
-      typingSpeed = 85;
+      typingSpeed = 75;
     }
 
     if (!isDeleting && charIndex === currentWord.length) {
-      // Pause at end of word
-      typingSpeed = 2400;
+      // Pause when full word is typed
+      typingSpeed = 2200;
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       wordIndex = (wordIndex + 1) % words.length;
-      typingSpeed = 400;
+      typingSpeed = 350;
     }
 
     setTimeout(type, typingSpeed);
   }
 
-  // Initial delay
+  // Start animation loop
   setTimeout(type, typingSpeed);
 }
-

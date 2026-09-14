@@ -26,11 +26,11 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/animations.css">
+  <!-- Stylesheets (with cache buster) -->
+  <link rel="stylesheet" href="css/variables.css?v=2.1">
+  <link rel="stylesheet" href="css/base.css?v=2.1">
+  <link rel="stylesheet" href="css/components.css?v=2.1">
+  <link rel="stylesheet" href="css/animations.css?v=2.1">
 </head>
 <body>
 
@@ -115,13 +115,19 @@
 
             <h1 class="hero-title">
               Hola, soy Ariel.<br>
-              <span class="hero-gradient">Construyo software</span>
-              <span class="typewriter-line">
-                <span class="typewriter-wrapper">
-                  <span id="typewriter-text">Fullstack Developer</span><span class="typewriter-cursor"></span>
-                </span>
-              </span>
+              <span class="hero-gradient">Fullstack Software Engineer</span>
             </h1>
+
+            <!-- 100% Fixed-Height Typewriter Pill (Zero CLS / Zero Layout Shifting) -->
+            <div class="hero-typewriter-pill">
+              <span class="typewriter-label">
+                <i data-lucide="terminal" style="width: 16px; height: 16px; color: var(--accent-secondary);"></i>
+                <span>Stack & Focus:</span>
+              </span>
+              <span class="typewriter-text-slot">
+                <span id="typewriter-text">Next.js 15 & React 19</span><span class="typewriter-cursor"></span>
+              </span>
+            </div>
 
             <p class="hero-subtitle">
               Desarrollador Fullstack apasionado por diseñar aplicaciones web de alta fidelidad, plataformas SaaS interactivas (*Invitely*, *PARKIA*), herramientas de IA y arquitecturas de backend escalables con Next.js, React, TypeScript, Python y Supabase.
@@ -633,7 +639,7 @@
 
   <div id="toast-container" class="toast-container"></div>
 
-  <!-- Scripts -->
-  <script type="module" src="js/app.js"></script>
+  <!-- Scripts (with cache buster) -->
+  <script type="module" src="js/app.js?v=2.1"></script>
 </body>
 </html>
