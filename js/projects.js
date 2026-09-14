@@ -11,7 +11,7 @@ export const projectsData = [
     shortDesc: 'Plataforma integral para crear, personalizar y enviar invitaciones interactivas con RSVP en tiempo real, gestión de listas de invitados y animaciones personalizadas.',
     tags: ['Next.js 15', 'TypeScript', 'Supabase', 'Tailwind CSS', 'PostgreSQL', 'Realtime RSVP', 'Framer Motion'],
     githubUrl: 'https://github.com/arsabot/invitely',
-    liveUrl: 'https://invitely-delta-dun.vercel.app/login',
+    liveUrl: 'https://invitely-delta-dun.vercel.app',
     accentColor: '#a855f7',
     icon: 'sparkles',
     highlights: [
@@ -23,14 +23,14 @@ export const projectsData = [
     architecture: `Cliente Next.js 15 (App Router + TypeScript) ───[Server Actions / Realtime]───> Supabase BaaS (PostgreSQL + RLS) ───> CDN Media Storage`
   },
   {
-    id: 'ai-text-reader',
-    title: 'Lector de Textos con Inteligencia Artificial & OCR',
+    id: 'vocalizar-ai',
+    title: 'VocalizAR-AI — Lector de Textos con IA & OCR',
     category: 'fullstack',
     categoryLabel: 'AI & Data Tools',
     shortDesc: 'Herramienta inteligente de accesibilidad y productividad con síntesis de voz neuronal (TTS), extracción OCR de documentos/imágenes y resumen contextual con IA.',
     tags: ['React', 'TypeScript', 'Python', 'FastAPI', 'OpenAI / Gemini API', 'Web Speech API', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/arsabot',
-    liveUrl: 'https://arsabot.github.io/#projects',
+    githubUrl: 'https://github.com/arsabot/VocalizAR-AI',
+    liveUrl: 'https://github.com/arsabot/VocalizAR-AI',
     accentColor: '#8b5cf6',
     icon: 'bot',
     highlights: [
@@ -48,8 +48,8 @@ export const projectsData = [
     categoryLabel: 'Fullstack Platform',
     shortDesc: 'Solución integral de movilidad urbana para conductores y dueños de estacionamientos con geolocalización, reserva en tiempo real y panel analítico.',
     tags: ['React 19', 'TypeScript', 'Django 5', 'Django REST', 'Leaflet', 'Recharts', 'Tailwind CSS', 'JWT'],
-    githubUrl: 'https://github.com/arsabot/parkia',
-    liveUrl: 'https://arsabot.github.io/#projects',
+    githubUrl: 'https://github.com/arsabot/parkia-pescar',
+    liveUrl: 'https://github.com/arsabot/parkia-pescar',
     accentColor: '#38bdf8',
     icon: 'car',
     highlights: [
@@ -68,7 +68,7 @@ export const projectsData = [
     shortDesc: 'Plataforma para la Fundación Forge que conecta a ejecutivos de alto nivel con talento joven mediante masterclasses en vivo, mentorías y registro automatizado.',
     tags: ['Next.js 15', 'React 19', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'AWS EC2', 'PM2'],
     githubUrl: 'https://github.com/arsabot/forge-champions',
-    liveUrl: 'https://arsabot.github.io/#projects',
+    liveUrl: 'https://github.com/arsabot/forge-champions',
     accentColor: '#6366f1',
     icon: 'graduation-cap',
     highlights: [
@@ -81,43 +81,43 @@ export const projectsData = [
   },
   {
     id: 'informar-app',
-    title: 'Informar App — Real-Time Ingestion & Analytics',
+    title: 'InformAR — Datos Abiertos & Finanzas Municipales',
     category: 'frontend',
-    categoryLabel: 'Data & Analytics',
-    shortDesc: 'Dashboard de analítica e ingesta continua de datos con renderizado reactivo de alta velocidad, linting estricto y componentes modulares.',
-    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Oxlint', 'Real-time Streams'],
+    categoryLabel: 'CivicTech & Analytics',
+    shortDesc: 'Plataforma cívica de visualización, análisis y transparencia de presupuestos municipales en Argentina con pipeline ETL, protección anti-SSRF y comparador per cápita.',
+    tags: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS', 'Recharts', 'ETL Pipeline', 'Zod'],
     githubUrl: 'https://github.com/arsabot/informar-app',
-    liveUrl: 'https://arsabot.github.io/#projects',
+    liveUrl: 'https://github.com/arsabot/informar-app',
     accentColor: '#10b981',
     icon: 'bar-chart-2',
     highlights: [
-      'Arquitectura de ingesta de datos con procesamiento en tiempo real.',
-      'Configuración avanzada de Oxlint para auditoría estricta de código y Type-Aware linting.',
-      'Interfaz modular de visualización de métricas con micro-interacciones de alta fluidez.',
-      'Optimización de bundle con Vite para carga ultra rápida (< 0.5s).'
+      'Directorio interactivo de municipios con búsqueda global (⌘K) y fichas de presupuesto por habitante.',
+      'Pipeline ETL con SafeFetcher, protección anti-SSRF, normalización y validación estricta con Zod.',
+      'Simulador ciudadano de destino de tasas e impuestos municipales en tiempo real.',
+      'Trazabilidad directa a boletines oficiales, ordenanzas y reportes RAFAM.'
     ],
-    architecture: `Pipeline de Ingesta (Streams) ───> State Management ───> Dashboard React UI (Vite + Oxlint)`
+    architecture: `Fuentes Oficiales (RAFAM / Boletines) ───[SafeFetcher + Zod Gate]───> SnapshotStore ───> Frontend React 19 + Recharts`
   },
   {
-    id: 'api-gateway',
-    title: 'Enterprise REST & Auth Gateway',
-    category: 'backend',
-    categoryLabel: 'Backend & APIs',
-    shortDesc: 'Microservicio de autenticación, rate limiting y enrutamiento centralizado para ecosistemas distribuidos de aplicaciones web y móviles.',
-    tags: ['Node.js', 'Express', 'JWT', 'Redis', 'Docker', 'PostgreSQL'],
-    githubUrl: 'https://github.com/arsabot',
-    liveUrl: 'https://arsabot.github.io/#projects',
+    id: 'mac-duo',
+    title: 'Mac-Duo — Dynamic Island Effect for MacBook',
+    category: 'frontend',
+    categoryLabel: 'macOS / Desktop UI',
+    shortDesc: 'Aplicación y concepto de interfaz para llevar el efecto interactivo Dynamic Island y notificaciones flotantes de iPhone a la pantalla de MacBook.',
+    tags: ['Swift', 'macOS', 'UI/UX', 'Dynamic Island', 'Desktop App'],
+    githubUrl: 'https://github.com/arsabot/Mac-Duo',
+    liveUrl: 'https://github.com/arsabot/Mac-Duo',
     accentColor: '#ec4899',
-    icon: 'server',
+    icon: 'laptop',
     highlights: [
-      'Control de tráfico y Rate Limiting mediante Redis para protección contra ataques de fuerza bruta.',
-      'Emisión y rotación segura de tokens JWT (Access & Refresh tokens).',
-      'Documentación interactiva OpenAPI / Swagger automatizada.',
-      'Contenedorización lista para producción con Docker Compose y healthchecks.'
+      'Animaciones fluidas adaptadas a la muesca (notch) de las pantallas MacBook.',
+      'Integración con eventos del sistema, reproducción de medios y estado de periféricos.',
+      'Diseño ultra liviano con mínimo consumo de CPU/memoria en macOS.'
     ],
-    architecture: `Client Requests ───> Reverse Proxy / Gateway ───> [Auth Middleware + Rate Limiter] ───> Microservices Layer`
+    architecture: `macOS Window Manager ───[System Event Listeners]───> Dynamic Island Floating View Component`
   }
 ];
+
 
 export function initProjects() {
   const container = document.getElementById('projects-grid');
