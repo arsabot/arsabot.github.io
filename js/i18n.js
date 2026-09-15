@@ -25,9 +25,9 @@ export const translations = {
     // Hero
     'hero.status': 'Disponible para proyectos & roles',
     'hero.greeting': 'Hola, soy Ariel.',
-    'hero.role': 'Fullstack Software Engineer',
+    'hero.role': 'Full Stack Web Developer',
     'hero.focusLabel': 'Stack & Focus:',
-    'hero.subtitle': 'Desarrollador Fullstack apasionado por diseñar aplicaciones web de alta fidelidad, plataformas SaaS interactivas (<em>Invitely</em>, <em>PARKIA</em>), herramientas de IA y arquitecturas de backend escalables con Next.js, React, TypeScript, Python y Supabase.',
+    'hero.subtitle': 'Desarrollador Web Full Stack apasionado por diseñar aplicaciones web de alta fidelidad, plataformas SaaS interactivas (<em>Invitely</em>, <em>PARKIA</em>), herramientas de IA y arquitecturas de backend escalables con Next.js, React, TypeScript, Python y Supabase.',
     'hero.btnProjects': 'Explorar Proyectos',
     'hero.btnCV': 'Descargar CV',
     'hero.btnWhatsapp': 'WhatsApp Directo',
@@ -47,9 +47,9 @@ export const translations = {
 
     // About
     'about.tag': 'Trayectoria',
-    'about.title': 'Ingeniería sólida con visión de producto',
+    'about.title': 'Desarrollo sólido con visión de producto',
     'about.desc': 'Combino rigor técnico, buenas prácticas y sensibilidad estética para transformar ideas complejas en productos digitales de alto rendimiento.',
-    'about.card1Title': 'Desarrollador Fullstack & Creador de Soluciones',
+    'about.card1Title': 'Desarrollador Full Stack & Creador de Soluciones',
     'about.card1P1': 'Me especializo en el ciclo de vida completo del desarrollo de software: desde el modelado de bases de datos relacionales y diseño de APIs robustas hasta la construcción de interfaces de usuario modernas, interactivas y con animaciones fluidas.',
     'about.card1P2': 'He diseñado e implementado plataformas como <strong>Invitely</strong> (SaaS de invitaciones digitales y gestión de eventos), <strong>PARKIA</strong> (movilidad urbana y reservas con geolocalización), herramientas de <strong>Inteligencia Artificial & OCR</strong> y <strong>Forge Champions</strong>.',
     'about.metric1Label': 'Apps Insignia',
@@ -92,7 +92,7 @@ export const translations = {
     // Experience / Timeline
     'experience.tag': 'Hitos & Experiencia',
     'experience.title': 'Línea de Tiempo Profesional',
-    'experience.desc': 'Evolución continua, proyectos entregados y desarrollo de capacidades avanzadas de ingeniería de software.',
+    'experience.desc': 'Evolución continua, proyectos entregados y desarrollo de capacidades avanzadas de software.',
     'exp.invitelyDate': '2026 — Presente',
     'exp.invitelyRole': 'Lead Developer — Invitely SaaS',
     'exp.invitelyOrg': 'EventTech & Plataforma de Invitaciones Interactivas',
@@ -181,9 +181,9 @@ export const translations = {
     // Hero
     'hero.status': 'Available for projects & roles',
     'hero.greeting': "Hi, I'm Ariel.",
-    'hero.role': 'Fullstack Software Engineer',
+    'hero.role': 'Full Stack Web Developer',
     'hero.focusLabel': 'Stack & Focus:',
-    'hero.subtitle': 'Fullstack Software Engineer passionate about crafting high-fidelity web applications, interactive SaaS platforms (<em>Invitely</em>, <em>PARKIA</em>), AI tooling, and scalable backend architectures with Next.js, React, TypeScript, Python, and Supabase.',
+    'hero.subtitle': 'Full Stack Web Developer passionate about crafting high-fidelity web applications, interactive SaaS platforms (<em>Invitely</em>, <em>PARKIA</em>), AI tooling, and scalable backend architectures with Next.js, React, TypeScript, Python, and Supabase.',
     'hero.btnProjects': 'Explore Projects',
     'hero.btnCV': 'Download CV',
     'hero.btnWhatsapp': 'Direct WhatsApp',
@@ -203,11 +203,11 @@ export const translations = {
 
     // About
     'about.tag': 'Background',
-    'about.title': 'Robust engineering with product mindset',
-    'about.desc': 'Combining technical rigor, engineering best practices, and aesthetic sensitivity to build high-performance digital products.',
-    'about.card1Title': 'Fullstack Developer & Solution Creator',
+    'about.title': 'Robust development with product mindset',
+    'about.desc': 'Combining technical rigor, development best practices, and aesthetic sensitivity to build high-performance digital products.',
+    'about.card1Title': 'Full Stack Developer & Solution Creator',
     'about.card1P1': 'I specialize in the full lifecycle of software development: from relational database modeling and robust API design to building modern, interactive, and fluid user interfaces.',
-    'about.card1P2': 'I have designed and engineered platforms such as <strong>Invitely</strong> (digital invitations & event management SaaS), <strong>PARKIA</strong> (smart urban mobility & geolocated reservations), <strong>AI & OCR Tools</strong>, and <strong>Forge Champions</strong>.',
+    'about.card1P2': 'I have designed and built platforms such as <strong>Invitely</strong> (digital invitations & event management SaaS), <strong>PARKIA</strong> (smart urban mobility & geolocated reservations), <strong>AI & OCR Tools</strong>, and <strong>Forge Champions</strong>.',
     'about.metric1Label': 'Flagship Apps',
     'about.metric2Label': 'Technologies',
     'about.metric3Label': 'Type-Safe & Clean Code',
@@ -220,7 +220,7 @@ export const translations = {
     // Skills
     'skills.tag': 'Tech Matrix',
     'skills.title': 'Ecosystem & Tech Stack',
-    'skills.desc': 'Modern tools and technologies I master to engineer resilient end-to-end web applications.',
+    'skills.desc': 'Modern tools and technologies I master to build resilient end-to-end web applications.',
     'skills.tabAll': 'All',
     'skills.tabFront': 'Frontend',
     'skills.tabBack': 'Backend & APIs',
@@ -230,7 +230,7 @@ export const translations = {
     // Projects
     'projects.tag': 'Portfolio',
     'projects.title': 'Featured Projects',
-    'projects.desc': 'Curated selection of real-world applications engineered for architecture, user experience, and problem solving.',
+    'projects.desc': 'Curated selection of real-world applications crafted for architecture, user experience, and problem solving.',
     'projects.tabAll': 'All Projects',
     'projects.tabFull': 'Fullstack & SaaS',
     'projects.tabFront': 'Frontend / UI',
@@ -248,7 +248,7 @@ export const translations = {
     // Experience / Timeline
     'experience.tag': 'Milestones & Career',
     'experience.title': 'Professional Timeline',
-    'experience.desc': 'Continuous evolution, delivered projects, and software engineering capabilities.',
+    'experience.desc': 'Continuous evolution, delivered projects, and software development capabilities.',
     'exp.invitelyDate': '2026 — Present',
     'exp.invitelyRole': 'Lead Developer — Invitely SaaS',
     'exp.invitelyOrg': 'EventTech & Interactive Digital Invitations Platform',
