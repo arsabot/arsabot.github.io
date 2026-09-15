@@ -140,7 +140,7 @@ export const projectsData = [
         'Despliegue y administración continua en AWS EC2 con PM2 para alta disponibilidad.'
       ],
       en: [
-        'Engineered with Next.js 15 App Router and Server Actions for lightning-fast performance and SEO.',
+        'Developed with Next.js 15 App Router and Server Actions for lightning-fast performance and SEO.',
         'Data layer powered by Supabase PostgreSQL with strict Row Level Security (RLS) policies.',
         'Responsive UI optimized for user engagement and corporate masterclass sign-up conversions.',
         'Continuous production deployment on AWS EC2 instances managed via PM2.'
@@ -402,8 +402,8 @@ export function initProjects() {
     const repoBtnText = lang === 'en' ? 'View Repository on GitHub' : 'Ver Repositorio en GitHub';
     const consultBtnText = lang === 'en' ? 'Consult via WhatsApp' : 'Consultar por WhatsApp';
     const waText = lang === 'en' 
-      ? `Hi Ariel, I saw your project ${title} and would like to talk`
-      : `Hola Ariel, vi tu proyecto ${title} y me gustaría conversar`;
+      ? `Hi Rodrigo, I saw your project ${title} and would like to talk`
+      : `Hola Rodrigo, vi tu proyecto ${title} y me gustaría conversar`;
 
     modalContent.innerHTML = `
       <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">

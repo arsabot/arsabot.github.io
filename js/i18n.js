@@ -24,7 +24,7 @@ export const translations = {
 
     // Hero
     'hero.status': 'Disponible para proyectos & roles',
-    'hero.greeting': 'Hola, soy Ariel.',
+    'hero.greeting': 'Hola, soy Rodrigo.',
     'hero.role': 'Full Stack Web Developer',
     'hero.focusLabel': 'Stack & Focus:',
     'hero.subtitle': 'Desarrollador Web Full Stack apasionado por diseñar aplicaciones web de alta fidelidad, plataformas SaaS interactivas (<em>Invitely</em>, <em>PARKIA</em>), herramientas de IA y arquitecturas de backend escalables con Next.js, React, TypeScript, Python y Supabase.',
@@ -180,7 +180,7 @@ export const translations = {
 
     // Hero
     'hero.status': 'Available for projects & roles',
-    'hero.greeting': "Hi, I'm Ariel.",
+    'hero.greeting': "Hi, I'm Rodrigo.",
     'hero.role': 'Full Stack Web Developer',
     'hero.focusLabel': 'Stack & Focus:',
     'hero.subtitle': 'Full Stack Web Developer passionate about crafting high-fidelity web applications, interactive SaaS platforms (<em>Invitely</em>, <em>PARKIA</em>), AI tooling, and scalable backend architectures with Next.js, React, TypeScript, Python, and Supabase.',
