@@ -76,3 +76,18 @@
   -webkit-text-fill-color: transparent;
   animation: shimmer 4s linear infinite;
 }
+
+
+/* ==========================================================================
+   TETRIS AMBIENT BACKGROUND CANVAS
+   ========================================================================== */
+.tetris-bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.9;
+}
