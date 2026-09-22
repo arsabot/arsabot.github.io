@@ -276,12 +276,7 @@ export const projectsData = [
     },
     architecture: `Pipeline de Ingesta (Streams) ───> State Management ───> Dashboard React UI (Vite + Oxlint)`
   },
-  {
-    id: 'vocalizar-ai',
-    title: {
-      es: 'VocalizAR — Lector de Textos con IA & OCR',
-      en: 'VocalizAR — AI Text Reader & Voice OCR Tool'
-    },
+  
     category: 'fullstack',
     categoryLabel: {
       es: 'AI & Data Tools',
@@ -359,7 +354,7 @@ export function initProjects() {
         <article class="project-card fade-in" data-category="${p.category}">
           <div class="project-thumb">
             ${p.image ? `
-              <img src="${p.image}" alt="${title}" class="project-thumb-img" loading="lazy" />
+              <img src="${p.image}" alt="${title}" class="project-thumb-img" decoding="async" />
               <div class="project-thumb-overlay"></div>
             ` : `
               <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, ${p.accentColor}28 0%, var(--bg-secondary) 80%); display: flex; align-items: center; justify-content: center;">

@@ -1044,7 +1044,7 @@ header nav {
 .project-thumb-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 12, 29, 0.1) 0%, rgba(15, 12, 29, 0.75) 100%);
+  background: linear-gradient(180deg, rgba(15, 12, 29, 0.0) 0%, rgba(15, 12, 29, 0.5) 100%);
   pointer-events: none;
   transition: opacity var(--transition-fast);
 }
