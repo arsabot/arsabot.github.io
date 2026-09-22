@@ -1218,6 +1218,30 @@ header nav {
   gap: 1rem;
 }
 
+.timeline-drag-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.timeline-drag-hint.active {
+  color: var(--accent-primary-light);
+  border-color: rgba(139, 92, 246, 0.5);
+  background: rgba(139, 92, 246, 0.15);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.3);
+  transform: scale(1.04);
+}
+
 .timeline-count-badge {
   display: inline-flex;
   align-items: center;
@@ -1278,8 +1302,21 @@ header nav {
   -webkit-overflow-scrolling: touch;
 }
 
-.timeline-track:active {
-  cursor: grabbing;
+.timeline-track:active,
+.timeline-track.is-dragging {
+  cursor: grabbing !important;
+  scroll-snap-type: none !important;
+  scroll-behavior: auto !important;
+}
+
+.timeline-track.is-dragging .timeline-node-card {
+  pointer-events: none;
+  user-select: none;
+}
+
+.timeline-track.is-dragging .timeline-node-circle {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px var(--node-accent, var(--accent-primary));
 }
 
 .timeline-track::-webkit-scrollbar {
