@@ -1,11 +1,11 @@
 /**
  * Main Application Orchestrator - With Dual Theme (Dark/Light) & Bilingual (ES/EN) Switchers
  */
-import { initI18n, getCurrentLang, onLanguageChange } from './i18n.js?v=4.4';
-import { initTypewriter } from './typewriter.js?v=4.4';
-import { initProjects } from './projects.js?v=4.4';
-import { initStats, showToast } from './stats.js?v=4.4';
-import { initHorizontalTimeline } from './timeline.js?v=4.4';
+import { initI18n, getCurrentLang, onLanguageChange } from './i18n.js?v=4.5';
+import { initTypewriter } from './typewriter.js?v=4.5';
+import { initProjects } from './projects.js?v=4.5';
+import { initStats, showToast } from './stats.js?v=4.5';
+import { initHorizontalTimeline } from './timeline.js?v=4.5';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize i18n

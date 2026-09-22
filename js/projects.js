@@ -1,7 +1,7 @@
 /**
  * Projects Data & Showcase Controller - Bilingual ES / EN Support with Real Screenshot Previews
  */
-import { getCurrentLang, onLanguageChange } from './i18n.js';
+import { getCurrentLang, onLanguageChange } from './i18n.js?v=4.5';
 
 export const projectsData = [
   {
@@ -44,7 +44,7 @@ export const projectsData = [
         'Responsive mobile-first experience optimized for direct access from WhatsApp and social shares.'
       ]
     },
-    architecture: `Cliente Next.js 15 (App Router + TypeScript) ───[Server Actions / Realtime]───> Supabase BaaS (PostgreSQL + RLS) ───> CDN Media Storage`
+    architecture: 'Cliente Next.js 15 (App Router + TypeScript) ───[Server Actions / Realtime]───> Supabase BaaS (PostgreSQL + RLS) ───> CDN Media Storage'
   },
   {
     id: 'merlo-participa',
@@ -65,6 +65,9 @@ export const projectsData = [
     githubUrl: 'https://github.com/arsabot/merlo-participa',
     liveUrl: 'https://merlo-participa.vercel.app',
     image: 'assets/projects/merlo-participa.png',
+    gallery: [
+      'assets/projects/merlo-participa.png'
+    ],
     accentColor: '#0ea5e9',
     icon: 'map-pin',
     highlights: {
@@ -81,7 +84,7 @@ export const projectsData = [
         'Admin moderation dashboard with advanced filtering, claim auditing, state transitions, and public visibility control.'
       ]
     },
-    architecture: `Cliente Next.js 16 (App Router + React 19 + Leaflet) ───[REST / Supabase Client]───> Supabase PostgreSQL (RLS) ───> Admin & Citizen Dashboard`
+    architecture: 'Cliente Next.js 16 (App Router + React 19 + Leaflet) ───[REST / Supabase Client]───> Supabase PostgreSQL (RLS) ───> Admin & Citizen Dashboard'
   },
   {
     id: 'worksy',
@@ -122,7 +125,7 @@ export const projectsData = [
         'Dual portal experience for candidates and recruiters with stack, seniority, and remote filters.'
       ]
     },
-    architecture: `Next.js 15 (Framer Motion + SSR) ───[Supabase SSR Client]───> PostgreSQL (17 Tables + RLS) ───> Instant Match Engine`
+    architecture: 'Next.js 15 (Framer Motion + SSR) ───[Supabase SSR Client]───> PostgreSQL (17 Tables + RLS) ───> Instant Match Engine'
   },
   {
     id: 'parkia',
@@ -163,7 +166,7 @@ export const projectsData = [
         'Django 5 backend with JWT authentication, role-based access (driver / admin), and 13-test test suite.'
       ]
     },
-    architecture: `Cliente SPA (React 19 + Vite + TypeScript) ───[REST API / JWT]───> Backend Django 5 (DRF) ───> PostgreSQL / SQLite Database`
+    architecture: 'Cliente SPA (React 19 + Vite + TypeScript) ───[REST API / JWT]───> Backend Django 5 (DRF) ───> PostgreSQL / SQLite Database'
   },
   {
     id: 'vector-ai-studio',
@@ -184,6 +187,9 @@ export const projectsData = [
     githubUrl: 'https://github.com/arsabot/vector-ai-studio',
     liveUrl: 'https://arsabot.github.io/#projects',
     image: 'assets/projects/vector-studio.png',
+    gallery: [
+      'assets/projects/vector-studio.png'
+    ],
     accentColor: '#f59e0b',
     icon: 'palette',
     highlights: {
@@ -200,7 +206,7 @@ export const projectsData = [
         'Production-ready clean SVG export optimized for vector workflows.'
       ]
     },
-    architecture: `Raster Image Ingestion ───[K-Means / Gemini Vision]───> Bézier Curve Tracer ───> Clean SVG DOM Output`
+    architecture: 'Raster Image Ingestion ───[K-Means / Gemini Vision]───> Bézier Curve Tracer ───> Clean SVG DOM Output'
   },
   {
     id: 'forge-champions',
@@ -221,6 +227,9 @@ export const projectsData = [
     githubUrl: 'https://github.com/arsabot/forge-champions',
     liveUrl: 'https://arsabot.github.io/#projects',
     image: 'assets/projects/forge.png',
+    gallery: [
+      'assets/projects/forge.png'
+    ],
     accentColor: '#6366f1',
     icon: 'graduation-cap',
     highlights: {
@@ -237,7 +246,7 @@ export const projectsData = [
         'Continuous production deployment on AWS EC2 instances managed via PM2.'
       ]
     },
-    architecture: `Next.js 15 (SSR + App Router) ───[Server Actions & REST]───> Supabase BaaS (PostgreSQL + RLS) ───> AWS EC2 Production Node`
+    architecture: 'Next.js 15 (SSR + App Router) ───[Server Actions & REST]───> Supabase BaaS (PostgreSQL + RLS) ───> AWS EC2 Production Node'
   },
   {
     id: 'informar-app',
@@ -258,6 +267,9 @@ export const projectsData = [
     githubUrl: 'https://github.com/arsabot/informar-app',
     liveUrl: 'https://arsabot.github.io/#projects',
     image: 'assets/projects/informar.png',
+    gallery: [
+      'assets/projects/informar.png'
+    ],
     accentColor: '#10b981',
     icon: 'bar-chart-2',
     highlights: {
@@ -274,38 +286,7 @@ export const projectsData = [
         'Vite bundle optimization achieving ultra-fast initial page loads (< 0.5s).'
       ]
     },
-    architecture: `Pipeline de Ingesta (Streams) ───> State Management ───> Dashboard React UI (Vite + Oxlint)`
-  },
-  
-    category: 'fullstack',
-    categoryLabel: {
-      es: 'AI & Data Tools',
-      en: 'AI & Data Tools'
-    },
-    shortDesc: {
-      es: 'Aplicación de lectura asistida con síntesis de voz neuronal (TTS), extracción OCR de documentos/imágenes y teleprompter interactivo con modelos avanzados de IA.',
-      en: 'Assisted reading application featuring neural text-to-speech (TTS), OCR document/image extraction, and interactive teleprompter with advanced AI models.'
-    },
-    tags: ['Python', 'React', 'TypeScript', 'FastAPI', 'CosyVoice 3 / TTS', 'OCR', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/arsabot/vocalizar-ai',
-    liveUrl: 'https://arsabot.github.io/#projects',
-    accentColor: '#8b5cf6',
-    icon: 'bot',
-    highlights: {
-      es: [
-        'Extracción y procesamiento óptico de caracteres (OCR) a partir de PDFs, capturas e imágenes escaneadas.',
-        'Generación de resúmenes inteligentes y puntos clave utilizando modelos de lenguaje LLM.',
-        'Síntesis de voz fluida multi-idioma con controles de reproducción y teleprompter sincronizado.',
-        'Arquitectura de API en Python FastAPI con streaming asíncrono de respuestas.'
-      ],
-      en: [
-        'Optical character recognition (OCR) pipeline from PDFs, screenshots, and scanned documents.',
-        'Automated contextual summaries and key takeaways extraction powered by LLM models.',
-        'Fluid multi-language neural voice synthesis with playback controls and synchronized teleprompter.',
-        'Asynchronous Python FastAPI streaming backend architecture.'
-      ]
-    },
-    architecture: `Frontend React (Audio & OCR Interface) ───[Async WebSockets / REST]───> Backend FastAPI (Python) ───> Neural TTS & LLM Inference`
+    architecture: 'Pipeline de Ingesta (Streams) ───> State Management ───> Dashboard React UI (Vite + Oxlint)'
   }
 ];
 
@@ -413,12 +394,13 @@ export function initProjects() {
     if (!dotsContainer) return;
     
     dotsContainer.innerHTML = Array.from({ length: total }, (_, i) => `
-      <span class="carousel-dot ${i === 0 ? 'active' : ''}" data-index="${i}" role="button" aria-label="Ir al proyecto ${i + 1}"></span>
+      <span class="carousel-dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>
     `).join('');
 
-    dotsContainer.querySelectorAll('.carousel-dot').forEach(dot => {
-      dot.addEventListener('click', (e) => {
-        const idx = parseInt(e.currentTarget.getAttribute('data-index') || '0', 10);
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.getAttribute('data-index'), 10);
         const cards = container.querySelectorAll('.project-card');
         if (cards[idx]) {
           cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
@@ -427,38 +409,7 @@ export function initProjects() {
     });
   }
 
-  // Scroll synchronization for active carousel dot
-  let scrollTimeout;
-  container.addEventListener('scroll', () => {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      const cards = container.querySelectorAll('.project-card');
-      const dots = document.querySelectorAll('#proj-carousel-dots .carousel-dot');
-      if (!cards.length || !dots.length) return;
-
-      const containerRect = container.getBoundingClientRect();
-      const containerCenter = containerRect.left + containerRect.width / 2;
-
-      let closestIdx = 0;
-      let minDistance = Infinity;
-
-      cards.forEach((card, i) => {
-        const cardRect = card.getBoundingClientRect();
-        const cardCenter = cardRect.left + cardRect.width / 2;
-        const distance = Math.abs(containerCenter - cardCenter);
-        if (distance < minDistance) {
-          minDistance = distance;
-          closestIdx = i;
-        }
-      });
-
-      dots.forEach((d, i) => {
-        d.classList.toggle('active', i === closestIdx);
-      });
-    }, 40);
-  }, { passive: true });
-
-  // Mobile arrow controls
+  // Mobile Carousel Horizontal Scroll & Buttons
   const prevBtn = document.getElementById('proj-prev-btn');
   const nextBtn = document.getElementById('proj-next-btn');
 
