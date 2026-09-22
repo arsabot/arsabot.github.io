@@ -27,7 +27,7 @@ export const translations = {
     'hero.greeting': 'Hola, soy Rodrigo.',
     'hero.role': 'Full Stack Web Developer',
     'hero.focusLabel': 'Stack & Focus:',
-    'hero.subtitle': 'Desarrollador Web Full Stack apasionado por diseñar aplicaciones web de alta fidelidad, plataformas SaaS interactivas (<em>Invitely</em>, <em>PARKIA</em>), herramientas de IA y arquitecturas de backend escalables con Next.js, React, TypeScript, Python y Supabase.',
+    'hero.subtitle': 'Desarrollador Web Full Stack apasionado por diseñar aplicaciones web de alta fidelidad, plataformas SaaS e iniciativas cívicas (<em>Invitely</em>, <em>Merlo Participa</em>, <em>PARKIA</em>), herramientas de IA y arquitecturas de backend escalables con Next.js, React, TypeScript, Python y Supabase.',
     'hero.btnProjects': 'Explorar Proyectos',
     'hero.btnCV': 'Descargar CV',
     'hero.btnWhatsapp': 'WhatsApp Directo',
@@ -43,7 +43,7 @@ export const translations = {
     'typewriter.3': 'Python, Django 5 & FastAPI',
     'typewriter.4': 'Supabase & PostgreSQL Architect',
     'typewriter.5': 'AI Integration & OCR Tooling',
-    'typewriter.6': 'Invitely & PARKIA SaaS Builder',
+    'typewriter.6': 'Invitely, Merlo Participa & PARKIA SaaS',
 
     // About
     'about.tag': 'Trayectoria',
@@ -51,7 +51,7 @@ export const translations = {
     'about.desc': 'Combino rigor técnico, buenas prácticas y sensibilidad estética para transformar ideas complejas en productos digitales de alto rendimiento.',
     'about.card1Title': 'Desarrollador Full Stack & Creador de Soluciones',
     'about.card1P1': 'Me especializo en el ciclo de vida completo del desarrollo de software: desde el modelado de bases de datos relacionales y diseño de APIs robustas hasta la construcción de interfaces de usuario modernas, interactivas y con animaciones fluidas.',
-    'about.card1P2': 'He diseñado e implementado plataformas como <strong>Invitely</strong> (SaaS de invitaciones digitales y gestión de eventos), <strong>PARKIA</strong> (movilidad urbana y reservas con geolocalización), herramientas de <strong>Inteligencia Artificial & OCR</strong> y <strong>Forge Champions</strong>.',
+    'about.card1P2': 'He diseñado e implementado plataformas como <strong>Invitely</strong> (SaaS de invitaciones digitales), <strong>Merlo Participa</strong> (portal vecinal y gestión cívica con geolocalización), <strong>PARKIA</strong> (movilidad urbana y reservas con geolocalización), herramientas de <strong>Inteligencia Artificial & OCR</strong> y <strong>Forge Champions</strong>.',
     'about.metric1Label': 'Apps Insignia',
     'about.metric2Label': 'Tecnologías',
     'about.metric3Label': 'Type-Safe & Clean Code',
@@ -183,7 +183,7 @@ export const translations = {
     'hero.greeting': "Hi, I'm Rodrigo.",
     'hero.role': 'Full Stack Web Developer',
     'hero.focusLabel': 'Stack & Focus:',
-    'hero.subtitle': 'Full Stack Web Developer passionate about crafting high-fidelity web applications, interactive SaaS platforms (<em>Invitely</em>, <em>PARKIA</em>), AI tooling, and scalable backend architectures with Next.js, React, TypeScript, Python, and Supabase.',
+    'hero.subtitle': 'Full Stack Web Developer passionate about crafting high-fidelity web applications, interactive SaaS platforms and civic solutions (<em>Invitely</em>, <em>Merlo Participa</em>, <em>PARKIA</em>), AI tooling, and scalable backend architectures with Next.js, React, TypeScript, Python, and Supabase.',
     'hero.btnProjects': 'Explore Projects',
     'hero.btnCV': 'Download CV',
     'hero.btnWhatsapp': 'Direct WhatsApp',
@@ -199,7 +199,7 @@ export const translations = {
     'typewriter.3': 'Python, Django 5 & FastAPI',
     'typewriter.4': 'Supabase & PostgreSQL Architect',
     'typewriter.5': 'AI Integration & OCR Tooling',
-    'typewriter.6': 'Invitely & PARKIA SaaS Builder',
+    'typewriter.6': 'Invitely, Merlo Participa & PARKIA SaaS',
 
     // About
     'about.tag': 'Background',
@@ -207,7 +207,7 @@ export const translations = {
     'about.desc': 'Combining technical rigor, development best practices, and aesthetic sensitivity to build high-performance digital products.',
     'about.card1Title': 'Full Stack Developer & Solution Creator',
     'about.card1P1': 'I specialize in the full lifecycle of software development: from relational database modeling and robust API design to building modern, interactive, and fluid user interfaces.',
-    'about.card1P2': 'I have designed and built platforms such as <strong>Invitely</strong> (digital invitations & event management SaaS), <strong>PARKIA</strong> (smart urban mobility & geolocated reservations), <strong>AI & OCR Tools</strong>, and <strong>Forge Champions</strong>.',
+    'about.card1P2': 'I have designed and built platforms such as <strong>Invitely</strong> (digital invitations SaaS), <strong>Merlo Participa</strong> (civic engagement portal & geolocated urban issue tracking), <strong>PARKIA</strong> (smart urban mobility & geolocated reservations), <strong>AI & OCR Tools</strong>, and <strong>Forge Champions</strong>.',
     'about.metric1Label': 'Flagship Apps',
     'about.metric2Label': 'Technologies',
     'about.metric3Label': 'Type-Safe & Clean Code',

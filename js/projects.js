@@ -41,6 +41,43 @@ export const projectsData = [
     architecture: `Cliente Next.js 15 (App Router + TypeScript) ───[Server Actions / Realtime]───> Supabase BaaS (PostgreSQL + RLS) ───> CDN Media Storage`
   },
   {
+    id: 'merlo-participa',
+    title: {
+      es: 'Merlo Participa — Portal Vecinal & Gestión Ciudadana',
+      en: 'Merlo Participa — Civic Engagement & Neighborhood Portal'
+    },
+    category: 'fullstack',
+    categoryLabel: {
+      es: 'CivicTech / SaaS',
+      en: 'CivicTech / SaaS'
+    },
+    shortDesc: {
+      es: 'Plataforma cívica para reporte y seguimiento de problemáticas barriales, reclamos urbanos con mapa interactivo, código de tracking y panel administrativo de moderación municipal.',
+      en: 'Civic platform for reporting and tracking urban issues, neighborhood proposals with interactive maps, tracking codes, and municipal moderation admin panel.'
+    },
+    tags: ['Next.js 16', 'React 19', 'TypeScript', 'Supabase', 'Leaflet', 'Tailwind CSS v4', 'Zod', 'PostgreSQL'],
+    githubUrl: 'https://github.com/arsabot/merlo-participa',
+    liveUrl: 'https://merlo-participa.vercel.app',
+    accentColor: '#0ea5e9',
+    icon: 'map-pin',
+    highlights: {
+      es: [
+        'Sistema de reclamos ciudadanos con categorización dinámica (bacheo, luminarias, arbolado, residuos, seguridad vial) y subida de evidencias.',
+        'Mapeo interactivo con Leaflet & OpenStreetMap para georreferenciación precisa de incidentes en el partido de Merlo.',
+        'Generación de código de seguimiento único alfanumérico para consulta de estados en tiempo real sin fricción.',
+        'Panel administrativo de moderación con filtros avanzados, auditoría de reclamos, cambio de estado y control de visibilidad pública.'
+      ],
+      en: [
+        'Citizen issue reporting system with dynamic categorization (potholes, lighting, trees, waste, traffic) and evidence uploads.',
+        'Interactive Leaflet & OpenStreetMap mapping for precise geolocation of urban incidents across Merlo.',
+        'Unique alphanumeric tracking code generation for frictionless real-time status inquiry and monitoring.',
+        'Admin moderation dashboard with advanced filtering, claim auditing, state transitions, and public visibility control.'
+      ]
+    },
+    architecture: `Cliente Next.js 16 (App Router + React 19 + Leaflet) ───[REST / Supabase Client]───> Supabase PostgreSQL (RLS) ───> Admin & Citizen Dashboard`
+  },
+
+  {
     id: 'vocalizar-ai',
     title: {
       es: 'VocalizAR — Lector de Textos con IA & OCR',
