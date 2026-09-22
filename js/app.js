@@ -5,6 +5,7 @@ import { initI18n, getCurrentLang, onLanguageChange } from './i18n.js';
 import { initTypewriter } from './typewriter.js';
 import { initProjects } from './projects.js';
 import { initStats, showToast } from './stats.js';
+import { initHorizontalTimeline } from './timeline.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize i18n
@@ -64,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypewriter();
   initProjects();
   initStats();
+  initHorizontalTimeline();
 
   // 5. CV Dropdown Toggles (Click outside support & Touch support)
   const cvDropdowns = document.querySelectorAll('.cv-dropdown-wrapper');

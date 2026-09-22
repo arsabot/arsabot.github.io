@@ -30,10 +30,10 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Stylesheets (with cache buster) -->
-  <link rel="stylesheet" href="css/variables.css?v=4.0">
-  <link rel="stylesheet" href="css/base.css?v=4.0">
-  <link rel="stylesheet" href="css/components.css?v=4.0">
-  <link rel="stylesheet" href="css/animations.css?v=4.0">
+  <link rel="stylesheet" href="css/variables.css?v=4.1">
+  <link rel="stylesheet" href="css/base.css?v=4.1">
+  <link rel="stylesheet" href="css/components.css?v=4.1">
+  <link rel="stylesheet" href="css/animations.css?v=4.1">
 </head>
 <body>
 
@@ -499,79 +499,219 @@
     </section>
 
     <!-- ======================================================================
-         EXPERIENCE / TIMELINE
+         EXPERIENCE / HORIZONTAL TIMELINE
          ====================================================================== -->
-    <section id="experience" class="section" style="background: rgba(139, 92, 246, 0.02);">
+    <section id="experience" class="section" style="background: rgba(139, 92, 246, 0.02); overflow: hidden;">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag"><i data-lucide="milestone" style="width: 14px; height: 14px;"></i> <span data-i18n="experience.tag">Hitos & Experiencia</span></span>
-          <h2 class="section-title" data-i18n="experience.title">Línea de Tiempo Profesional</h2>
-          <p class="section-desc" data-i18n="experience.desc">Evolución continua, proyectos entregados y desarrollo de capacidades avanzadas de software.</p>
+        <div class="section-header-flex">
+          <div>
+            <span class="section-tag"><i data-lucide="milestone" style="width: 14px; height: 14px;"></i> <span data-i18n="experience.tag">Hitos & Experiencia</span></span>
+            <h2 class="section-title" data-i18n="experience.title">Línea de Tiempo Profesional</h2>
+            <p class="section-desc" data-i18n="experience.desc">Evolución continua, proyectos entregados y desarrollo de capacidades avanzadas de software.</p>
+          </div>
+
+          <!-- Desktop & Tablet Timeline Navigation Controls -->
+          <div class="timeline-header-controls">
+            <span class="timeline-count-badge">
+              <i data-lucide="layers" style="width: 14px; height: 14px;"></i>
+              <span data-i18n="experience.countBadge">6 Hitos Clave</span>
+            </span>
+            <div class="timeline-nav-arrows">
+              <button class="carousel-nav-btn" id="timeline-prev-btn" aria-label="Hito anterior">
+                <i data-lucide="chevron-left" style="width: 18px; height: 18px;"></i>
+              </button>
+              <button class="carousel-nav-btn" id="timeline-next-btn" aria-label="Siguiente hito">
+                <i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="timeline">
-          <!-- Timeline Item 0: Invitely -->
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <span class="timeline-date" data-i18n="exp.invitelyDate">2026 — Presente</span>
-              <h3 class="timeline-role" data-i18n="exp.invitelyRole">Lead Developer — Invitely SaaS</h3>
-              <div class="timeline-org" data-i18n="exp.invitelyOrg">EventTech & Plataforma de Invitaciones Interactivas</div>
-              <p style="font-size: 0.95rem;" data-i18n="exp.invitelyDesc">
-                Desarrollo integral con Next.js 15, TypeScript, Supabase, Tailwind CSS y RSVP en tiempo real con optimización de entrega móvil.
-              </p>
+        <!-- Horizontal Timeline Track Component -->
+        <div class="timeline-horizontal-container">
+          <!-- Continuous Glowing Line Axis -->
+          <div class="timeline-axis-line"></div>
+
+          <div class="timeline-track" id="timeline-track">
+            <!-- 1. Invitely -->
+            <div class="timeline-node-card" style="--node-accent: #a855f7;">
+              <div class="timeline-node-marker">
+                <div class="timeline-node-circle">
+                  <i data-lucide="sparkles" style="width: 20px; height: 20px;"></i>
+                </div>
+                <span class="timeline-date-pill" data-i18n="exp.invitelyDate">2026 — Presente</span>
+              </div>
+              <div class="timeline-card-content">
+                <div class="timeline-card-badge" style="background: rgba(168, 85, 247, 0.12); color: #c084fc; border-color: rgba(168, 85, 247, 0.3);">
+                  SaaS / EventTech
+                </div>
+                <h3 class="timeline-role" data-i18n="exp.invitelyRole">Lead Developer — Invitely SaaS</h3>
+                <div class="timeline-org">
+                  <i data-lucide="building" style="width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span data-i18n="exp.invitelyOrg">EventTech & Plataforma de Invitaciones</span>
+                </div>
+                <p class="timeline-desc" data-i18n="exp.invitelyDesc">
+                  Desarrollo integral con Next.js 15, TypeScript, Supabase, Tailwind CSS y RSVP en tiempo real con optimización de entrega móvil.
+                </p>
+                <div class="timeline-tech-tags">
+                  <span>Next.js 15</span>
+                  <span>TypeScript</span>
+                  <span>Supabase</span>
+                  <span>Tailwind CSS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Merlo Participa -->
+            <div class="timeline-node-card" style="--node-accent: #0ea5e9;">
+              <div class="timeline-node-marker">
+                <div class="timeline-node-circle">
+                  <i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>
+                </div>
+                <span class="timeline-date-pill" data-i18n="exp.merloDate">2026</span>
+              </div>
+              <div class="timeline-card-content">
+                <div class="timeline-card-badge" style="background: rgba(14, 165, 233, 0.12); color: #38bdf8; border-color: rgba(14, 165, 233, 0.3);">
+                  CivicTech / SaaS
+                </div>
+                <h3 class="timeline-role" data-i18n="exp.merloRole">Lead Fullstack Developer — Merlo Participa</h3>
+                <div class="timeline-org">
+                  <i data-lucide="building" style="width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span data-i18n="exp.merloOrg">Plataforma Cívica & Gestión Comunitaria</span>
+                </div>
+                <p class="timeline-desc" data-i18n="exp.merloDesc">
+                  Desarrollo integral con Next.js 16, React 19, Supabase, mapas con Leaflet, gestión de reclamos con tracking y panel de moderación.
+                </p>
+                <div class="timeline-tech-tags">
+                  <span>Next.js 16</span>
+                  <span>React 19</span>
+                  <span>Leaflet</span>
+                  <span>Supabase</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. PARKIA -->
+            <div class="timeline-node-card" style="--node-accent: #38bdf8;">
+              <div class="timeline-node-marker">
+                <div class="timeline-node-circle">
+                  <i data-lucide="car" style="width: 20px; height: 20px;"></i>
+                </div>
+                <span class="timeline-date-pill" data-i18n="exp.parkiaDate">2026</span>
+              </div>
+              <div class="timeline-card-content">
+                <div class="timeline-card-badge" style="background: rgba(56, 189, 248, 0.12); color: #7dd3fc; border-color: rgba(56, 189, 248, 0.3);">
+                  Smart Mobility
+                </div>
+                <h3 class="timeline-role" data-i18n="exp.parkiaRole">Lead Fullstack Developer — PARKIA</h3>
+                <div class="timeline-org">
+                  <i data-lucide="building" style="width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span data-i18n="exp.parkiaOrg">Movilidad Urbana & Reservas Inteligentes</span>
+                </div>
+                <p class="timeline-desc" data-i18n="exp.parkiaDesc">
+                  Diseño integral de arquitectura frontend/backend con React 19, TypeScript, mapas interactivos con Leaflet, backend en Python Django 5 con DRF y autenticación JWT.
+                </p>
+                <div class="timeline-tech-tags">
+                  <span>React 19</span>
+                  <span>Django 5</span>
+                  <span>DRF</span>
+                  <span>Leaflet</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Forge Champions -->
+            <div class="timeline-node-card" style="--node-accent: #6366f1;">
+              <div class="timeline-node-marker">
+                <div class="timeline-node-circle">
+                  <i data-lucide="graduation-cap" style="width: 20px; height: 20px;"></i>
+                </div>
+                <span class="timeline-date-pill" data-i18n="exp.forgeDate">2026</span>
+              </div>
+              <div class="timeline-card-content">
+                <div class="timeline-card-badge" style="background: rgba(99, 102, 241, 0.12); color: #a5b4fc; border-color: rgba(99, 102, 241, 0.3);">
+                  EdTech
+                </div>
+                <h3 class="timeline-role" data-i18n="exp.forgeRole">Desarrollador Fullstack — Forge Champions</h3>
+                <div class="timeline-org">
+                  <i data-lucide="building" style="width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span data-i18n="exp.forgeOrg">Fundación Forge • Team 7</span>
+                </div>
+                <p class="timeline-desc" data-i18n="exp.forgeDesc">
+                  Portal educativo de mentorías corporativas y masterclasses para conectar ejecutivos con jóvenes talentos.
+                </p>
+                <div class="timeline-tech-tags">
+                  <span>Next.js 15</span>
+                  <span>React 19</span>
+                  <span>Supabase</span>
+                  <span>AWS EC2</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Grupo MSA -->
+            <div class="timeline-node-card" style="--node-accent: #10b981;">
+              <div class="timeline-node-marker">
+                <div class="timeline-node-circle">
+                  <i data-lucide="shield-check" style="width: 20px; height: 20px;"></i>
+                </div>
+                <span class="timeline-date-pill" data-i18n="exp.msaDate">Ene 2025 — May 2026</span>
+              </div>
+              <div class="timeline-card-content">
+                <div class="timeline-card-badge" style="background: rgba(16, 185, 129, 0.12); color: #6ee7b7; border-color: rgba(16, 185, 129, 0.3);">
+                  GovTech & QA
+                </div>
+                <h3 class="timeline-role" data-i18n="exp.msaRole">QA Tester — Grupo MSA</h3>
+                <div class="timeline-org">
+                  <i data-lucide="building" style="width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span data-i18n="exp.msaOrg">Sistemas Electorales & Alta Demanda</span>
+                </div>
+                <p class="timeline-desc" data-i18n="exp.msaDesc">
+                  Seguimiento de incidentes, análisis de Root Cause en código e infraestructura, diagnóstico técnico y colaboración estrecha con desarrollo.
+                </p>
+                <div class="timeline-tech-tags">
+                  <span>RCA Diagnostics</span>
+                  <span>Jira / Agile</span>
+                  <span>SQL</span>
+                  <span>Testing</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Uplive -->
+            <div class="timeline-node-card" style="--node-accent: #f59e0b;">
+              <div class="timeline-node-marker">
+                <div class="timeline-node-circle">
+                  <i data-lucide="headset" style="width: 20px; height: 20px;"></i>
+                </div>
+                <span class="timeline-date-pill" data-i18n="exp.upliveDate">2021 — 2023</span>
+              </div>
+              <div class="timeline-card-content">
+                <div class="timeline-card-badge" style="background: rgba(245, 158, 11, 0.12); color: #fcd34d; border-color: rgba(245, 158, 11, 0.3);">
+                  IT Operations
+                </div>
+                <h3 class="timeline-role" data-i18n="exp.upliveRole">Analista de Soporte IT — Uplive</h3>
+                <div class="timeline-org">
+                  <i data-lucide="building" style="width: 14px; height: 14px; flex-shrink: 0;"></i>
+                  <span data-i18n="exp.upliveOrg">Soporte Digital & Troubleshooting</span>
+                </div>
+                <p class="timeline-desc" data-i18n="exp.upliveDesc">
+                  Soporte técnico avanzado, troubleshooting de sistemas, análisis de logs y resolución de incidencias críticas bajo SLA.
+                </p>
+                <div class="timeline-tech-tags">
+                  <span>Troubleshooting</span>
+                  <span>Networking</span>
+                  <span>Log Analysis</span>
+                  <span>SLA</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Timeline Item 1: PARKIA -->
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <span class="timeline-date" data-i18n="exp.parkiaDate">2026</span>
-              <h3 class="timeline-role" data-i18n="exp.parkiaRole">Lead Fullstack Developer — PARKIA</h3>
-              <div class="timeline-org" data-i18n="exp.parkiaOrg">Plataforma de Movilidad Urbana & Reservas Inteligentes</div>
-              <p style="font-size: 0.95rem;" data-i18n="exp.parkiaDesc">
-                Diseño integral de arquitectura frontend/backend con React 19, TypeScript, mapas interactivos con Leaflet, backend en Python Django 5 con DRF y autenticación JWT.
-              </p>
-            </div>
-          </div>
-
-          <!-- Timeline Item 2: Forge Champions -->
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <span class="timeline-date" data-i18n="exp.forgeDate">2026</span>
-              <h3 class="timeline-role" data-i18n="exp.forgeRole">Desarrollador Fullstack — Forge Champions</h3>
-              <div class="timeline-org" data-i18n="exp.forgeOrg">Fundación Forge • Team 7</div>
-              <p style="font-size: 0.95rem;" data-i18n="exp.forgeDesc">
-                Portal educativo de mentorías corporativas y masterclasses para conectar ejecutivos con jóvenes talentos.
-              </p>
-            </div>
-          </div>
-
-          <!-- Timeline Item 3: Grupo MSA -->
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <span class="timeline-date" data-i18n="exp.msaDate">Ene 2025 — May 2026</span>
-              <h3 class="timeline-role" data-i18n="exp.msaRole">QA Tester — Grupo MSA</h3>
-              <div class="timeline-org" data-i18n="exp.msaOrg">Sistemas Electorales & Software de Alta Demanda</div>
-              <p style="font-size: 0.95rem;" data-i18n="exp.msaDesc">
-                Seguimiento de incidentes, análisis de Root Cause en código e infraestructura, diagnóstico técnico y colaboración estrecha con desarrollo.
-              </p>
-            </div>
-          </div>
-
-          <!-- Timeline Item 4: Uplive -->
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <span class="timeline-date" data-i18n="exp.upliveDate">2021 — 2023</span>
-              <h3 class="timeline-role" data-i18n="exp.upliveRole">Analista de Soporte IT — Uplive</h3>
-              <div class="timeline-org" data-i18n="exp.upliveOrg">Soporte Técnico Digital & Troubleshooting</div>
-              <p style="font-size: 0.95rem;" data-i18n="exp.upliveDesc">
-                Soporte técnico avanzado, troubleshooting de sistemas, análisis de logs y resolución de incidencias críticas bajo SLA.
-              </p>
+          <!-- Bottom Carousel Dots for Mobile & Quick Navigation -->
+          <div class="timeline-bottom-controls">
+            <div class="carousel-dots" id="timeline-carousel-dots">
+              <!-- Dynamically populated via timeline.js -->
             </div>
           </div>
         </div>
@@ -1041,6 +1181,6 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- Scripts (with cache buster) -->
-  <script type="module" src="js/app.js?v=4.0"></script>
+  <script type="module" src="js/app.js?v=4.1"></script>
 </body>
 </html>
