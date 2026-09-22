@@ -1,5 +1,5 @@
 /**
- * Projects Data & Showcase Controller - Bilingual ES / EN Support
+ * Projects Data & Showcase Controller - Bilingual ES / EN Support with Real Screenshot Previews
  */
 import { getCurrentLang, onLanguageChange } from './i18n.js';
 
@@ -22,6 +22,12 @@ export const projectsData = [
     tags: ['Next.js 15', 'TypeScript', 'Supabase', 'Tailwind CSS', 'PostgreSQL', 'Realtime RSVP', 'Framer Motion'],
     githubUrl: 'https://github.com/arsabot/invitely',
     liveUrl: 'https://invitely-delta-dun.vercel.app/login',
+    image: 'assets/projects/invitely.png',
+    gallery: [
+      'assets/projects/invitely.png',
+      'assets/projects/invitely-2.png',
+      'assets/projects/invitely-3.png'
+    ],
     accentColor: '#a855f7',
     icon: 'sparkles',
     highlights: {
@@ -58,6 +64,7 @@ export const projectsData = [
     tags: ['Next.js 16', 'React 19', 'TypeScript', 'Supabase', 'Leaflet', 'Tailwind CSS v4', 'Zod', 'PostgreSQL'],
     githubUrl: 'https://github.com/arsabot/merlo-participa',
     liveUrl: 'https://merlo-participa.vercel.app',
+    image: 'assets/projects/merlo-participa.png',
     accentColor: '#0ea5e9',
     icon: 'map-pin',
     highlights: {
@@ -76,53 +83,57 @@ export const projectsData = [
     },
     architecture: `Cliente Next.js 16 (App Router + React 19 + Leaflet) ───[REST / Supabase Client]───> Supabase PostgreSQL (RLS) ───> Admin & Citizen Dashboard`
   },
-
   {
-    id: 'vocalizar-ai',
+    id: 'worksy',
     title: {
-      es: 'VocalizAR — Lector de Textos con IA & OCR',
-      en: 'VocalizAR — AI Text Reader & Voice OCR Tool'
+      es: 'Worksy — Plataforma de Matching Laboral con Swipe',
+      en: 'Worksy — Swipe-Based Tech Job Matching Platform'
     },
     category: 'fullstack',
     categoryLabel: {
-      es: 'AI & Data Tools',
-      en: 'AI & Data Tools'
+      es: 'HRTech / SaaS',
+      en: 'HRTech / SaaS'
     },
     shortDesc: {
-      es: 'Aplicación de lectura asistida con síntesis de voz neuronal (TTS), extracción OCR de documentos/imágenes y teleprompter interactivo con modelos avanzados de IA.',
-      en: 'Assisted reading application featuring neural text-to-speech (TTS), OCR document/image extraction, and interactive teleprompter with advanced AI models.'
+      es: 'Plataforma interactiva de reclutamiento tech inspirada en swipe con filtros avanzados, chat en tiempo real, validación con Zod y matching instantáneo de entrevistas.',
+      en: 'Interactive tech recruiting platform inspired by swipe mechanics featuring smart filters, real-time chat, Zod validation, and instant interview matching.'
     },
-    tags: ['Python', 'React', 'TypeScript', 'FastAPI', 'CosyVoice 3 / TTS', 'OCR', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/arsabot/vocalizar-ai',
+    tags: ['Next.js 15', 'React 19', 'TypeScript', 'Supabase SSR', 'Framer Motion', 'Tailwind CSS', 'Canvas Confetti'],
+    githubUrl: 'https://github.com/arsabot/worksy',
     liveUrl: 'https://arsabot.github.io/#projects',
-    accentColor: '#8b5cf6',
-    icon: 'bot',
+    image: 'assets/projects/worksy.png',
+    gallery: [
+      'assets/projects/worksy.png',
+      'assets/projects/worksy-2.png'
+    ],
+    accentColor: '#ec4899',
+    icon: 'sparkles',
     highlights: {
       es: [
-        'Extracción y procesamiento óptico de caracteres (OCR) a partir de PDFs, capturas e imágenes escaneadas.',
-        'Generación de resúmenes inteligentes y puntos clave utilizando modelos de lenguaje LLM.',
-        'Síntesis de voz fluida multi-idioma con controles de reproducción y teleprompter sincronizado.',
-        'Arquitectura de API en Python FastAPI con streaming asíncrono de respuestas.'
+        'Física de arrastre y swipe interactivo con rotación proporcional desarrollada en Framer Motion.',
+        'Celebración instantánea de match con efectos dinámicos de confeti y animaciones fluidas a 60fps.',
+        'Esquema relacional en Supabase PostgreSQL con 17 tablas normalizadas y Row Level Security (RLS).',
+        'Panel dual para candidatos y empresas con filtrado por stacks, seniority y modalidades de trabajo.'
       ],
       en: [
-        'Optical character recognition (OCR) pipeline from PDFs, screenshots, and scanned documents.',
-        'Automated contextual summaries and key takeaways extraction powered by LLM models.',
-        'Fluid multi-language neural voice synthesis with playback controls and synchronized teleprompter.',
-        'Asynchronous Python FastAPI streaming backend architecture.'
+        'Interactive card swipe gesture physics with proportional rotation built with Framer Motion.',
+        'Instant match celebration with dynamic particle effects and silky smooth 60fps animations.',
+        'Normalized Supabase PostgreSQL relational schema with 17 tables and strict RLS policies.',
+        'Dual portal experience for candidates and recruiters with stack, seniority, and remote filters.'
       ]
     },
-    architecture: `React SPA (Speech & OCR Visualizer) ───[WebSocket / REST Streaming]───> Python FastAPI Backend ───> CosyVoice & Neural TTS Services`
+    architecture: `Next.js 15 (Framer Motion + SSR) ───[Supabase SSR Client]───> PostgreSQL (17 Tables + RLS) ───> Instant Match Engine`
   },
   {
     id: 'parkia',
     title: {
-      es: 'PARKIA — Smart Parking & Reservation Platform',
-      en: 'PARKIA — Smart Parking & Reservation Platform'
+      es: 'PARKIA — Plataforma Inteligente de Reserva de Estacionamiento',
+      en: 'PARKIA — Smart Parking Reservation Platform'
     },
     category: 'fullstack',
     categoryLabel: {
-      es: 'Fullstack Platform',
-      en: 'Fullstack Platform'
+      es: 'Smart Mobility',
+      en: 'Smart Mobility'
     },
     shortDesc: {
       es: 'Solución integral de movilidad urbana para conductores y dueños de estacionamientos con geolocalización, reserva en tiempo real y panel analítico.',
@@ -131,6 +142,11 @@ export const projectsData = [
     tags: ['React 19', 'TypeScript', 'Django 5', 'Django REST', 'Leaflet', 'Recharts', 'Tailwind CSS', 'JWT'],
     githubUrl: 'https://github.com/arsabot/parkia',
     liveUrl: 'https://arsabot.github.io/#projects',
+    image: 'assets/projects/parkia.png',
+    gallery: [
+      'assets/projects/parkia.png',
+      'assets/projects/parkia-2.png'
+    ],
     accentColor: '#38bdf8',
     icon: 'car',
     highlights: {
@@ -150,6 +166,43 @@ export const projectsData = [
     architecture: `Cliente SPA (React 19 + Vite + TypeScript) ───[REST API / JWT]───> Backend Django 5 (DRF) ───> PostgreSQL / SQLite Database`
   },
   {
+    id: 'vector-ai-studio',
+    title: {
+      es: 'VectorAI Studio — Vectorizador de Imágenes con IA & SVG',
+      en: 'VectorAI Studio — AI Image to SVG Vectorizer'
+    },
+    category: 'frontend',
+    categoryLabel: {
+      es: 'AI Tools / WebApp',
+      en: 'AI Tools / WebApp'
+    },
+    shortDesc: {
+      es: 'Estudio profesional para convertir mapas de bits a gráficos vectoriales SVG limpios con cuantización K-Means, filtros de contornos y vectorización asistida por IA.',
+      en: 'Professional studio to convert raster images into clean, scalable SVG vector graphics with K-Means quantization and AI-assisted vectorization.'
+    },
+    tags: ['React', 'TypeScript', 'Vite', 'Gemini Vision AI', 'ImageTracerJS', 'Tailwind CSS', 'Canvas'],
+    githubUrl: 'https://github.com/arsabot/vector-ai-studio',
+    liveUrl: 'https://arsabot.github.io/#projects',
+    image: 'assets/projects/vector-studio.png',
+    accentColor: '#f59e0b',
+    icon: 'palette',
+    highlights: {
+      es: [
+        'Motor de vectorización local con cuantización de color K-Means y curvas Bézier suaves.',
+        'Integración con Google Gemini Vision para vectorización semántica asistida por lenguaje natural.',
+        'Comparador visual interactivo Split Slider antes/después en tiempo real.',
+        'Exportación instantánea a SVG limpio, optimizado y compatible con diseño vectorial profesional.'
+      ],
+      en: [
+        'Local vectorization engine with K-Means color quantization and smooth Bézier curves.',
+        'Google Gemini Vision integration for prompt-driven semantic vectorization.',
+        'Real-time interactive before/after split slider visual comparator.',
+        'Production-ready clean SVG export optimized for vector workflows.'
+      ]
+    },
+    architecture: `Raster Image Ingestion ───[K-Means / Gemini Vision]───> Bézier Curve Tracer ───> Clean SVG DOM Output`
+  },
+  {
     id: 'forge-champions',
     title: {
       es: 'Forge Champions — Portal & Mentorship Landing',
@@ -167,6 +220,7 @@ export const projectsData = [
     tags: ['Next.js 15', 'React 19', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'AWS EC2', 'PM2'],
     githubUrl: 'https://github.com/arsabot/forge-champions',
     liveUrl: 'https://arsabot.github.io/#projects',
+    image: 'assets/projects/forge.png',
     accentColor: '#6366f1',
     icon: 'graduation-cap',
     highlights: {
@@ -203,6 +257,7 @@ export const projectsData = [
     tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Oxlint', 'Real-time Streams'],
     githubUrl: 'https://github.com/arsabot/informar-app',
     liveUrl: 'https://arsabot.github.io/#projects',
+    image: 'assets/projects/informar.png',
     accentColor: '#10b981',
     icon: 'bar-chart-2',
     highlights: {
@@ -222,40 +277,40 @@ export const projectsData = [
     architecture: `Pipeline de Ingesta (Streams) ───> State Management ───> Dashboard React UI (Vite + Oxlint)`
   },
   {
-    id: 'api-gateway',
+    id: 'vocalizar-ai',
     title: {
-      es: 'Enterprise REST & Auth Gateway',
-      en: 'Enterprise REST & Auth Gateway'
+      es: 'VocalizAR — Lector de Textos con IA & OCR',
+      en: 'VocalizAR — AI Text Reader & Voice OCR Tool'
     },
-    category: 'backend',
+    category: 'fullstack',
     categoryLabel: {
-      es: 'Backend & APIs',
-      en: 'Backend & APIs'
+      es: 'AI & Data Tools',
+      en: 'AI & Data Tools'
     },
     shortDesc: {
-      es: 'Microservicio de autenticación, rate limiting y enrutamiento centralizado para ecosistemas distribuidos de aplicaciones web y móviles.',
-      en: 'Centralized authentication, rate limiting, and routing microservice for distributed web and mobile application ecosystems.'
+      es: 'Aplicación de lectura asistida con síntesis de voz neuronal (TTS), extracción OCR de documentos/imágenes y teleprompter interactivo con modelos avanzados de IA.',
+      en: 'Assisted reading application featuring neural text-to-speech (TTS), OCR document/image extraction, and interactive teleprompter with advanced AI models.'
     },
-    tags: ['Node.js', 'Express', 'JWT', 'Redis', 'Docker', 'PostgreSQL'],
-    githubUrl: 'https://github.com/arsabot',
+    tags: ['Python', 'React', 'TypeScript', 'FastAPI', 'CosyVoice 3 / TTS', 'OCR', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/arsabot/vocalizar-ai',
     liveUrl: 'https://arsabot.github.io/#projects',
-    accentColor: '#ec4899',
-    icon: 'server',
+    accentColor: '#8b5cf6',
+    icon: 'bot',
     highlights: {
       es: [
-        'Control de tráfico y Rate Limiting mediante Redis para protección contra ataques de fuerza bruta.',
-        'Emisión y rotación segura de tokens JWT (Access & Refresh tokens).',
-        'Documentación interactiva OpenAPI / Swagger automatizada.',
-        'Contenedorización lista para producción con Docker Compose y healthchecks.'
+        'Extracción y procesamiento óptico de caracteres (OCR) a partir de PDFs, capturas e imágenes escaneadas.',
+        'Generación de resúmenes inteligentes y puntos clave utilizando modelos de lenguaje LLM.',
+        'Síntesis de voz fluida multi-idioma con controles de reproducción y teleprompter sincronizado.',
+        'Arquitectura de API en Python FastAPI con streaming asíncrono de respuestas.'
       ],
       en: [
-        'Traffic throttling and Redis Rate Limiting protecting endpoints against brute-force attacks.',
-        'Secure JWT token issuance and rotation (Access & Refresh tokens).',
-        'Automated OpenAPI / Swagger interactive API documentation.',
-        'Production-ready Docker Compose containerization with health checks.'
+        'Optical character recognition (OCR) pipeline from PDFs, screenshots, and scanned documents.',
+        'Automated contextual summaries and key takeaways extraction powered by LLM models.',
+        'Fluid multi-language neural voice synthesis with playback controls and synchronized teleprompter.',
+        'Asynchronous Python FastAPI streaming backend architecture.'
       ]
     },
-    architecture: `Client Requests ───> Reverse Proxy / Gateway ───> [Auth Middleware + Rate Limiter] ───> Microservices Layer`
+    architecture: `Frontend React (Audio & OCR Interface) ───[Async WebSockets / REST]───> Backend FastAPI (Python) ───> Neural TTS & LLM Inference`
   }
 ];
 
@@ -286,14 +341,14 @@ export function initProjects() {
 
   function renderProjects(filter = activeFilter) {
     activeFilter = filter;
+    const filtered = filter === 'all' 
+      ? projectsData 
+      : projectsData.filter(p => p.category === filter);
+
     const lang = getCurrentLang();
     const detailsBtnText = lang === 'en' ? 'Architecture Details' : 'Detalles de Arquitectura';
     const viewCodeText = lang === 'en' ? 'View code on GitHub' : 'Ver código en GitHub';
     const viewLiveText = lang === 'en' ? 'View live demo' : 'Ver demo en vivo';
-
-    const filtered = filter === 'all' 
-      ? projectsData 
-      : projectsData.filter(p => p.category === filter);
 
     container.innerHTML = filtered.map(p => {
       const title = getLocalized(p.title);
@@ -303,9 +358,14 @@ export function initProjects() {
       return `
         <article class="project-card fade-in" data-category="${p.category}">
           <div class="project-thumb">
-            <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, ${p.accentColor}28 0%, var(--bg-secondary) 80%); display: flex; align-items: center; justify-content: center;">
-              <i data-lucide="${p.icon}" style="width: 56px; height: 56px; color: ${p.accentColor}; opacity: 0.95;"></i>
-            </div>
+            ${p.image ? `
+              <img src="${p.image}" alt="${title}" class="project-thumb-img" loading="lazy" />
+              <div class="project-thumb-overlay"></div>
+            ` : `
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, ${p.accentColor}28 0%, var(--bg-secondary) 80%); display: flex; align-items: center; justify-content: center;">
+                <i data-lucide="${p.icon}" style="width: 56px; height: 56px; color: ${p.accentColor}; opacity: 0.95;"></i>
+              </div>
+            `}
             <span class="project-category-badge">${catLabel}</span>
           </div>
 
@@ -443,6 +503,22 @@ export function initProjects() {
       : `Hola Rodrigo, vi tu proyecto ${title} y me gustaría conversar`;
 
     modalContent.innerHTML = `
+      ${project.image ? `
+        <div class="modal-project-cover">
+          <img id="modal-main-img" src="${project.image}" alt="${title}" />
+        </div>
+      ` : ''}
+
+      ${project.gallery && project.gallery.length > 1 ? `
+        <div class="modal-gallery-row">
+          ${project.gallery.map((img, idx) => `
+            <div class="modal-gallery-thumb" onclick="document.getElementById('modal-main-img').src='${img}'" title="Ver captura ${idx + 1}">
+              <img src="${img}" alt="${title} view ${idx+1}" />
+            </div>
+          `).join('')}
+        </div>
+      ` : ''}
+
       <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
         <span class="section-tag" style="margin-bottom: 0;">${catLabel}</span>
       </div>
