@@ -1,7 +1,7 @@
 /**
  * Projects Data & Showcase Controller - Bilingual ES / EN Support with Real Screenshot Previews
  */
-import { getCurrentLang, onLanguageChange } from './i18n.js?v=4.6';
+import { getCurrentLang, onLanguageChange } from './i18n.js?v=5.0';
 
 export const projectsData = [
   {
@@ -22,11 +22,11 @@ export const projectsData = [
     tags: ['Next.js 15', 'TypeScript', 'Supabase', 'Tailwind CSS', 'PostgreSQL', 'Realtime RSVP', 'Framer Motion'],
     githubUrl: 'https://github.com/arsabot/invitely',
     liveUrl: 'https://invitely-delta-dun.vercel.app/login',
-    image: 'assets/projects/invitely.png',
+    image: 'assets/projects/invitely.webp',
     gallery: [
-      'assets/projects/invitely.png',
-      'assets/projects/invitely-2.png',
-      'assets/projects/invitely-3.png'
+      'assets/projects/invitely.webp',
+      'assets/projects/invitely-2.webp',
+      'assets/projects/invitely-3.webp'
     ],
     accentColor: '#a855f7',
     icon: 'sparkles',
@@ -64,9 +64,9 @@ export const projectsData = [
     tags: ['Next.js 16', 'React 19', 'TypeScript', 'Supabase', 'Leaflet', 'Tailwind CSS v4', 'Zod', 'PostgreSQL'],
     githubUrl: 'https://github.com/arsabot/merlo-participa',
     liveUrl: 'https://merlo-participa.vercel.app',
-    image: 'assets/projects/merlo-participa.png',
+    image: 'assets/projects/merlo-participa.webp',
     gallery: [
-      'assets/projects/merlo-participa.png'
+      'assets/projects/merlo-participa.webp'
     ],
     accentColor: '#0ea5e9',
     icon: 'map-pin',
@@ -104,10 +104,10 @@ export const projectsData = [
     tags: ['Next.js 15', 'React 19', 'TypeScript', 'Supabase SSR', 'Framer Motion', 'Tailwind CSS', 'Canvas Confetti'],
     githubUrl: 'https://github.com/arsabot/worksy',
     liveUrl: 'https://arsabot.github.io/#projects',
-    image: 'assets/projects/worksy.png',
+    image: 'assets/projects/worksy.webp',
     gallery: [
-      'assets/projects/worksy.png',
-      'assets/projects/worksy-2.png'
+      'assets/projects/worksy.webp',
+      'assets/projects/worksy-2.webp'
     ],
     accentColor: '#ec4899',
     icon: 'sparkles',
@@ -145,10 +145,10 @@ export const projectsData = [
     tags: ['React 19', 'TypeScript', 'Django 5', 'Django REST', 'Leaflet', 'Recharts', 'Tailwind CSS', 'JWT'],
     githubUrl: 'https://github.com/arsabot/parkia',
     liveUrl: 'https://arsabot.github.io/#projects',
-    image: 'assets/projects/parkia.png',
+    image: 'assets/projects/parkia.webp',
     gallery: [
-      'assets/projects/parkia.png',
-      'assets/projects/parkia-2.png'
+      'assets/projects/parkia.webp',
+      'assets/projects/parkia-2.webp'
     ],
     accentColor: '#38bdf8',
     icon: 'car',
@@ -186,9 +186,9 @@ export const projectsData = [
     tags: ['React', 'TypeScript', 'Vite', 'Gemini Vision AI', 'ImageTracerJS', 'Tailwind CSS', 'Canvas'],
     githubUrl: 'https://github.com/arsabot/vector-ai-studio',
     liveUrl: 'https://arsabot.github.io/#projects',
-    image: 'assets/projects/vector-studio.png',
+    image: 'assets/projects/vector-studio.webp',
     gallery: [
-      'assets/projects/vector-studio.png'
+      'assets/projects/vector-studio.webp'
     ],
     accentColor: '#f59e0b',
     icon: 'palette',
@@ -226,9 +226,9 @@ export const projectsData = [
     tags: ['Next.js 15', 'React 19', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'AWS EC2', 'PM2'],
     githubUrl: 'https://github.com/arsabot/forge-champions',
     liveUrl: 'https://arsabot.github.io/#projects',
-    image: 'assets/projects/forge.png',
+    image: 'assets/projects/forge.webp',
     gallery: [
-      'assets/projects/forge.png'
+      'assets/projects/forge.webp'
     ],
     accentColor: '#6366f1',
     icon: 'graduation-cap',
@@ -266,9 +266,9 @@ export const projectsData = [
     tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Oxlint', 'Real-time Streams'],
     githubUrl: 'https://github.com/arsabot/informar-app',
     liveUrl: 'https://arsabot.github.io/#projects',
-    image: 'assets/projects/informar.png',
+    image: 'assets/projects/informar.webp',
     gallery: [
-      'assets/projects/informar.png'
+      'assets/projects/informar.webp'
     ],
     accentColor: '#10b981',
     icon: 'bar-chart-2',
@@ -335,7 +335,7 @@ export function initProjects() {
         <article class="project-card fade-in" data-category="${p.category}">
           <div class="project-thumb">
             ${p.image ? `
-              <img src="${p.image}" alt="${title}" class="project-thumb-img" decoding="async" />
+              <img src="${p.image}" alt="${title}" class="project-thumb-img" width="1600" height="900" loading="lazy" decoding="async" />
               <div class="project-thumb-overlay"></div>
             ` : `
               <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, ${p.accentColor}28 0%, var(--bg-secondary) 80%); display: flex; align-items: center; justify-content: center;">
@@ -451,7 +451,7 @@ export function initProjects() {
     modalContent.innerHTML = `
       ${project.image ? `
         <div class="modal-project-cover">
-          <img id="modal-main-img" src="${project.image}" alt="${title}" />
+          <img id="modal-main-img" src="${project.image}" alt="${title}" width="1600" height="900" decoding="async" />
         </div>
       ` : ''}
 
@@ -459,7 +459,7 @@ export function initProjects() {
         <div class="modal-gallery-row">
           ${project.gallery.map((img, idx) => `
             <div class="modal-gallery-thumb" onclick="document.getElementById('modal-main-img').src='${img}'" title="Ver captura ${idx + 1}">
-              <img src="${img}" alt="${title} view ${idx+1}" />
+              <img src="${img}" alt="${title} view ${idx+1}" width="120" height="75" loading="lazy" decoding="async" />
             </div>
           `).join('')}
         </div>

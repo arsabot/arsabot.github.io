@@ -271,10 +271,26 @@ export function initTetrisBackground() {
       pieces[i].draw(ctx);
     }
 
-    animationFrameId = requestAnimationFrame(render);
+    if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(() => {
+      animationFrameId = requestAnimationFrame(render);
+    }, { timeout: 800 });
+  } else {
+    setTimeout(() => {
+      animationFrameId = requestAnimationFrame(render);
+    }, 50);
+  }
   }
 
-  animationFrameId = requestAnimationFrame(render);
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(() => {
+      animationFrameId = requestAnimationFrame(render);
+    }, { timeout: 800 });
+  } else {
+    setTimeout(() => {
+      animationFrameId = requestAnimationFrame(render);
+    }, 50);
+  }
 
   // Pause when page is hidden to preserve battery
   document.addEventListener('visibilitychange', () => {
@@ -285,7 +301,15 @@ export function initTetrisBackground() {
       isRunning = true;
       lastScrollY = window.scrollY || window.pageYOffset || 0;
       scrollDelta = 0;
+      if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(() => {
       animationFrameId = requestAnimationFrame(render);
+    }, { timeout: 800 });
+  } else {
+    setTimeout(() => {
+      animationFrameId = requestAnimationFrame(render);
+    }, 50);
+  }
     }
   });
 }
