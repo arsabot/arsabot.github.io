@@ -1,14 +1,14 @@
 /**
  * Projects Data & Showcase Controller - Bilingual ES / EN Support with Real Screenshot Previews
  */
-import { getCurrentLang, onLanguageChange } from './i18n.js?v=5.1';
+import { getCurrentLang, onLanguageChange } from './i18n.js?v=5.2';
 
 export const projectsData = [
   {
-    id: 'nerdearla-live',
+    id: 'transcribely',
     title: {
-      es: 'Nerdearla Live — Accesibilidad & Traducción Simultánea con IA',
-      en: 'Nerdearla Live — Real-Time Accessibility & AI Translation'
+      es: 'Transcribely — Accesibilidad & Traducción Simultánea con IA (Nerdearla Vibeathon)',
+      en: 'Transcribely — Real-Time Accessibility & AI Translation (Nerdearla Vibeathon)'
     },
     category: 'fullstack',
     categoryLabel: {
@@ -16,15 +16,16 @@ export const projectsData = [
       en: 'AI / Accessibility (Vibeathon 2026)'
     },
     shortDesc: {
-      es: 'Plataforma para conferencias masivas (Nerdearla Vibeathon 2026) con transcripción local WebGPU (Whisper & Nemotron), traducción simultánea bidireccional vía Gemini Live API (< 700ms), speech-biasing acústico y soporte multi-sala.',
-      en: 'Large-scale conference platform (Nerdearla Vibeathon 2026) featuring client-side WebGPU transcription (Whisper & Nemotron), instant Gemini Live API bidi translation (< 700ms), phonetic speech-biasing, and multi-room isolation.'
+      es: 'Plataforma open source desarrollada para el Nerdearla Vibeathon 2026. Transcripción local en el navegador con WebGPU (Whisper & Nemotron), traducción simultánea bidireccional vía Gemini Live API (< 700ms), speech-biasing acústico y distribución multi-sala.',
+      en: 'Open-source platform built for Nerdearla Vibeathon 2026. Client-side WebGPU transcription (Whisper & Nemotron), instant Gemini Live API bidi translation (< 700ms), phonetic speech-biasing, and multi-room distribution.'
     },
     tags: ['Python 3.12', 'FastAPI', 'Gemini Live API', 'WebGPU', 'Whisper & Nemotron', 'WebSockets', 'Docker', 'Redis'],
     githubUrl: 'https://github.com/arsabot/nerdearla-live-transcribe',
     liveUrl: 'https://github.com/arsabot/nerdearla-live-transcribe',
-    image: 'assets/projects/nerdearla-live.webp',
+    image: 'assets/projects/transcribely.webp',
     gallery: [
-      'assets/projects/nerdearla-live.webp'
+      'assets/projects/transcribely.webp',
+      'assets/projects/transcribely-white.webp'
     ],
     accentColor: '#10b981',
     icon: 'mic',
