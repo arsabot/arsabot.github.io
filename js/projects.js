@@ -1,9 +1,49 @@
 /**
  * Projects Data & Showcase Controller - Bilingual ES / EN Support with Real Screenshot Previews
  */
-import { getCurrentLang, onLanguageChange } from './i18n.js?v=5.0';
+import { getCurrentLang, onLanguageChange } from './i18n.js?v=5.1';
 
 export const projectsData = [
+  {
+    id: 'nerdearla-live',
+    title: {
+      es: 'Nerdearla Live — Accesibilidad & Traducción Simultánea con IA',
+      en: 'Nerdearla Live — Real-Time Accessibility & AI Translation'
+    },
+    category: 'fullstack',
+    categoryLabel: {
+      es: 'AI / Accessibility (Vibeathon 2026)',
+      en: 'AI / Accessibility (Vibeathon 2026)'
+    },
+    shortDesc: {
+      es: 'Plataforma para conferencias masivas (Nerdearla Vibeathon 2026) con transcripción local WebGPU (Whisper & Nemotron), traducción simultánea bidireccional vía Gemini Live API (< 700ms), speech-biasing acústico y soporte multi-sala.',
+      en: 'Large-scale conference platform (Nerdearla Vibeathon 2026) featuring client-side WebGPU transcription (Whisper & Nemotron), instant Gemini Live API bidi translation (< 700ms), phonetic speech-biasing, and multi-room isolation.'
+    },
+    tags: ['Python 3.12', 'FastAPI', 'Gemini Live API', 'WebGPU', 'Whisper & Nemotron', 'WebSockets', 'Docker', 'Redis'],
+    githubUrl: 'https://github.com/arsabot/nerdearla-live-transcribe',
+    liveUrl: 'https://github.com/arsabot/nerdearla-live-transcribe',
+    image: 'assets/projects/nerdearla-live.webp',
+    gallery: [
+      'assets/projects/nerdearla-live.webp'
+    ],
+    accentColor: '#10b981',
+    icon: 'mic',
+    highlights: {
+      es: [
+        'Inferencia local en el navegador del orador vía WebGPU (Whisper & Nemotron), eliminando costos de GPU en el servidor y protegiendo la privacidad del audio.',
+        'Traducción simultánea en < 700ms mediante conexión bidireccional por WebSocket a Gemini Live API con conmutación por error automática.',
+        'Motor fonético y acústico de Speech-Biasing para corregir nombres técnicos y términos complejos de Nerdearla en tiempo real.',
+        'Arquitectura de sesiones multi-sala aisladas para distribución en pantallas gigantes, OBS Studio y teléfonos de asistentes.'
+      ],
+      en: [
+        'Local client-side WebGPU inference (Whisper & Nemotron) in the speaker browser, eliminating server GPU costs and safeguarding audio privacy.',
+        'Sub-700ms simultaneous translation via full-duplex WebSocket connection to Gemini Live API with automatic fallback.',
+        'Phonetic and acoustic Speech-Biasing engine correcting technical jargon and Nerdearla brand terms in real time.',
+        'Isolated multi-room session architecture for audience smartphones, stage giant displays, and OBS Studio streaming.'
+      ]
+    },
+    architecture: 'Audio Entrada (WebGPU Whisper / Nemotron) ───[Full-Duplex WebSockets]───> Backend FastAPI (Python 3.12) ───[Gemini Live API]───> Subtítulos & Pantallas Multi-Sala'
+  },
   {
     id: 'invitely',
     title: {
