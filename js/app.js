@@ -1,12 +1,12 @@
-import { initTetrisBackground } from './tetris-bg.js?v=5.2';
+import { initTetrisBackground } from './tetris-bg.js?v=5.3';
 /**
  * Main Application Orchestrator - With Dual Theme (Dark/Light) & Bilingual (ES/EN) Switchers
  */
-import { initI18n, getCurrentLang, onLanguageChange } from './i18n.js?v=5.2';
-import { initTypewriter } from './typewriter.js?v=5.2';
-import { initProjects } from './projects.js?v=5.2';
-import { initStats, showToast } from './stats.js?v=5.2';
-import { initHorizontalTimeline } from './timeline.js?v=5.2';
+import { initI18n, getCurrentLang, onLanguageChange } from './i18n.js?v=5.3';
+import { initTypewriter } from './typewriter.js?v=5.3';
+import { initProjects } from './projects.js?v=5.3';
+import { initStats, showToast } from './stats.js?v=5.3';
+import { initHorizontalTimeline } from './timeline.js?v=5.3';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize i18n
