@@ -1,7 +1,7 @@
 /**
  * Projects Data & Showcase Controller - Bilingual ES / EN Support with Real Screenshot Previews
  */
-import { getCurrentLang, onLanguageChange } from './i18n.js?v=5.4';
+import { getCurrentLang, onLanguageChange } from './i18n.js?v=5.5';
 
 export const projectsData = [
   {

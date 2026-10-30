@@ -1648,12 +1648,12 @@ header nav {
 .timeline-horizontal-container {
   position: relative;
   width: 100%;
-  padding-top: 0.5rem;
+  padding-top: 0;
 }
 
 .timeline-axis-line {
   position: absolute;
-  top: 32px;
+  top: 62.5px;
   left: 20px;
   right: 20px;
   height: 3px;
@@ -1677,7 +1677,7 @@ header nav {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 0 0.5rem 1.5rem 0.5rem;
+  padding: 2.5rem 1rem 1.75rem 1rem;
   position: relative;
   z-index: 2;
   cursor: grab;
